@@ -61,6 +61,13 @@
 #pragma config FNOSC = PRIPLL    //Oscillator Source Selection->Primary Oscillator with PLL module (XT + PLL, HS + PLL, EC + PLL)
 #pragma config PLLMODE = DISABLED    //PLL Mode Selection->No PLL used; PLLEN bit is not available
 #pragma config IESO = ON    //Two-speed Oscillator Start-up Enable bit->Start up device with FRC, then switch to user-selected oscillator source
+/*
+#pragma config FNOSC = FRC    //Oscillator Source Selection->Internal Fast RC (FRC)
+#pragma config PLLMODE = DISABLED    //PLL Mode Selection->No PLL used; PLLEN bit is not available
+#pragma config IESO = OFF    //Two-speed Oscillator Start-up Enable bit->Start up with user-selected oscillator source
+ */
+
+
 
 // FOSC
 #pragma config POSCMD = HS    //Primary Oscillator Mode Select bits->XT Crystal Oscillator Mode

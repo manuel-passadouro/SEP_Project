@@ -78,6 +78,17 @@ void ADC_Init(void) {
     AD1CON1bits.ADON = 1;      // Turn on ADC
 }
 
+void ADC_Init_alt(void) {
+   ANSB = 0x0003; // Set RB3/AN5 as analog pin
+   AD1CON1 = 0x0070; // SSRC bitfield is set to 0b111 to set internal counter sampling
+   AD1CHS = 0x0005; // Connect RB3/AN5 as CH0 input
+   AD1CSSL = 0; // Disable scan for all channels
+   AD1CON3 = 0x0F00; // Sample time = 15Tad, Tad = Tcy
+   AD1CON2 = 0x0004; // Set AD1IF after every 2 samples
+   AD1CON1bits.ADON = 1; // Turn ADC on
+}
+   
+
 int ADC_Read(void) {
     // Start sampling
     delay_ms(1);             // Wait for sampling (adjust as needed)
@@ -101,9 +112,10 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     
-    ADC_Init();  // Initialize the ADC
+    ADC_Init_alt();  // Initialize the ADC
 
-    int adcValue;
+    int adcValue; // Variable to store the ADC conversion results
+    int dummy;
     
     // Configure RB8 as a digital output
     TRISBbits.TRISB8 = 0;   // Set RB8 as output
@@ -114,14 +126,21 @@ int main(void)
         // Add your application code
         
         //LED Blink on pin RB8
-        LATBbits.LATB8 = 1;  // Turn LED on (assuming active high)
-        delay_ms(10);       // Delay 500ms
+        //LATBbits.LATB8 = 1;  // Turn LED on (assuming active high)
+        //delay_ms(10);       // Delay 500ms
         
-        LATBbits.LATB8 = 0;  // Turn LED off
-        delay_ms(50);       // Delay 500ms
+        //LATBbits.LATB8 = 0;  // Turn LED off
+        //delay_ms(10);       // Delay 500ms
         
         //ADC input
-        //adcValue = ADC_Read();  // Read the ADC value from AN5
+        IFS0bits.AD1IF = 0; // Clear ADC interrupt flag
+        AD1CON1bits.ASAM = 1; // Auto start sampling for 31Tad
+        while (!IFS0bits.AD1IF); // Wait until the two conversions were performed
+        AD1CON1bits.ASAM = 0; // Stop sample/convert
+        adcValue = ADC1BUF0; // Retrieve first sample
+        adcValue += *((&ADC1BUF0) + 1);
+        adcValue = adcValue >> 2;
+        dummy = adcValue;
 
     }
 
