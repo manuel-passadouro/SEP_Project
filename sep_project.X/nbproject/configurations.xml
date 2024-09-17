@@ -381,6 +381,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-2aeff"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/mpass/Desktop/SEP_Project/sep_project.X/debug/default/sep_project_ptg"/>
         <property key="programmerToGoImageName" value="sep_project_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

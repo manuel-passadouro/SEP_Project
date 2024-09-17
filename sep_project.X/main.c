@@ -47,7 +47,7 @@
 */
 #include "mcc_generated_files/system.h"
 
-// Delay function
+
 void delay_ms(unsigned int milliseconds) {
     unsigned int i;
     for (i = 0; i < milliseconds; i++) {
@@ -56,20 +56,21 @@ void delay_ms(unsigned int milliseconds) {
 }
 
 void ADC_Init(void) {
-    // Configure RB3 as input (AN5 is mapped to RB3)
-    TRISBbits.TRISB3 = 1;      // Set RB3 as input
-    AD1PCFGbits.PCFG5 = 0;     // Set AN5 (RB3) as analog input (0 = analog)
-
+    
+    //Port Configuration
+    TRISBbits.TRISB3 = 1; //RB3/AN5 (pin 7) as input
+    ANSBbits.ANSB3 = 1; //RB3/AN5 (pin 7) as analog
+    //AD1PCFG = 0xFFDF;  // Configure A/D port, AN5 input pin (RB3)
+    
     // ADC Configuration
     AD1CON1bits.ADON = 0;      // Turn off ADC to configure
     AD1CON1bits.FORM = 0;      // Output format as integer
     AD1CON1bits.SSRC = 7;      // Auto-conversion
     AD1CON1bits.ASAM = 0;      // Sampling begins when SAMP bit is set
     
-    AD1CON2bits.VCFG = 0;      // Use AVdd and AVss as reference voltages
-    AD1CON2bits.SMPI = 0;      // Interrupt after 1 conversion (ADC1BUF0)
+    AD1CON2bits.SMPI = 1;      // Interrupt after 2 conversions (ADC1BUF0)
     
-    AD1CON3bits.ADCS = 2;      // ADC Conversion Clock (TAD = 3*Tcy)
+    AD1CON3bits.ADCS = 0;      // ADC Conversion Clock (TAD = Tcy)
     AD1CON3bits.SAMC = 16;     // Auto-sample time = 16*TAD
     
     AD1CHSbits.CH0SA = 5;      // Select AN5 as input channel (RB3 -> AN5)
@@ -79,8 +80,9 @@ void ADC_Init(void) {
 
 int ADC_Read(void) {
     // Start sampling
+    delay_ms(1);             // Wait for sampling (adjust as needed)
     AD1CON1bits.SAMP = 1;      // Start sampling
-    __delay_ms(1);             // Wait for sampling (adjust as needed)
+    delay_ms(1);             // Wait for sampling (adjust as needed)
     AD1CON1bits.SAMP = 0;      // Stop sampling, start conversion
     
     // Wait for the conversion to complete
@@ -116,10 +118,10 @@ int main(void)
         delay_ms(10);       // Delay 500ms
         
         LATBbits.LATB8 = 0;  // Turn LED off
-        delay_ms(10);       // Delay 500ms
+        delay_ms(50);       // Delay 500ms
         
         //ADC input
-        adcValue = ADC_Read();  // Read the ADC value from AN5
+        //adcValue = ADC_Read();  // Read the ADC value from AN5
 
     }
 

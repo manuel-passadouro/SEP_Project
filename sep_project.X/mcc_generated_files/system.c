@@ -58,14 +58,14 @@
 #pragma config BSLIM = 8191    //Boot Segment Flash Page Address Limit bits->8191
 
 // FOSCSEL
-#pragma config FNOSC = FRC    //Oscillator Source Selection->Internal Fast RC (FRC)
+#pragma config FNOSC = PRIPLL    //Oscillator Source Selection->Primary Oscillator with PLL module (XT + PLL, HS + PLL, EC + PLL)
 #pragma config PLLMODE = DISABLED    //PLL Mode Selection->No PLL used; PLLEN bit is not available
-#pragma config IESO = OFF    //Two-speed Oscillator Start-up Enable bit->Start up with user-selected oscillator source
+#pragma config IESO = ON    //Two-speed Oscillator Start-up Enable bit->Start up device with FRC, then switch to user-selected oscillator source
 
 // FOSC
-#pragma config POSCMD = NONE    //Primary Oscillator Mode Select bits->Primary Oscillator disabled
-#pragma config OSCIOFCN = OFF    //OSC2 Pin Function bit->OSC2 is clock output
-#pragma config SOSCSEL = OFF    //SOSC Power Selection Configuration bits->Digital (SCLKI) mode
+#pragma config POSCMD = HS    //Primary Oscillator Mode Select bits->XT Crystal Oscillator Mode
+#pragma config OSCIOFCN = ON    //OSC2 Pin Function bit->OSC2 is clock output
+#pragma config SOSCSEL = ON    //SOSC Power Selection Configuration bits->Digital (SCLKI) mode
 #pragma config PLLSS = PLL_PRI    //PLL Secondary Selection Configuration bit->PLL is fed by the Primary oscillator
 #pragma config IOL1WAY = ON    //Peripheral pin select configuration bit->Allow only one reconfiguration
 #pragma config FCKSM = CSDCMD    //Clock Switching Mode bits->Both Clock switching and Fail-safe Clock Monitor are disabled
@@ -73,7 +73,7 @@
 // FWDT
 #pragma config WDTPS = PS32768    //Watchdog Timer Postscaler bits->1:32768
 #pragma config FWPSA = PR128    //Watchdog Timer Prescaler bit->1:128
-#pragma config FWDTEN = OFF    //Watchdog Timer Enable bits->WDT and SWDTEN disabled
+#pragma config FWDTEN = ON    //Watchdog Timer Enable bits->WDT and SWDTEN disabled
 #pragma config WINDIS = OFF    //Watchdog Timer Window Enable bit->Watchdog Timer in Non-Window mode
 #pragma config WDTWIN = WIN25    //Watchdog Timer Window Select bits->WDT Window is 25% of WDT period
 #pragma config WDTCMX = WDTCLK    //WDT MUX Source Select bits->WDT clock source is determined by the WDTCLK Configuration bits
@@ -103,8 +103,8 @@
 void SYSTEM_Initialize(void)
 {
     PIN_MANAGER_Initialize();
-    INTERRUPT_Initialize();
     CLOCK_Initialize();
+    INTERRUPT_Initialize();
 }
 
 /**

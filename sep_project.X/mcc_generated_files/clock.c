@@ -80,7 +80,7 @@ void CLOCK_Initialize(void)
     PMD7 = 0x00;
     // CLC1MD enabled; CLC2MD enabled; 
     PMD8 = 0x00;
-    // CF no clock failure; NOSC FRC; SOSCEN disabled; POSCEN disabled; CLKLOCK unlocked; OSWEN Switch is Complete; IOLOCK not-active; 
-    __builtin_write_OSCCONH((uint8_t) (0x00));
+    // CF no clock failure; NOSC PRIPLL; SOSCEN disabled; POSCEN disabled; CLKLOCK unlocked; OSWEN Switch is Complete; IOLOCK not-active; 
+    __builtin_write_OSCCONH((uint8_t) (0x03));
     __builtin_write_OSCCONL((uint8_t) (0x00));
 }
