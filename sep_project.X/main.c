@@ -47,6 +47,17 @@
 */
 #include "mcc_generated_files/system.h"
 
+/**
+  Section: Defines
+*/
+
+#define VREF_MV 3500           // Reference voltage in millivolts (3500 mV)
+#define ADC_MAX_VALUE 1023     // Max ADC value for a 10-bit ADC
+#define KELVIN_OFFSET 27315    // Offset to convert from Kelvin to Celsius (273.15 * 100)
+
+/**
+  Section: Function Declarations
+*/
 
 void delay_ms(unsigned int milliseconds) {
     unsigned int i;
@@ -55,30 +66,9 @@ void delay_ms(unsigned int milliseconds) {
     }
 }
 
-void ADC_Init(void) {
-    
-    //Port Configuration
-    TRISBbits.TRISB3 = 1; //RB3/AN5 (pin 7) as input
-    ANSBbits.ANSB3 = 1; //RB3/AN5 (pin 7) as analog
-    //AD1PCFG = 0xFFDF;  // Configure A/D port, AN5 input pin (RB3)
-    
-    // ADC Configuration
-    AD1CON1bits.ADON = 0;      // Turn off ADC to configure
-    AD1CON1bits.FORM = 0;      // Output format as integer
-    AD1CON1bits.SSRC = 7;      // Auto-conversion
-    AD1CON1bits.ASAM = 0;      // Sampling begins when SAMP bit is set
-    
-    AD1CON2bits.SMPI = 1;      // Interrupt after 2 conversions (ADC1BUF0)
-    
-    AD1CON3bits.ADCS = 0;      // ADC Conversion Clock (TAD = Tcy)
-    AD1CON3bits.SAMC = 16;     // Auto-sample time = 16*TAD
-    
-    AD1CHSbits.CH0SA = 5;      // Select AN5 as input channel (RB3 -> AN5)
-    
-    AD1CON1bits.ADON = 1;      // Turn on ADC
-}
 
-void ADC_Init_alt(void) {
+
+void ADC_Init(void) {
    ANSB = 0x0003; // Set RB3/AN5 as analog pin
    AD1CON1 = 0x0070; // SSRC bitfield is set to 0b111 to set internal counter sampling
    AD1CHS = 0x0005; // Connect RB3/AN5 as CH0 input
@@ -88,20 +78,51 @@ void ADC_Init_alt(void) {
    AD1CON1bits.ADON = 1; // Turn ADC on
 }
    
-
+/**
+ * @brief Perform reading with ADC.
+ *
+ * @param[in] Void
+ * @return Integer with 10 ADC result (2 sample avarage).
+ */
 int ADC_Read(void) {
-    // Start sampling
-    delay_ms(1);             // Wait for sampling (adjust as needed)
-    AD1CON1bits.SAMP = 1;      // Start sampling
-    delay_ms(1);             // Wait for sampling (adjust as needed)
-    AD1CON1bits.SAMP = 0;      // Stop sampling, start conversion
+    int adcValue;
     
-    // Wait for the conversion to complete
-    while (!AD1CON1bits.DONE);
-    
-    // Return the ADC result from ADC1BUF0
-    return ADC1BUF0;
+    IFS0bits.AD1IF = 0; // Clear ADC interrupt flag
+    AD1CON1bits.ASAM = 1; // Auto start sampling for 31Tad
+    while (!IFS0bits.AD1IF); // Wait until the two conversions were performed
+    AD1CON1bits.ASAM = 0; // Stop sample/convert
+    adcValue = ADC1BUF0; // Retrieve first sample
+    adcValue += *((&ADC1BUF0) + 1); //retrieve next sample (next buffer)
+    adcValue = adcValue >> 1;
 }
+
+/**
+ * @brief Converts an ADC value to Celsius temperature.
+ *
+ * @param[in] adcValue The ADC value to be converted. This is an integer
+ *                     representing the raw ADC reading. 
+ * @return The temperature in degrees Celsius, calculated from the ADC value.
+ */
+int adcValueToCelsius(int adcValue) {
+    // Step 1: Approximate division by 1023 using shifts where possible
+    // Scale the value to avoid precision loss: (adcValue * 3500) / 1023
+    
+    // Instead of multiplying directly by 3500, break it into a shift-friendly operation
+    // For example, multiply by a close power of 2 (4096 = 2^12), and then adjust.
+    long voltageMV = ((long)adcValue << 12) / ADC_MAX_VALUE;  // adcValue * 4096 / 1023 = closer to the ratio
+    
+    // Scale back down by shifting: (This needs tweaking, but this concept applies)
+    voltageMV = (voltageMV * VREF_MV) >> 12;  // Apply an offset shift to bring it back
+    
+    // Step 2: Convert millivolts to Kelvin (since 1mV = 1K)
+    long temperatureKelvin = voltageMV * 100;  // Kelvin temperature, scaled by 100
+    
+    // Step 3: Convert Kelvin to Celsius (T_C = T_K - 273.15)
+    int temperatureCelsius = (int)(temperatureKelvin - KELVIN_OFFSET) / 100;
+    
+    return temperatureCelsius;
+}
+
 
 
 /*
@@ -112,10 +133,9 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     
-    ADC_Init_alt();  // Initialize the ADC
+    ADC_Init();  // Initialize the ADC
 
-    int adcValue; // Variable to store the ADC conversion results
-    int dummy;
+    int adc_out; // Variable to store the ADC conversion results
     
     // Configure RB8 as a digital output
     TRISBbits.TRISB8 = 0;   // Set RB8 as output
@@ -133,15 +153,9 @@ int main(void)
         //delay_ms(10);       // Delay 500ms
         
         //ADC input
-        IFS0bits.AD1IF = 0; // Clear ADC interrupt flag
-        AD1CON1bits.ASAM = 1; // Auto start sampling for 31Tad
-        while (!IFS0bits.AD1IF); // Wait until the two conversions were performed
-        AD1CON1bits.ASAM = 0; // Stop sample/convert
-        adcValue = ADC1BUF0; // Retrieve first sample
-        adcValue += *((&ADC1BUF0) + 1);
-        adcValue = adcValue >> 2;
-        dummy = adcValue;
-
+            
+        adc_out = ADC_Read();
+  
     }
 
     return 1;
