@@ -12,6 +12,8 @@
 - [ ] Temp sensor ADC readout
 - [ ] APDS 9960 I2C config
 - [ ] SPI initial config
+- [ ] Remove MCC files
+- [ ] Organize Code file structure
 <!-- TODO ENDS HERE -->
 
 <!-- NEW LOG ENTRY STARTS HERE -->
