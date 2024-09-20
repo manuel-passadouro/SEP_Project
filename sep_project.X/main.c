@@ -86,14 +86,16 @@ void ADC_Init(void) {
  */
 int ADC_Read(void) {
     int adcValue;
-    
-    IFS0bits.AD1IF = 0; // Clear ADC interrupt flag
+    int dummy;
+    IFS0bits.AD1IF = 0; // Clear ADC interrupt flaggthy
     AD1CON1bits.ASAM = 1; // Auto start sampling for 31Tad
     while (!IFS0bits.AD1IF); // Wait until the two conversions were performed
     AD1CON1bits.ASAM = 0; // Stop sample/convert
     adcValue = ADC1BUF0; // Retrieve first sample
     adcValue += *((&ADC1BUF0) + 1); //retrieve next sample (next buffer)
     adcValue = adcValue >> 1;
+    
+    return adcValue;
 }
 
 /**
@@ -103,24 +105,15 @@ int ADC_Read(void) {
  *                     representing the raw ADC reading. 
  * @return The temperature in degrees Celsius, calculated from the ADC value.
  */
-int adcValueToCelsius(int adcValue) {
-    // Step 1: Approximate division by 1023 using shifts where possible
-    // Scale the value to avoid precision loss: (adcValue * 3500) / 1023
+float adcValueToCelsius(float adcValue) {
     
-    // Instead of multiplying directly by 3500, break it into a shift-friendly operation
-    // For example, multiply by a close power of 2 (4096 = 2^12), and then adjust.
-    long voltageMV = ((long)adcValue << 12) / ADC_MAX_VALUE;  // adcValue * 4096 / 1023 = closer to the ratio
+    float adc_temp_k;
+    float adc_temp_c; 
     
-    // Scale back down by shifting: (This needs tweaking, but this concept applies)
-    voltageMV = (voltageMV * VREF_MV) >> 12;  // Apply an offset shift to bring it back
+    adc_temp_k = (adcValue/1024) * 3300;
+    adc_temp_c = adc_temp_k - 273.15;
     
-    // Step 2: Convert millivolts to Kelvin (since 1mV = 1K)
-    long temperatureKelvin = voltageMV * 100;  // Kelvin temperature, scaled by 100
-    
-    // Step 3: Convert Kelvin to Celsius (T_C = T_K - 273.15)
-    int temperatureCelsius = (int)(temperatureKelvin - KELVIN_OFFSET) / 100;
-    
-    return temperatureCelsius;
+    return adc_temp_c;
 }
 
 
@@ -135,27 +128,22 @@ int main(void)
     
     ADC_Init();  // Initialize the ADC
 
-    int adc_out; // Variable to store the ADC conversion results
-    
+    float adc_temp; // Variable to store the ADC conversion results
+    float adc_out;
+    float dummy;
     // Configure RB8 as a digital output
-    TRISBbits.TRISB8 = 0;   // Set RB8 as output
-    LATBbits.LATB8 = 0;     // Set initial state to low (LED off)
+    TRISBbits.TRISB6 = 0;   // Set RB8 as output
+    LATBbits.LATB6 = 1;     // Set initial state to low (LED off)
     
     while (1)
     {
         // Add your application code
         
-        //LED Blink on pin RB8
-        //LATBbits.LATB8 = 1;  // Turn LED on (assuming active high)
-        //delay_ms(10);       // Delay 500ms
-        
-        //LATBbits.LATB8 = 0;  // Turn LED off
-        //delay_ms(10);       // Delay 500ms
-        
         //ADC input
             
         adc_out = ADC_Read();
-  
+        adc_temp = adcValueToCelsius((float)adc_out);
+        dummy = adc_temp;
     }
 
     return 1;
