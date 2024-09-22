@@ -51,7 +51,7 @@
   Section: Defines
 */
 
-#define VREF_MV 3500           // Reference voltage in millivolts (3500 mV)
+#define VREF_MV 3250           // Reference voltage in millivolts (3500 mV)
 #define ADC_MAX_VALUE 1023     // Max ADC value for a 10-bit ADC
 #define KELVIN_OFFSET 27315    // Offset to convert from Kelvin to Celsius (273.15 * 100)
 
@@ -86,7 +86,6 @@ void ADC_Init(void) {
  */
 int ADC_Read(void) {
     int adcValue;
-    int dummy;
     IFS0bits.AD1IF = 0; // Clear ADC interrupt flaggthy
     AD1CON1bits.ASAM = 1; // Auto start sampling for 31Tad
     while (!IFS0bits.AD1IF); // Wait until the two conversions were performed
@@ -108,10 +107,12 @@ int ADC_Read(void) {
 float adcValueToCelsius(float adcValue) {
     
     float adc_temp_k;
-    float adc_temp_c; 
+    float adc_temp_c;
+    float adcValueaux;
     
-    adc_temp_k = (adcValue/1024) * 3300;
-    adc_temp_c = adc_temp_k - 273.15;
+    //Convert 10 bit voltgae value to Kelvin (AD592: 1mV/K)
+    adc_temp_k = (adcValue/ADC_MAX_VALUE) * VREF_MV;
+    adc_temp_c = adc_temp_k - 273.15; //Convert from Kelvin to Celsius
     
     return adc_temp_c;
 }
@@ -129,8 +130,7 @@ int main(void)
     ADC_Init();  // Initialize the ADC
 
     float adc_temp; // Variable to store the ADC conversion results
-    float adc_out;
-    float dummy;
+    int adc_out;
     // Configure RB8 as a digital output
     TRISBbits.TRISB6 = 0;   // Set RB8 as output
     LATBbits.LATB6 = 1;     // Set initial state to low (LED off)
@@ -143,7 +143,6 @@ int main(void)
             
         adc_out = ADC_Read();
         adc_temp = adcValueToCelsius((float)adc_out);
-        dummy = adc_temp;
     }
 
     return 1;

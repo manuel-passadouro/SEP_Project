@@ -262,7 +262,7 @@
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
         <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
@@ -309,7 +309,7 @@
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
-        <property key="voltagevalue" value="3.5"/>
+        <property key="voltagevalue" value="3.25"/>
       </PK5Tool>
       <Tool>
         <property key="ADC 1" value="true"/>
@@ -408,7 +408,7 @@
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
-        <property key="voltagevalue" value="3.5"/>
+        <property key="voltagevalue" value="3.25"/>
       </Tool>
     </conf>
   </confs>
