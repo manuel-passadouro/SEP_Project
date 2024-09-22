@@ -4,13 +4,6 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000015bc.00 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000015bc.01 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000015bc.02 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000015bc.03 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000015bc.04 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000015bc.05 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000015bc.06 \
   -p24FJ256GA702 \
   --mdfp=C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
   -o \
@@ -36,7 +29,7 @@ Command:
   --defsym=__MPLAB_BUILD=1 \
   --defsym=__MPLAB_DEBUG=1 \
   --defsym=__DEBUG=1 \
-  -Tp24FJ256GA702.gld.07 \
+  -Tp24FJ256GA702.gld.00 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -145,18 +138,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-reserve_data_0x800           0x800                0x1c            0x1c  (28)
-reserve_data_0x81c           0x81c                 0x2             0x2  (2)
-reserve_data_0x81e           0x81e                 0x2             0x2  (2)
-reserve_data_0x820           0x820                 0x2             0x2  (2)
-reserve_data_0x822           0x822                 0x2             0x2  (2)
-reserve_data_0x824           0x824                 0x4             0x4  (4)
-.ndata                       0x828                   0             0x2  (2)
-reserve_data_0x82a           0x82a                0x26            0x26  (38)
-.nbss                        0x850                   0             0x2  (2)
-.bss                         0x852                   0            0x20  (32)
+.ndata                       0x800                   0             0x2  (2)
+.nbss                        0x802                   0             0x2  (2)
+.bss                         0x804                   0            0x20  (32)
 
-                 Total "data" memory used (bytes):           0x72  (114) <1%
+                 Total "data" memory used (bytes):           0x24  (36) <1%
 
 
 Dynamic Memory Usage
@@ -164,9 +150,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x872                              0x3f8e  (16270)
+stack                        0x824                              0x3fdc  (16348)
 
-                 Maximum dynamic memory (bytes):         0x3f8e  (16270)
+                 Maximum dynamic memory (bytes):         0x3fdc  (16348)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
@@ -287,41 +273,6 @@ FDEVOPT1         0x02af2c           0x000002
 
 Linker script and memory map
 
-
-reserve_data_0x800
-                    0x0800         0x1c
-                    0x081c                  . = 0x1c
- *fill*             0x0800         0x1c00
-
-reserve_data_0x81c
-                    0x081c          0x2
-                    0x081e                  . = 0x2
- *fill*             0x081c          0x200
-
-reserve_data_0x81e
-                    0x081e          0x2
-                    0x0820                  . = 0x2
- *fill*             0x081e          0x200
-
-reserve_data_0x820
-                    0x0820          0x2
-                    0x0822                  . = 0x2
- *fill*             0x0820          0x200
-
-reserve_data_0x822
-                    0x0822          0x2
-                    0x0824                  . = 0x2
- *fill*             0x0822          0x200
-
-reserve_data_0x824
-                    0x0824          0x4
-                    0x0828                  . = 0x4
- *fill*             0x0824          0x400
-
-reserve_data_0x82a
-                    0x082a         0x26
-                    0x0850                  . = 0x26
- *fill*             0x082a         0x2600
 LOAD build/default/debug/mcc_generated_files/clock.o
 LOAD build/default/debug/mcc_generated_files/pin_manager.o
 LOAD build/default/debug/mcc_generated_files/mcc.o
@@ -2000,15 +1951,15 @@ __c30_signature
  __c30_signature
                   0x0004a1          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.DA_o)
 
-.ndata              0x0828          0x2
- .ndata             0x0828          0x2 build/default/debug/mcc_generated_files/traps.o
+.ndata              0x0800          0x2
+ .ndata             0x0800          0x2 build/default/debug/mcc_generated_files/traps.o
 
-.nbss               0x0850          0x2
- .nbss              0x0850          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.DA_o)
-                    0x0850                  _errno
+.nbss               0x0802          0x2
+ .nbss              0x0802          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.DA_o)
+                    0x0802                  _errno
 
-.bss                0x0852         0x20
- .bss               0x0852         0x20 build/default/debug/mcc_generated_files/traps.o
+.bss                0x0804         0x20
+ .bss               0x0804         0x20 build/default/debug/mcc_generated_files/traps.o
 
 .ivt._OscillatorFail
                   0x000004          0x2
