@@ -46,9 +46,8 @@ The system can:
 
 ## High Level Architecture:
 
-This following architecture is to be implemented for this project:
+The following architecture is to be implemented for this project:
 
-**TODO: ADD ARCHITECTURE DIAGRAM**
 ![Project Architecture Diagram.](./SEP_project_architecture.png)
 
 ## Workflow:
