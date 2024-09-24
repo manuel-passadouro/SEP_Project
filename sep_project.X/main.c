@@ -46,14 +46,21 @@
   Section: Included Files
 */
 #include "mcc_generated_files/system.h"
+#define FCY 16000000UL
+#include <libpic30.h>
 
 /**
   Section: Defines
 */
 
-#define VREF_MV 3500           // Reference voltage in millivolts (3500 mV)
-#define ADC_MAX_VALUE 1023     // Max ADC value for a 10-bit ADC
-#define KELVIN_OFFSET 27315    // Offset to convert from Kelvin to Celsius (273.15 * 100)
+#define I2C_SLAVE_ADDR_READ 0x73
+#define I2C_SLAVE_ADDR_WRITE 0x72
+
+#define I2C_READ 1
+#define I2C_WRITE 0
+
+#define SLAVE_ID_ADDR 0x92
+
 
 /**
   Section: Function Declarations
@@ -66,63 +73,18 @@ void delay_ms(unsigned int milliseconds) {
     }
 }
 
-
-
-void ADC_Init(void) {
-   ANSB = 0x0003; // Set RB3/AN5 as analog pin
-   AD1CON1 = 0x0070; // SSRC bitfield is set to 0b111 to set internal counter sampling
-   AD1CHS = 0x0005; // Connect RB3/AN5 as CH0 input
-   AD1CSSL = 0; // Disable scan for all channels
-   AD1CON3 = 0x0F00; // Sample time = 15Tad, Tad = Tcy
-   AD1CON2 = 0x0004; // Set AD1IF after every 2 samples
-   AD1CON1bits.ADON = 1; // Turn ADC on
-}
-   
-/**
- * @brief Perform reading with ADC.
- *
- * @param[in] Void
- * @return Integer with 10 ADC result (2 sample avarage).
- */
-int ADC_Read(void) {
-    int adcValue;
-    int dummy;
-    IFS0bits.AD1IF = 0; // Clear ADC interrupt flaggthy
-    AD1CON1bits.ASAM = 1; // Auto start sampling for 31Tad
-    while (!IFS0bits.AD1IF); // Wait until the two conversions were performed
-    AD1CON1bits.ASAM = 0; // Stop sample/convert
-    adcValue = ADC1BUF0; // Retrieve first sample
-    adcValue += *((&ADC1BUF0) + 1); //retrieve next sample (next buffer)
-    adcValue = adcValue >> 1;
-    
-    return adcValue;
-}
-
-/**
- * @brief Converts an ADC value to Celsius temperature.
- *
- * @param[in] adcValue The ADC value to be converted. This is an integer
- *                     representing the raw ADC reading. 
- * @return The temperature in degrees Celsius, calculated from the ADC value.
- */
-float adcValueToCelsius(float adcValue) {
-    
-    float adc_temp_k;
-    float adc_temp_c; 
-    
-    adc_temp_k = (adcValue/1024) * 3300;
-    adc_temp_c = adc_temp_k - 273.15;
-    
-    return adc_temp_c;
-}
+ 
 
 void i2c_master_init(void){
     
     I2C1CONLbits.I2CEN = 0; // Disable I2C peripheral during setup
     I2C1CONLbits.A10M = 0; // 7 bit address mode
-    I2C1BRG = 0x4E; // 100KHz for a 4:1 (with FCY = 16 MHz)
+    I2C1BRG = 0x12; // 400KHz (FCY = 16 MHz)
     
     // Configure I2C pins on pre-defined IOs
+    //ANSBbits.ANSB8 = 0;
+    ANSBbits.ANSB9 = 0; //Disable analog on RB9
+  
     TRISBbits.TRISB8 = 1;    // Set RB8 (SCL1) as input
     TRISBbits.TRISB9 = 1;    // Set RB9 (SDA1) as input
     ODCBbits.ODCB8 = 1;      // Set RB8 (SCL1) as open-drain
@@ -144,12 +106,16 @@ void stopCondition(){
 
 uint8_t writeByte(uint8_t data){
     
+    //startCondition();
     I2C1TRN = data; // Move data to the I2CxTRN register, transmission starts right after
-    delay_ms(1); // Wait till a complete byte is transmitted
+    __delay_ms(100); // Wait till a complete byte is transmitted
+    
     if(!I2C1STATbits.ACKSTAT){ // Check for the slave acknowledge
         return 0; // No error code
     }
     return -1; // Error code
+    
+    
 } 
 
 uint8_t readByte(uint8_t data){
@@ -170,12 +136,8 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
+    i2c_master_init();
     
-    ADC_Init();  // Initialize the ADC
-
-    float adc_temp; // Variable to store the ADC conversion results
-    float adc_out;
-    float dummy;
     // Configure RB8 as a digital output
     TRISBbits.TRISB6 = 0;   // Set RB8 as output
     LATBbits.LATB6 = 1;     // Set initial state to low (LED off)
@@ -184,11 +146,18 @@ int main(void)
     {
         // Add your application code
         
-        //ADC input
-            
-        adc_out = ADC_Read();
-        adc_temp = adcValueToCelsius((float)adc_out);
-        dummy = adc_temp;
+        //Slave Write address + ID register
+        startCondition();
+        writeByte(I2C_SLAVE_ADDR_WRITE);
+        writeByte(SLAVE_ID_ADDR);
+        stopCondition();
+        __delay_ms(100);
+        
+        //Slave read address + data
+        startCondition();
+        writeByte(I2C_SLAVE_ADDR_READ);
+        
+        
     }
 
     return 1;
