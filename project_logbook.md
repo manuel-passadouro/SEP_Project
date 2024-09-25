@@ -14,6 +14,7 @@
 - [ ] SPI initial config
 - [ ] Remove MCC files
 - [ ] Organize Code file structure
+- [ ] Sensor Node schematic
 <!-- TODO ENDS HERE -->
 
 <!-- NEW LOG ENTRY STARTS HERE -->
