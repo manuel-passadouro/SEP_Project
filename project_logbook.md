@@ -12,6 +12,7 @@
 - [x] Temp sensor ADC readout
 - [ ] APDS 9960 I2C config
 - [ ] SPI initial config
+- [ ] Timer based interrupt
 - [ ] Remove MCC files
 - [ ] Organize Code file structure
 - [ ] Sensor Node schematic
