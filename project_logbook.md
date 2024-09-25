@@ -18,6 +18,27 @@
 
 <!-- NEW LOG ENTRY STARTS HERE -->
 
+## 24/09/2024
+
+### Notes:
+
+- Color Sensor was placed on the breadboard, with 2.2KOhm pull-ups;
+- I2C master init and byte send function were tested,
+  results on the oscilloscope were ok;
+- Slave address must be concatenated for read and write (so 0x39 becomes 0x73 for read, 0x72 for write);
+- Workflow for reading the sensor data:
+  - Send start condition;
+  - Send slave write address;
+  - wait for ACK;
+  - Send data register address;
+  - wait for ACK;
+  - Send Stop condition (?);
+  - read byte from slave;
+- Must implement and test voltage divider for ADC Vref;
+- Merge ADC and I2C code then reorganize project library before 1st delivery. 
+
+<!-- NEW LOG ENTRY ENDS HERE -->
+
 ## 22/09/2024
 
 ### Notes:
@@ -26,8 +47,6 @@
 - ADC readout is fine but fluctuates a lot, Vref should be lower since max temp of sensor comes at around 0.4V
 - Use external Vref for ADC
 - Next step is to connect APDS9960 breakout board to PIC and start working on I2C.
-
-<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 19/09/2024
 
