@@ -48,6 +48,7 @@
 #include "mcc_generated_files/system.h"
 #define FCY 16000000UL
 #include <libpic30.h>
+#include <stdbool.h>
 
 /**
   Section: Defines
@@ -59,7 +60,15 @@
 #define I2C_READ 1
 #define I2C_WRITE 0
 
-#define SLAVE_ID_ADDR 0x92
+#define ID_ADDR 0x94 //Sensro ID (R)
+#define PIHT_ADDR 0x8B //Proximity interrupt high threshold (R/W)
+#define ENABLE_ADDR 0x80 //Enable Interrupts and states (R/W)
+#define CONTROL_ADDR 0x8F //Gain control (R/W)
+
+#define PDATA_ADDR 0x9C //Proximty Data (R)
+#define CDATAH_ADDR 0x95 //High byte of clear channel data (R)
+#define CDATAL_ADDR 0x94 //Low byte of clear channel data (R)
+
 
 
 /**
@@ -108,7 +117,7 @@ uint8_t writeByte(uint8_t data){
     
     //startCondition();
     I2C1TRN = data; // Move data to the I2CxTRN register, transmission starts right after
-    __delay_ms(100); // Wait till a complete byte is transmitted
+    __delay_ms(20); // Wait till a complete byte is transmitted
     
     if(!I2C1STATbits.ACKSTAT){ // Check for the slave acknowledge
         return 0; // No error code
@@ -118,10 +127,10 @@ uint8_t writeByte(uint8_t data){
     
 } 
 
-uint8_t readByte(uint8_t data){
+uint8_t readByte(){
     
     I2C1CONLbits.RCEN = 1; // Assert the receive enable bit
-    delay_ms(1); // Wait till a complete byte is transmitted
+    __delay_ms(20); // Wait till a complete byte is transmitted
     if(I2C1STATbits.RBF){// Check if the receive buffer is full
         return I2C1RCV; // Return the received data
     }    
@@ -138,25 +147,70 @@ int main(void)
     SYSTEM_Initialize();
     i2c_master_init();
     
+    uint8_t read_data;
+    uint8_t als_high_byte;
+    uint8_t als_low_byte;
+    uint8_t sensor_gain = 0x03; //2 = 16x ASL gain
+    uint8_t enable_byte = 0x07;
+    
+    
+    bool start_flag = 0;
+
+    
     // Configure RB8 as a digital output
     TRISBbits.TRISB6 = 0;   // Set RB8 as output
     LATBbits.LATB6 = 1;     // Set initial state to low (LED off)
     
+    
     while (1)
     {
-        // Add your application code
+              
+        //Get ID from sensor
+        LATBbits.LATB6 = 0;
+        if (!start_flag){
+            //Enable proximity and light detection
+            startCondition(); //Start write procedure
+            writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+            writeByte(ENABLE_ADDR); //send register address
+            writeByte(enable_byte);
+            stopCondition(); //End write procedure
+            
+            //Set snesor gain
+            startCondition(); //Start write procedure
+            writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+            writeByte(CONTROL_ADDR); //send register address
+            writeByte(sensor_gain);
+            stopCondition(); //End write procedure
+            
+            start_flag = 1;
+        }
         
-        //Slave Write address + ID register
-        startCondition();
-        writeByte(I2C_SLAVE_ADDR_WRITE);
-        writeByte(SLAVE_ID_ADDR);
-        stopCondition();
+        
+        //Read Ambient light data
+        startCondition(); //Start write procedure
+        writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+        writeByte(CDATAL_ADDR); //send register address
+        stopCondition(); //End write procedure
+        
+        startCondition(); //Start read procedure
+        writeByte(I2C_SLAVE_ADDR_READ); //send read address
+        als_low_byte = readByte();
+        stopCondition(); //End read procedure
+          
+        startCondition(); //Start write procedure
+        writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+        writeByte(CDATAH_ADDR); //send register address
+        stopCondition(); //End write procedure
+        
+        startCondition(); //Start read procedure
+        writeByte(I2C_SLAVE_ADDR_READ); //send read address
+        als_high_byte = readByte();
+        stopCondition(); //End read procedure
+            
+        
+        LATBbits.LATB6 = 1; 
         __delay_ms(100);
-        
-        //Slave read address + data
-        startCondition();
-        writeByte(I2C_SLAVE_ADDR_READ);
-        
+          
         
     }
 
