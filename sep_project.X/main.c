@@ -46,12 +46,14 @@
   Section: Included Files
 */
 #include "mcc_generated_files/system.h"
+#include <libpic30.h>
 
 /**
   Section: Defines
 */
+#define FCY 16000000UL // Clock speed (16 MHz)
 
-#define VREF_MV 3250           // Reference voltage in millivolts (3500 mV)
+#define VREF_MV 3100           // Reference voltage in millivolts (3500 mV)
 #define ADC_MAX_VALUE 1023     // Max ADC value for a 10-bit ADC
 #define KELVIN_OFFSET 27315    // Offset to convert from Kelvin to Celsius (273.15 * 100)
 
@@ -59,22 +61,20 @@
   Section: Function Declarations
 */
 
-void delay_ms(unsigned int milliseconds) {
-    unsigned int i;
-    for (i = 0; i < milliseconds; i++) {
-        __delay32(16000);  // Assuming 16 MHz Fcy (instruction clock)
-    }
-}
-
-
 
 void ADC_Init(void) {
-   ANSB = 0x0003; // Set RB3/AN5 as analog pin
+   
+   ANSBbits.ANSB3 = 1; // Set RB3/AN5 as analog pin (sensor output)
+   //ANSAbits.ANSA0 = 1; // Set RA0/AN0 as analog pin (Vref +)
+   
    AD1CON1 = 0x0070; // SSRC bitfield is set to 0b111 to set internal counter sampling
+   //AD1CON1bits.MODE12 = 1; //12-bit mode
    AD1CHS = 0x0005; // Connect RB3/AN5 as CH0 input
    AD1CSSL = 0; // Disable scan for all channels
    AD1CON3 = 0x0F00; // Sample time = 15Tad, Tad = Tcy
    AD1CON2 = 0x0004; // Set AD1IF after every 2 samples
+   //AD1CON2bits.PVCFG = 0b01; // Use Vref+ as positive voltage reference
+   //AD1CON2bits.NVCFG0 = 1; // Use vref- as negative voltage reference
    AD1CON1bits.ADON = 1; // Turn ADC on
 }
    
@@ -133,7 +133,7 @@ int main(void)
     int adc_out;
     // Configure RB8 as a digital output
     TRISBbits.TRISB6 = 0;   // Set RB8 as output
-    LATBbits.LATB6 = 1;     // Set initial state to low (LED off)
+    LATBbits.LATB6 = 1;     // Set initial state to high (LED on)
     
     while (1)
     {
