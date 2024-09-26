@@ -10,7 +10,8 @@
 - [x] PIC setup on breadboard
 - [x] LED test
 - [x] Temp sensor ADC readout
-- [ ] APDS 9960 I2C config
+- [x] APDS 9960 I2C config
+- [ ] Timer interrupt
 - [ ] SPI initial config
 - [ ] Remove MCC files
 - [ ] Organize Code file structure
@@ -18,6 +19,16 @@
 <!-- TODO ENDS HERE -->
 
 <!-- NEW LOG ENTRY STARTS HERE -->
+
+## 26/09/2024
+
+### Notes:
+- ADC temperature readout inconsistent, using external references
+  or 12-bit does not improve results, seem related to Vdd/Vss connections;
+- I2C implementation is showing progress. Can read fro and write to slaves registers;
+- Now we can begin exploring sensor configurations and starting testing its capabilities.
+
+<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 24/09/2024
 
@@ -37,8 +48,6 @@
   - read byte from slave;
 - Must implement and test voltage divider for ADC Vref;
 - Merge ADC and I2C code then reorganize project library before 1st delivery. 
-
-<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 22/09/2024
 
