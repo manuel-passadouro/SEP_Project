@@ -13,6 +13,7 @@
 - [x] APDS 9960 I2C config
 - [ ] Timer interrupt
 - [ ] SPI initial config
+- [ ] Timer based interrupt
 - [ ] Remove MCC files
 - [ ] Organize Code file structure
 - [ ] Sensor Node schematic
