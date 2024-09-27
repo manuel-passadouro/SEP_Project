@@ -61,13 +61,25 @@
 #define I2C_WRITE 0
 
 #define ID_ADDR 0x94 //Sensro ID (R)
+
+//Config Registers
 #define PIHT_ADDR 0x8B //Proximity interrupt high threshold (R/W)
 #define ENABLE_ADDR 0x80 //Enable Interrupts and states (R/W)
 #define CONTROL_ADDR 0x8F //Gain control (R/W)
+#define GCONFIG1_ADDR 0xA2 //Gesture config 1 (R/W)
+#define GCONFIG3_ADDR 0xAA //Gesture config 3 (R/W)
+#define GCONFIG4_ADDR 0xAB //Gesture config 4 (R/W)
 
+//Data Registers
 #define PDATA_ADDR 0x9C //Proximty Data (R)
 #define CDATAH_ADDR 0x95 //High byte of clear channel data (R)
 #define CDATAL_ADDR 0x94 //Low byte of clear channel data (R)
+#define GSTATUS_ADDR 0xAF //Gesture Status
+#define GFIFO_U_ADDR 0xFC //Gesture FIFO UP
+#define GFIFO_D_ADDR 0xFD //Gesture FIFO DOWN
+#define GFIFO_L_ADDR 0xFE //Gesture FIFO LEFT
+#define GFIFO_R_ADDR 0xFF //Gesture FIFO RIGHT
+
 
 
 
@@ -150,11 +162,17 @@ int main(void)
     uint8_t read_data;
     uint8_t als_high_byte;
     uint8_t als_low_byte;
+    uint8_t test_data;
+    uint8_t gstatus_data;
     uint8_t sensor_gain = 0x03; //2 = 16x ASL gain
-    uint8_t enable_byte = 0x07;
+    uint8_t enable_byte = 0x47; //Enable Gesture, Prox, ALS.
+    uint8_t gconfig1_byte = 0x00; //Enable gesture interrupts and exit mask.
+    uint8_t gconfig4_byte = 0x01; //Enable gesture engine.
+    
     
     
     bool start_flag = 0;
+    bool g_valid = 0;
 
     
     // Configure RB8 as a digital output
@@ -166,7 +184,7 @@ int main(void)
     {
               
         //Get ID from sensor
-        LATBbits.LATB6 = 0;
+        //LATBbits.LATB6 = 0;
         if (!start_flag){
             //Enable proximity and light detection
             startCondition(); //Start write procedure
@@ -182,11 +200,33 @@ int main(void)
             writeByte(sensor_gain);
             stopCondition(); //End write procedure
             
+            /*
+             * //Set ADC time
+            startCondition(); //Start write procedure
+            writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+            writeByte(CONTROL_ADDR); //send register address
+            writeByte(sensor_gain);
+            stopCondition(); //End write procedure
+             */
+            
+            startCondition(); //Start write procedure
+            writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+            writeByte(GCONFIG1_ADDR); //send register address
+            writeByte(gconfig1_byte);
+            stopCondition(); //End write procedure
+            
+            startCondition(); //Start write procedure
+            writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+            writeByte(GCONFIG4_ADDR); //send register address
+            writeByte(gconfig4_byte);
+            stopCondition(); //End write procedure
+            
             start_flag = 1;
         }
         
         
         //Read Ambient light data
+        /*
         startCondition(); //Start write procedure
         writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
         writeByte(CDATAL_ADDR); //send register address
@@ -206,10 +246,57 @@ int main(void)
         writeByte(I2C_SLAVE_ADDR_READ); //send read address
         als_high_byte = readByte();
         stopCondition(); //End read procedure
-            
+        */
         
-        LATBbits.LATB6 = 1; 
-        __delay_ms(100);
+        startCondition(); //Start write procedure
+        writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+        writeByte(GSTATUS_ADDR); //send register address
+        stopCondition(); //End write procedure
+        
+        startCondition(); //Start read procedure
+        writeByte(I2C_SLAVE_ADDR_READ); //send read address
+        gstatus_data = readByte();
+        g_valid = gstatus_data & 1;
+        stopCondition(); //End read procedure
+        
+        if(g_valid){
+            startCondition(); //Start write procedure
+            writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+            writeByte(GFIFO_U_ADDR); //send register address
+            stopCondition(); //End write procedure
+
+            startCondition(); //Start read procedure
+            writeByte(I2C_SLAVE_ADDR_READ); //send read address
+            test_data = readByte();
+            stopCondition(); //End read procedure
+            
+            __delay_ms(10);
+            
+            startCondition(); //Start write procedure
+            writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+            writeByte(GSTATUS_ADDR); //send register address
+            stopCondition(); //End write procedure
+
+            startCondition(); //Start read procedure
+            writeByte(I2C_SLAVE_ADDR_READ); //send read address
+            gstatus_data = readByte();
+            g_valid = gstatus_data & 1;
+            stopCondition(); //End read procedure
+            
+            if(test_data){
+                //LATBbits.LATB6 = 1;
+                LATBbits.LATB6 ^= 1;  // Toggle LATB6
+            }
+            
+            //LATBbits.LATB6 = 1;
+        }
+        else{
+            LATBbits.LATB6 ^= 1;  // Toggle LATB6
+        }
+        
+             
+        //LATBbits.LATB6 = 1; 
+        __delay_ms(10);
           
         
     }
