@@ -21,6 +21,17 @@
 
 <!-- NEW LOG ENTRY STARTS HERE -->
 
+## 27/09/2024
+
+### Notes:
+- Started work on gesture detection, need to better understand sensor behaviour
+  interms of timings and when reading can/should be performed;
+- Priority is to implement a timer interrupt for enter/exit in idle mode;
+- Begin to clean-up the code before it gets out of hand, split the code
+  in .c/.h combinations (ADC, I2C, APPD9960, SPI, etc...).
+
+<!-- NEW LOG ENTRY ENDS HERE -->
+
 ## 26/09/2024
 
 ### Notes:
@@ -28,8 +39,6 @@
   or 12-bit does not improve results, seem related to Vdd/Vss connections;
 - I2C implementation is showing progress. Can read fro and write to slaves registers;
 - Now we can begin exploring sensor configurations and starting testing its capabilities.
-
-<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 24/09/2024
 
