@@ -87,6 +87,43 @@
   Section: Function Declarations
 */
 
+void __attribute__((__interrupt__, auto_psv)) _T1Interrupt(void) {
+    // Limpa a flag de interrupção
+    IFS0bits.T1IF = 0;
+
+    // Código que será executado a cada x segundos
+    
+}
+
+void Timer1_Init(void) {
+
+     // 0 = 0
+    T1CONbits.TON = 1;          // 1- Liga o Timer1
+    // T1CONbits.TSYNC          // 2 - TCS = 0
+    T1CONbits.TCS = 0;          // Usa o clock interno (Fosc/4)
+     // 3 = 0
+    T1CONbits.TCKPS = 0b11;     // 5,4 -  Prescaler 1:256
+    T1CONbits.TGATE = 0;        // 6 - Modo de gate desligado
+     // 7 = 0
+     // T1CONbits.TECS=             // 9,8 - timer type
+     // 12,11,10 = 0
+    T1CONbits.TSIDL = 0;        // 13- Idle
+     // 14 = 0
+    T1CONbits.TON = 0;          // 15- Desliga o Timer1 enquanto configura
+    
+
+
+    PR1 = y;                 // Definir o período do Timer1 (x segundos)
+    TMR1 = 0;                   // Zera o contador do Timer1
+
+    IPC0bits.T1IP = 4;          // Prioridade da interrupção do Timer1
+    IFS0bits.T1IF = 0;          // Limpa a flag de interrupção do Timer1
+    IEC0bits.T1IE = 1;          // Habilita a interrupção do Timer1
+
+    T1CONbits.TON = 1;          // 15- Ligar o Timer1 enquanto configura
+ 
+}
+
 void delay_ms(unsigned int milliseconds) {
     unsigned int i;
     for (i = 0; i < milliseconds; i++) {
