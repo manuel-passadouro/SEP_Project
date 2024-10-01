@@ -1,5 +1,5 @@
-build/default/debug/adc.o: adc.c adc.h mcc_generated_files/system.h
+build/default/debug/adc.o: adc.c adc.h sys_config.h
 
 adc.h:
 
-mcc_generated_files/system.h:
+sys_config.h:

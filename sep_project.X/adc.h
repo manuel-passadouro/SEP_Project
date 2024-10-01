@@ -12,8 +12,7 @@
 extern "C" {
 #endif
     
-//#include <libpic30.h>
-#include "mcc_generated_files/system.h"
+#include "sys_config.h"
     
 #define VREF_MV 3100           // Reference voltage in millivolts (3500 mV)
 #define ADC_MAX_VALUE 1023     // Max ADC value for a 10-bit ADC
