@@ -14,6 +14,8 @@
         <itemPath>mcc_generated_files/system.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
       </logicalFolder>
+      <itemPath>adc.h</itemPath>
+      <itemPath>sys_config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -39,6 +41,8 @@
         <itemPath>mcc_generated_files/system.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
+      <itemPath>adc.c</itemPath>
+      <itemPath>sys_config.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -262,7 +266,7 @@
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
@@ -282,6 +286,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-2aeff"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/mpass/Desktop/SEP_Project/sep_project.X/debug/default/sep_project_ptg"/>
         <property key="programmerToGoImageName" value="sep_project_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -410,6 +416,34 @@
                   value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="3.25"/>
       </Tool>
+      <item path="mcc_generated_files/clock.c" ex="true" overriding="false">
+      </item>
+      <item path="mcc_generated_files/clock.h" ex="true" overriding="false">
+      </item>
+      <item path="mcc_generated_files/interrupt_manager.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="mcc_generated_files/interrupt_manager.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="mcc_generated_files/mcc.c" ex="true" overriding="false">
+      </item>
+      <item path="mcc_generated_files/mcc.h" ex="true" overriding="false">
+      </item>
+      <item path="mcc_generated_files/pin_manager.c" ex="true" overriding="false">
+      </item>
+      <item path="mcc_generated_files/pin_manager.h" ex="true" overriding="false">
+      </item>
+      <item path="mcc_generated_files/system.c" ex="true" overriding="false">
+      </item>
+      <item path="mcc_generated_files/system.h" ex="true" overriding="false">
+      </item>
+      <item path="mcc_generated_files/traps.c" ex="true" overriding="false">
+      </item>
+      <item path="mcc_generated_files/traps.h" ex="true" overriding="false">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

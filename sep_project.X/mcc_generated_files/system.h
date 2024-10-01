@@ -43,11 +43,16 @@
 */
 
 #ifndef _XTAL_FREQ
-#define _XTAL_FREQ  8000000UL
+#define _XTAL_FREQ  16000000UL
+#endif
+
+#ifndef FCY
+#define FCY  16000000UL
 #endif
 
 #include "xc.h"
 #include "stdint.h"
+#include <libpic30.h>
 
 #ifndef SYSTEM_H
 #define	SYSTEM_H
