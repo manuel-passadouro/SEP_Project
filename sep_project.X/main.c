@@ -82,7 +82,7 @@ int main(void)
         adc_temp = adc_temp;
         
         LATBbits.LATB6 ^= 1; //Toggle LED
-        __delay_ms(100);
+        __delay_ms(1000);
         
     }
 

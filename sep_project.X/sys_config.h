@@ -27,7 +27,8 @@ extern "C" {
 #include "stdint.h"
 #include "adc.h"
 
-#define FCY 16000000UL // Clock speed (16 MHz)
+#define FOSC 8000000UL
+#define FCY (FOSC/2) // Clock speed
 
 #include <libpic30.h>
 
