@@ -4,13 +4,13 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000016cc.00 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000016cc.01 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000016cc.02 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000016cc.03 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000016cc.04 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000016cc.05 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000016cc.06 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000019f0.00 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000019f0.01 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000019f0.02 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000019f0.03 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000019f0.04 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000019f0.05 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000019f0.06 \
   -p24FJ256GA702 \
   --mdfp=C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
   -o \
@@ -32,6 +32,8 @@ Command:
   build/default/debug/mcc_generated_files/interrupt_manager.o \
   build/default/debug/mcc_generated_files/system.o \
   build/default/debug/main.o \
+  build/default/debug/i2c.o \
+  build/default/debug/apds9960.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
   --defsym=__MPLAB_DEBUG=1 \
@@ -104,13 +106,13 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x1ac           0x282  (642)
-.text                        0x2ac               0x22a           0x33f  (831)
-.init.delay32                0x4d6                0x1c            0x2a  (42)
-.text                        0x4f2                0x1a            0x27  (39)
-.dinit                       0x50c                0x10            0x18  (24)
-.text                        0x51c                0x12            0x1b  (27)
+.text                        0x2ac               0x134           0x1ce  (462)
+.init.delay32                0x3e0                0x1c            0x2a  (42)
+.text                        0x3fc                0x32            0x4b  (75)
+.dinit                       0x42e                0x10            0x18  (24)
+.text                        0x43e                0x12            0x1b  (27)
 
-                 Total "program" memory used (bytes):          0x645  (1605) <1%
+                 Total "program" memory used (bytes):          0x4f8  (1272) <1%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -154,26 +156,27 @@ External Symbols in Program Memory (by address):
                   0x000266                  __MathError
                   0x000286                  __NVMError
                   0x0002a6                  __DefaultInterrupt
-                  0x0002ac                  _delay_ms
-                  0x0002ca                  _i2c_master_init
-                  0x0002e4                  _startCondition
-                  0x0002f6                  _stopCondition
-                  0x000308                  _writeByte
-                  0x00032a                  _readByte
-                  0x000348                  _main
-                  0x00046a                  _CLOCK_Initialize
-                  0x0004b0                  _PIN_MANAGER_Initialize
-                  0x0004d6                  ___delay32
-                  0x00051c                  _SYSTEM_Initialize
-                  0x000528                  _INTERRUPT_Initialize
+                  0x0002ac                  _i2c_master_init
+                  0x0002c6                  _startCondition
+                  0x0002d8                  _stopCondition
+                  0x0002ea                  _writeByte
+                  0x00030c                  _readByte
+                  0x00032a                  _apds9960_init
+                  0x000350                  _apds9960_get_prox
+                  0x000374                  _CLOCK_Initialize
+                  0x0003ba                  _PIN_MANAGER_Initialize
+                  0x0003e0                  ___delay32
+                  0x000416                  _main
+                  0x00043e                  _SYSTEM_Initialize
+                  0x00044a                  _INTERRUPT_Initialize
                   0x02af00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x00046a                  _CLOCK_Initialize
-                  0x000528                  _INTERRUPT_Initialize
-                  0x0004b0                  _PIN_MANAGER_Initialize
-                  0x00051c                  _SYSTEM_Initialize
+                  0x000374                  _CLOCK_Initialize
+                  0x00044a                  _INTERRUPT_Initialize
+                  0x0003ba                  _PIN_MANAGER_Initialize
+                  0x00043e                  _SYSTEM_Initialize
                   0x000246                  __AddressError
                   0x0002a6                  __DefaultInterrupt
                   0x02af00                  __FSEC.sec
@@ -181,18 +184,19 @@ External Symbols in Program Memory (by name):
                   0x000286                  __NVMError
                   0x000204                  __OscillatorFail
                   0x000224                  __StackError
-                  0x0004d6                  ___delay32
+                  0x0003e0                  ___delay32
                   0x000152                  __data_init
                   0x000152                  __data_init_da
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x0002ac                  _delay_ms
-                  0x0002ca                  _i2c_master_init
-                  0x000348                  _main
-                  0x00032a                  _readByte
-                  0x0002e4                  _startCondition
-                  0x0002f6                  _stopCondition
-                  0x000308                  _writeByte
+                  0x000350                  _apds9960_get_prox
+                  0x00032a                  _apds9960_init
+                  0x0002ac                  _i2c_master_init
+                  0x000416                  _main
+                  0x00030c                  _readByte
+                  0x0002c6                  _startCondition
+                  0x0002d8                  _stopCondition
+                  0x0002ea                  _writeByte
 
 Memory Configuration
 
@@ -256,6 +260,8 @@ LOAD build/default/debug/mcc_generated_files/traps.o
 LOAD build/default/debug/mcc_generated_files/interrupt_manager.o
 LOAD build/default/debug/mcc_generated_files/system.o
 LOAD build/default/debug/main.o
+LOAD build/default/debug/i2c.o
+LOAD build/default/debug/apds9960.o
                     0x0001                  __MPLAB_BUILD = 0x1
                     0x0001                  __MPLAB_DEBUG = 0x1
                     0x0001                  __DEBUG = 0x1
@@ -346,17 +352,19 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x1d5c
+.debug_info       0x000000       0x20dc
  *(.debug_info)
  .debug_info      0x000000        0x373 build/default/debug/mcc_generated_files/clock.o
  .debug_info      0x000373        0x308 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_info      0x00067b        0x42e build/default/debug/mcc_generated_files/traps.o
  .debug_info      0x000aa9        0x169 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_info      0x000c12        0x335 build/default/debug/mcc_generated_files/system.o
- .debug_info      0x000f47        0xe15 build/default/debug/main.o
+ .debug_info      0x000f47        0x4b8 build/default/debug/main.o
+ .debug_info      0x0013ff        0xb3b build/default/debug/i2c.o
+ .debug_info      0x001f3a        0x1a2 build/default/debug/apds9960.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x3f4
+.debug_abbrev     0x000000        0x4b0
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x6a build/default/debug/mcc_generated_files/clock.o
  .debug_abbrev    0x00006a         0x59 build/default/debug/mcc_generated_files/pin_manager.o
@@ -364,9 +372,11 @@ __FDEVOPT1
  .debug_abbrev    0x0000c4        0x100 build/default/debug/mcc_generated_files/traps.o
  .debug_abbrev    0x0001c4         0x34 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_abbrev    0x0001f8         0xb4 build/default/debug/mcc_generated_files/system.o
- .debug_abbrev    0x0002ac        0x148 build/default/debug/main.o
+ .debug_abbrev    0x0002ac         0x9d build/default/debug/main.o
+ .debug_abbrev    0x000349        0x104 build/default/debug/i2c.o
+ .debug_abbrev    0x00044d         0x63 build/default/debug/apds9960.o
 
-.debug_line       0x000000        0x6a4
+.debug_line       0x000000        0x800
  *(.debug_line)
  .debug_line      0x000000        0x12b build/default/debug/mcc_generated_files/clock.o
  .debug_line      0x00012b        0x12b build/default/debug/mcc_generated_files/pin_manager.o
@@ -374,23 +384,28 @@ __FDEVOPT1
  .debug_line      0x000270        0x150 build/default/debug/mcc_generated_files/traps.o
  .debug_line      0x0003c0         0x55 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_line      0x000415        0x11e build/default/debug/mcc_generated_files/system.o
- .debug_line      0x000533        0x171 build/default/debug/main.o
+ .debug_line      0x000533        0x10e build/default/debug/main.o
+ .debug_line      0x000641        0x120 build/default/debug/i2c.o
+ .debug_line      0x000761         0x9f build/default/debug/apds9960.o
 
-.debug_frame      0x000000        0x300
+.debug_frame      0x000000        0x342
  *(.debug_frame)
  .debug_frame     0x000000         0x2e build/default/debug/mcc_generated_files/clock.o
  .debug_frame     0x00002e         0x2e build/default/debug/mcc_generated_files/pin_manager.o
  .debug_frame     0x00005c        0x17e build/default/debug/mcc_generated_files/traps.o
  .debug_frame     0x0001da         0x2e build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_frame     0x000208         0x2e build/default/debug/mcc_generated_files/system.o
- .debug_frame     0x000236         0xca build/default/debug/main.o
+ .debug_frame     0x000236         0x2e build/default/debug/main.o
+ .debug_frame     0x000264         0x96 build/default/debug/i2c.o
+ .debug_frame     0x0002fa         0x48 build/default/debug/apds9960.o
 
-.debug_str        0x000000         0x75
+.debug_str        0x000000         0x7f
  *(.debug_str)
  .debug_str       0x000000         0x12 build/default/debug/mcc_generated_files/clock.o
  .debug_str       0x000012         0x18 build/default/debug/mcc_generated_files/traps.o
  .debug_str       0x00002a          0xc build/default/debug/mcc_generated_files/system.o
- .debug_str       0x000036         0x3f build/default/debug/main.o
+ .debug_str       0x000036         0x13 build/default/debug/main.o
+ .debug_str       0x000049         0x36 build/default/debug/i2c.o
 
 .debug_loc
  *(.debug_loc)
@@ -399,7 +414,7 @@ __FDEVOPT1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x1a0
+                  0x000000        0x1df
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x27 build/default/debug/mcc_generated_files/clock.o
@@ -412,12 +427,16 @@ __FDEVOPT1
  .debug_pubnames
                   0x0000fc         0x28 build/default/debug/mcc_generated_files/system.o
  .debug_pubnames
-                  0x000124         0x7c build/default/debug/main.o
+                  0x000124         0x1b build/default/debug/main.o
+ .debug_pubnames
+                  0x00013f         0x66 build/default/debug/i2c.o
+ .debug_pubnames
+                  0x0001a5         0x3a build/default/debug/apds9960.o
 
 .debug_ranges
  *(.debug_ranges)
 
-.debug_aranges    0x000000         0x90
+.debug_aranges    0x000000         0xc0
  *(.debug_aranges)
  .debug_aranges
                   0x000000         0x18 build/default/debug/mcc_generated_files/clock.o
@@ -431,6 +450,10 @@ __FDEVOPT1
                   0x000060         0x18 build/default/debug/mcc_generated_files/system.o
  .debug_aranges
                   0x000078         0x18 build/default/debug/main.o
+ .debug_aranges
+                  0x000090         0x18 build/default/debug/i2c.o
+ .debug_aranges
+                  0x0000a8         0x18 build/default/debug/apds9960.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -1779,42 +1802,50 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000090        0x1fa
+                  0x0000c0        0x262
  .debug_pubtypes
-                  0x000090         0x2b build/default/debug/mcc_generated_files/clock.o
+                  0x0000c0         0x2b build/default/debug/mcc_generated_files/clock.o
  .debug_pubtypes
-                  0x0000bb         0x1f build/default/debug/mcc_generated_files/pin_manager.o
+                  0x0000eb         0x1f build/default/debug/mcc_generated_files/pin_manager.o
  .debug_pubtypes
-                  0x0000da         0x71 build/default/debug/mcc_generated_files/traps.o
+                  0x00010a         0x71 build/default/debug/mcc_generated_files/traps.o
  .debug_pubtypes
-                  0x00014b         0x12 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x00017b         0x12 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_pubtypes
-                  0x00015d         0x42 build/default/debug/mcc_generated_files/system.o
+                  0x00018d         0x42 build/default/debug/mcc_generated_files/system.o
  .debug_pubtypes
-                  0x00019f         0xeb build/default/debug/main.o
+                  0x0001cf         0x67 build/default/debug/main.o
+ .debug_pubtypes
+                  0x000236         0xce build/default/debug/i2c.o
+ .debug_pubtypes
+                  0x000304         0x1e build/default/debug/apds9960.o
 
 __c30_signature
-                  0x00028a         0x3c
+                  0x000322         0x48
  __c30_signature
-                  0x00028a          0x6 build/default/debug/mcc_generated_files/clock.o
+                  0x000322          0x6 build/default/debug/mcc_generated_files/clock.o
  __c30_signature
-                  0x000290          0x6 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x000328          0x6 build/default/debug/mcc_generated_files/pin_manager.o
  __c30_signature
-                  0x000296          0x6 build/default/debug/mcc_generated_files/mcc.o
+                  0x00032e          0x6 build/default/debug/mcc_generated_files/mcc.o
  __c30_signature
-                  0x00029c          0x6 build/default/debug/mcc_generated_files/traps.o
+                  0x000334          0x6 build/default/debug/mcc_generated_files/traps.o
  __c30_signature
-                  0x0002a2          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x00033a          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
  __c30_signature
-                  0x0002a8          0x6 build/default/debug/mcc_generated_files/system.o
+                  0x000340          0x6 build/default/debug/mcc_generated_files/system.o
  __c30_signature
-                  0x0002ae          0x6 build/default/debug/main.o
+                  0x000346          0x6 build/default/debug/main.o
  __c30_signature
-                  0x0002b4          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
+                  0x00034c          0x6 build/default/debug/i2c.o
  __c30_signature
-                  0x0002ba          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
+                  0x000352          0x6 build/default/debug/apds9960.o
  __c30_signature
-                  0x0002c0          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
+                  0x000358          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
+ __c30_signature
+                  0x00035e          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
+ __c30_signature
+                  0x000364          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
 
 .ndata              0x0828          0x2
  .ndata             0x0828          0x2 build/default/debug/mcc_generated_files/traps.o
@@ -1872,33 +1903,36 @@ __c30_signature
 .config_BSLIM     0x02af10          0x2
  .config_BSLIM    0x02af10          0x2 build/default/debug/mcc_generated_files/system.o
 
-.text             0x0002ac        0x22a
- .text            0x0002ac        0x1be build/default/debug/main.o
-                  0x0002ac                  _delay_ms
-                  0x0002ca                  _i2c_master_init
-                  0x0002e4                  _startCondition
-                  0x0002f6                  _stopCondition
-                  0x000308                  _writeByte
-                  0x00032a                  _readByte
-                  0x000348                  _main
- .text            0x00046a         0x46 build/default/debug/mcc_generated_files/clock.o
-                  0x00046a                  _CLOCK_Initialize
- .text            0x0004b0         0x26 build/default/debug/mcc_generated_files/pin_manager.o
-                  0x0004b0                  _PIN_MANAGER_Initialize
+.text             0x0002ac        0x134
+ .text            0x0002ac         0x7e build/default/debug/i2c.o
+                  0x0002ac                  _i2c_master_init
+                  0x0002c6                  _startCondition
+                  0x0002d8                  _stopCondition
+                  0x0002ea                  _writeByte
+                  0x00030c                  _readByte
+ .text            0x00032a         0x4a build/default/debug/apds9960.o
+                  0x00032a                  _apds9960_init
+                  0x000350                  _apds9960_get_prox
+ .text            0x000374         0x46 build/default/debug/mcc_generated_files/clock.o
+                  0x000374                  _CLOCK_Initialize
+ .text            0x0003ba         0x26 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x0003ba                  _PIN_MANAGER_Initialize
 
-.init.delay32     0x0004d6         0x1c
- .init.delay32    0x0004d6         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
-                  0x0004d6                  ___delay32
+.init.delay32     0x0003e0         0x1c
+ .init.delay32    0x0003e0         0x1c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
+                  0x0003e0                  ___delay32
 
-.text             0x0004f2         0x1a
- .text            0x0004f2         0x1a build/default/debug/mcc_generated_files/traps.o
-                  0x0004f2                  _TRAPS_halt_on_error
+.text             0x0003fc         0x32
+ .text            0x0003fc         0x1a build/default/debug/mcc_generated_files/traps.o
+                  0x0003fc                  _TRAPS_halt_on_error
+ .text            0x000416         0x18 build/default/debug/main.o
+                  0x000416                  _main
 
-.dinit            0x00050c         0x10
- .dinit           0x00050c         0x10 data_init
+.dinit            0x00042e         0x10
+ .dinit           0x00042e         0x10 data_init
 
-.text             0x00051c         0x12
- .text            0x00051c          0xc build/default/debug/mcc_generated_files/system.o
-                  0x00051c                  _SYSTEM_Initialize
- .text            0x000528          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
-                  0x000528                  _INTERRUPT_Initialize
+.text             0x00043e         0x12
+ .text            0x00043e          0xc build/default/debug/mcc_generated_files/system.o
+                  0x00043e                  _SYSTEM_Initialize
+ .text            0x00044a          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x00044a                  _INTERRUPT_Initialize
