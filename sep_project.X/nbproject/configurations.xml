@@ -17,6 +17,7 @@
       <itemPath>adc.h</itemPath>
       <itemPath>sys_config.h</itemPath>
       <itemPath>spi.h</itemPath>
+      <itemPath>timer.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -45,6 +46,7 @@
       <itemPath>adc.c</itemPath>
       <itemPath>sys_config.c</itemPath>
       <itemPath>spi.c</itemPath>
+      <itemPath>timer.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -288,6 +290,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-2aeff"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/mpass/Desktop/SEP_Project/sep_project.X/debug/default/sep_project_ptg"/>
         <property key="programmerToGoImageName" value="sep_project_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

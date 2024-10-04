@@ -20,7 +20,7 @@
 #pragma config AIVTDIS = OFF            // Alternate Interrupt Vector Table bit (Disabled AIVT)
 
 // FBSLIM
-#pragma config BSLIM = 8191           // Boot Segment Flash Page Address Limit bits (Enter Hexadecimal value)
+#pragma config BSLIM = 8191             // Boot Segment Flash Page Address Limit bits (Enter Hexadecimal value)
 
 // FOSCSEL
 #pragma config FNOSC = PRIPLL           // Oscillator Source Selection (Primary Oscillator with PLL module (XT + PLL, HS + PLL, EC + PLL))

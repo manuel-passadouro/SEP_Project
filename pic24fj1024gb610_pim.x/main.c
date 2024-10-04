@@ -68,7 +68,7 @@ void spi_init_master(void){
     SPI1CON1bits.MSTEN = 1; // Set for master mode
     SPI1CON2 = 0; // Fully disable frame mode
     
-    // Configure pins PPS and disable analog functionality
+    //Configure pins PPS and disable analog functionality
     
     //Disable analog functionality
     ANSGbits.ANSELG6 = 0; //Disable analog on RG6
@@ -171,7 +171,8 @@ int main ( void )
 //                        time.second, 
 //                        adcResult
 //                      );
-                printf("DataIn: 0X%x\r", spi_data_in);
+                printf("DataOut: 0X%x   DataIn: 0X%x\r\n", spi_data_out, spi_data_in);
+                //printf("DataIn: 0X%x\r", spi_data_in);
                 
                 lastAdcResult = adcResult;
                 memcpy(&lastTime, &time, sizeof(time));

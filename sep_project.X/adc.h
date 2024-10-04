@@ -20,9 +20,9 @@ extern "C" {
     
 //////////////////////////////// Prototypes ////////////////////////////////////
     
-void ADC_Init(void);
-int ADC_Read(void);
-float adcValueToCelsius(float);
+void adc_init(void);
+uint8_t adc_read(void);
+float adc_convert_temp(float);
 
 
 #ifdef	__cplusplus

@@ -44,6 +44,9 @@
 
 
 #include "sys_config.h"
+#include "adc.h"
+#include "timer.h"
+#include "spi.h"
 
 /**
   Section: Defines
@@ -55,35 +58,66 @@
 /**
   Section: Function Declarations
 */
+void test_sleep(){
+    
+    uint8_t i = 0;
+    
+    Sleep();
+    while(i < 5){
+        LATBbits.LATB6 ^= 1;
+        __delay_ms(200);
+        i++;
+    }
+    i=0;
+    while(i < 5){
+        LATBbits.LATB6 ^= 1;
+        __delay_ms(500);
+        i++;
+    }   
+}
+
+void led_init(){
+    TRISBbits.TRISB6 = 0;   // Set RB6 as digital output
+    LATBbits.LATB6 = 1;     // Set initial state to high (LED on)
+}
 
 
 
 /*
                          Main application
  */
-int main(void)
-{
-    // initialize the device
-    ADC_Init();  // Initialize the ADC
-
-    float adc_temp; // Variable to store the ADC conversion results
-    int adc_out;
-    // Configure RB6 as a digital output
-    TRISBbits.TRISB6 = 0;   // Set RB6 as output
-    LATBbits.LATB6 = 1;     // Set initial state to high (LED on)
+int main(void){
     
+    float adc_temp; // Variable to store the ADC conversion results
+    uint8_t adc_out;
+    uint8_t spi_data_out = 0x00;
+    uint8_t spi_data_in;
+    
+    //Device Initialization
+    led_init();
+    timer1_init();
+    spi_init_slave();
+    adc_init();     
+     
     while (1)
     {
         // Add your application code
         
+        spi_data_in = spi_write_byte(spi_data_out);
+        //__delay_ms(2000);
+        if(timer1_flag){
+            spi_data_out++;
+            timer1_flag = 0; //Clear Timer 1 Flag
+        }
+        
         //ADC readout           
-        adc_out = ADC_Read();
-        adc_temp = adcValueToCelsius((float)adc_out);
-        adc_temp = adc_temp;
+        //adc_out = adc_read();
+        //adc_temp = adc_temp_convert((float)adc_out);
+        //adc_temp = adc_temp;
         
-        LATBbits.LATB6 ^= 1; //Toggle LED
-        __delay_ms(1000);
-        
+        //test_sleep();
+       
+        CLEAR_WDT; //Watchdog reset  
     }
 
     return 1;

@@ -13,9 +13,16 @@ extern "C" {
 #endif
 
 #include "sys_config.h"
+    
+//SPI slave pins
+//MOSI pin 22 RP/RB11
+//MISO pin 23 RP/RB12
+//CLK pin 24 RP/RB13
+//CS pin 25 RP/RB14
+       
 
-
-
+void spi_init_slave(void);
+uint8_t spi_write_byte(uint8_t) ;
 
 
 #ifdef	__cplusplus
