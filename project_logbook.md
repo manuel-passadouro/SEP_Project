@@ -13,13 +13,25 @@
 - [x] APDS 9960 I2C config
 - [ ] Timer interrupt
 - [ ] SPI initial config
-- [ ] Timer based interrupt
-- [ ] Remove MCC files
-- [ ] Organize Code file structure
+- [x] Remove MCC files
+- [x] Organize Code file structure
 - [ ] Sensor Node schematic
 <!-- TODO ENDS HERE -->
 
 <!-- NEW LOG ENTRY STARTS HERE -->
+
+## 01/10/2024
+
+### Notes:
+- Organized code in .c/.h files, excluded MCC generated code
+  from project;
+- Started SPI implementation on Devboard, need to test master config and
+  view output on oscilloscope;
+- Need to implement timer interrupt and idle/sleep mode;
+- Must write proper I2C drivers for 1st delivery;
+- Idea: test WDT by making a function that gets randomly stuck.
+
+<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 27/09/2024
 
@@ -29,8 +41,6 @@
 - Priority is to implement a timer interrupt for enter/exit in idle mode;
 - Begin to clean-up the code before it gets out of hand, split the code
   in .c/.h combinations (ADC, I2C, APPD9960, SPI, etc...).
-
-<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 26/09/2024
 
