@@ -11,14 +11,33 @@
 - [x] LED test
 - [x] Temp sensor ADC readout
 - [x] APDS 9960 I2C config
-- [ ] Timer interrupt
-- [ ] SPI initial config
+- [x] Timer interrupt
+- [x] SPI initial config
 - [x] Remove MCC files
 - [x] Organize Code file structure
 - [ ] Sensor Node schematic
 <!-- TODO ENDS HERE -->
 
 <!-- NEW LOG ENTRY STARTS HERE -->
+
+## 03/10/2024
+
+### Notes:
+- Added timer and timer interrupt, working fine;
+- Clock source for timers must be chosen carefully
+  due to sleep mode and overflow;
+- Watchdog timer needs to be better understood before implmentation;
+- SPI is working well after properly configuring PPS, next
+  step is to implement interrupts;
+- No registers for SPI prescaller, what baudrate to use? ;
+- FOSC had to be defined in sys_config, delays now working
+  in expected way, actual FCY is 4MHz (FOSC/2);
+- Sleep mode appers to be working and interrupts trigger wake-up,
+  but control register does not inidicate sleep? ;
+- Development is going at a good pace, can start to
+  draw out software flowchart.
+
+<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 01/10/2024
 
@@ -30,8 +49,6 @@
 - Need to implement timer interrupt and idle/sleep mode;
 - Must write proper I2C drivers for 1st delivery;
 - Idea: test WDT by making a function that gets randomly stuck.
-
-<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 27/09/2024
 
