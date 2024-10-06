@@ -47,6 +47,8 @@
 #include "adc.h"
 #include "timer.h"
 #include "spi.h"
+#include "i2c.h"
+#include "apds9960.h"
 
 /**
   Section: Defines
@@ -97,7 +99,9 @@ int main(void){
     led_init();
     timer1_init();
     spi_init_slave();
-    adc_init();     
+    adc_init();
+    i2c_master_init();
+    apds9960_init();
      
     while (1)
     {

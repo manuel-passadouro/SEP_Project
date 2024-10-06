@@ -21,7 +21,7 @@ void spi_init_slave(){
     SPI1CON1bits.MSTEN = 0;  // Set for slave mode
     SPI1CON1bits.SSEN = 1;   // Slave Select enable
     SPI1CON2 = 0;            // Fully disable frame mode
-    SPI1BUFL = 0;            //7Clear Recieve buffer
+    SPI1BUFL = 0;            //Clear Recieve buffer
     
     //Configure pins PPS and disable analog functionality
     

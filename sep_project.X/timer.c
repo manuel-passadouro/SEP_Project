@@ -18,7 +18,7 @@ void __attribute__((__interrupt__, auto_psv)) _T1Interrupt(void) {
 void timer1_init(void) {
     
     TMR1 = 0;                   //Clear Timer 1
-    PR1 = 605;                  //Timer period (1210 = 10s)
+    PR1 = 120;                  //Timer period (1210 = 10s)
         
     T1CONbits.TON = 0;          // Disable timer for config
     T1CONbits.TCS = 1;          // 0 = Use FOSC/2, 1 = Use other clock

@@ -108,7 +108,7 @@ int main ( void )
     uint16_t adcResult;
     uint16_t lastAdcResult = 0xFFFF;
     
-    uint8_t spi_data_out = 0xBB;
+    uint8_t spi_data_out = 0x76;
     uint8_t spi_data_in;
     
     /* Call the System Initialize routine*/
@@ -149,7 +149,6 @@ int main ( void )
         adcResult = ADC_Read10bit( ADC_CHANNEL_POTENTIOMETER );
 
         RTCC_TimeGet( &time );
-        
         LATGbits.LATG9 = 0;
         spi_data_in = spi_write_byte(spi_data_out);
         LATGbits.LATG9 = 1;
