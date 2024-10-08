@@ -36,11 +36,13 @@ limitations under the License.
 // *****************************************************************************
 extern void SYS_Initialize ( void ) ;
 static void BlinkAliveEventHandler( void );
+static void SpiSendEventHandler( void );
 static void ScreenUpdateEventHandler( void );
 
 static RTCC_DATETIME time;
 static RTCC_DATETIME lastTime = {0};
 static volatile bool toggleBlinkAlive = false;
+static volatile bool send_spi_flag = false;
 static volatile bool allowScreenUpdate = true; 
 
 #define MEMCMP_VALUES_IDENTICAL 0
@@ -109,7 +111,7 @@ int main ( void )
     uint16_t lastAdcResult = 0xFFFF;
     
     uint8_t spi_data_out = 0x76;
-    uint8_t spi_data_in;
+    uint8_t spi_data_in = 0x00;
     
     /* Call the System Initialize routine*/
     SYS_Initialize ( );
@@ -126,6 +128,7 @@ int main ( void )
     /* Get a timer event once every 100ms for the blink alive. */
     TIMER_SetConfiguration ( TIMER_CONFIGURATION_1MS );
     TIMER_RequestTick( &BlinkAliveEventHandler, 500 );
+    TIMER_RequestTick( &SpiSendEventHandler, 100 );
     TIMER_RequestTick( &ScreenUpdateEventHandler, 170 );
     
     /* The TIMER_1MS configuration should come before the RTCC initialization as
@@ -181,7 +184,19 @@ int main ( void )
         if(toggleBlinkAlive == true)
         {
             LED_Toggle( LED_BLINK_ALIVE );
+            spi_data_out++;
             toggleBlinkAlive = false;
+        }
+        
+        if(send_spi_flag == true)
+        {
+            //spi_data_out++;
+            //Send data via SPI
+            LATGbits.LATG9 = 0;
+            spi_data_in = spi_write_byte(spi_data_out);
+            LATGbits.LATG9 = 1;
+            
+            send_spi_flag = false;
         }
         
         /* To determine how the LED and Buttons are mapped to the actual board
@@ -200,6 +215,11 @@ int main ( void )
 static void BlinkAliveEventHandler(void)
 {    
     toggleBlinkAlive = true;
+}
+
+static void SpiSendEventHandler(void)
+{    
+   send_spi_flag = true;
 }
 
 static void ScreenUpdateEventHandler(void)
