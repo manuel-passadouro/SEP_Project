@@ -15,8 +15,9 @@
  */
 void adc_init(void) {
    
+   AD1CON5bits.BGREQ = 1;       // Enable Band Gap Voltage Reference.
+   ANCFGbits.VBGEN3 = 1;
    ANSBbits.ANSB3 = 1;          // Set RB3/AN5 as analog pin (sensor output)
-   //ANSAbits.ANSA0 = 1;        // Set RA0/AN0 as analog pin (Vref +)
    
    AD1CON1 = 0x0070;            // SSRC bitfield is set to 0b111 to set internal counter sampling
    //AD1CON1bits.MODE12 = 1;    //12-bit mode

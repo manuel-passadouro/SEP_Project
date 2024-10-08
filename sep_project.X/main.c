@@ -91,6 +91,7 @@ void led_init(){
 int main(void){
     
     float adc_temp;
+    float dummy;
     uint16_t adc_out;
     uint8_t spi_data_out = 0x00;
     uint8_t spi_data_in;
@@ -115,14 +116,10 @@ int main(void){
             LATBbits.LATB6 ^= 1;
             adc_out = adc_read();
             adc_temp = adc_temp_convert((float)adc_out);
-            prox_data = apds9960_get_prox();
+            dummy = adc_temp;
+           // prox_data = apds9960_get_prox();
             timer1_flag = 0; //Clear Timer 1 Flag     
         }
-        
-        //ADC readout           
-        //adc_out = adc_read();
-        //adc_temp = adc_temp_convert((float)adc_out);
-        //adc_temp = adc_temp;
         
         //test_sleep();
        
