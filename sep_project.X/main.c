@@ -90,10 +90,11 @@ void led_init(){
  */
 int main(void){
     
-    float adc_temp; // Variable to store the ADC conversion results
-    uint8_t adc_out;
+    float adc_temp;
+    uint16_t adc_out;
     uint8_t spi_data_out = 0x00;
     uint8_t spi_data_in;
+    uint8_t prox_data;
     
     //Device Initialization
     led_init();
@@ -107,11 +108,15 @@ int main(void){
     {
         // Add your application code
         
-        spi_data_in = spi_write_byte(spi_data_out);
-        //__delay_ms(2000);
+        //spi_data_in = spi_write_byte(spi_data_out);
+        
         if(timer1_flag){
-            spi_data_out++;
-            timer1_flag = 0; //Clear Timer 1 Flag
+            //spi_data_out++;
+            LATBbits.LATB6 ^= 1;
+            adc_out = adc_read();
+            adc_temp = adc_temp_convert((float)adc_out);
+            prox_data = apds9960_get_prox();
+            timer1_flag = 0; //Clear Timer 1 Flag     
         }
         
         //ADC readout           

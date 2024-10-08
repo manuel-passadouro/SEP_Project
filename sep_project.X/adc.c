@@ -37,9 +37,9 @@ void adc_init(void) {
  * @param[in] Void
  * @return Integer with 10 ADC result (2 sample avarage).
  */
-uint8_t adc_read(void) {
-    uint8_t adcValue;
-    IFS0bits.AD1IF = 0;             // Clear ADC interrupt flaggthy
+uint16_t adc_read(void) {
+    uint16_t adcValue;
+    IFS0bits.AD1IF = 0;             // Clear ADC interrupt flag
     AD1CON1bits.ASAM = 1;           // Auto start sampling for 31Tad
     while (!IFS0bits.AD1IF);        // Wait until the two conversions were performed
     AD1CON1bits.ASAM = 0;           // Stop sample/convert

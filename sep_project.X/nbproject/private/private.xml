@@ -5,6 +5,10 @@
         <group>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/spi.c</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/main.c</file>
+            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/adc.h</file>
+            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/adc.c</file>
+            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/timer.c</file>
+            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/apds9960.c</file>
         </group>
     </open-files>
 </project-private>

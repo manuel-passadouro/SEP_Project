@@ -21,7 +21,7 @@ extern "C" {
 //////////////////////////////// Prototypes ////////////////////////////////////
     
 void adc_init(void);
-uint8_t adc_read(void);
+uint16_t adc_read(void);
 float adc_convert_temp(float);
 
 
