@@ -109,7 +109,6 @@ int main(void){
     {
         // Add your application code
         
-        spi_data_in = spi_write_byte(spi_data_out);
         
         if(timer1_flag){
             spi_data_out++;

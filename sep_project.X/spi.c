@@ -7,11 +7,25 @@
 
 #include "spi.h"
 
+volatile int spi_data_out = 0x01;
+volatile int spi_data_in = 0x00;
+
+// SPI1 ISR example
+void __attribute__((__interrupt__, auto_psv)) _SPI1Interrupt(void) {
+    // Clear the interrupt flag
+    IFS0bits.SPI1IF = 0;
+
+    // Read the received data
+    spi_data_in = spi_write_byte(spi_data_out);
+
+}
+
 void spi_init_slave(){
     
     SPI1CON1bits.SPIEN = 0;  // Disable the SPI peripheral during configuration
     IFS0bits.SPI1IF = 0;     // Clear the SPI peripheral interrupt flag
-    IEC0bits.SPI1IE = 0;     // Disable the SPI peripheral interrupt flag
+    IEC0bits.SPI1IE = 1;     // Enable the SPI peripheral interrupt flag
+    IPC2bits.SPI1IP = 4; // Set SPI interrupt priority (1-7, 7 being the highest)
     SPI1CON1bits.DISSCK = 0; // Enable generation of SCK signal
     SPI1CON1bits.DISSDO = 0; // Enable generation of SDO signal
     SPI1CON1bits.MODE16 = 0; // Set 8-bit mode

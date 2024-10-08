@@ -128,7 +128,7 @@ int main ( void )
     /* Get a timer event once every 100ms for the blink alive. */
     TIMER_SetConfiguration ( TIMER_CONFIGURATION_1MS );
     TIMER_RequestTick( &BlinkAliveEventHandler, 500 );
-    TIMER_RequestTick( &SpiSendEventHandler, 100 );
+    TIMER_RequestTick( &SpiSendEventHandler, 1000 );
     TIMER_RequestTick( &ScreenUpdateEventHandler, 170 );
     
     /* The TIMER_1MS configuration should come before the RTCC initialization as
@@ -184,13 +184,12 @@ int main ( void )
         if(toggleBlinkAlive == true)
         {
             LED_Toggle( LED_BLINK_ALIVE );
-            spi_data_out++;
             toggleBlinkAlive = false;
         }
         
         if(send_spi_flag == true)
         {
-            //spi_data_out++;
+            spi_data_out++;
             //Send data via SPI
             LATGbits.LATG9 = 0;
             spi_data_in = spi_write_byte(spi_data_out);

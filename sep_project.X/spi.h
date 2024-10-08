@@ -19,7 +19,9 @@ extern "C" {
 //MISO pin 23 RP/RB12
 //CLK pin 24 RP/RB13
 //CS pin 25 RP/RB14
-       
+
+extern volatile int spi_data_out;
+extern volatile int spi_data_in;
 
 void spi_init_slave(void);
 uint8_t spi_write_byte(uint8_t) ;
