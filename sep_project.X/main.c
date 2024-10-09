@@ -93,30 +93,33 @@ int main(void){
     float adc_temp;
     float dummy;
     uint16_t adc_out;
-    uint8_t spi_data_out = 0x01;
-    uint8_t spi_data_in;
+  //  uint8_t spi_data_out = 0x00;
+   // uint8_t spi_data_in;
     uint8_t prox_data;
     
     //Device Initialization
     led_init();
-    timer1_init();
     spi_init_slave();
+    timer1_init();
     adc_init();
     i2c_master_init();
     apds9960_init();
-     
+    
+    
     while (1)
     {
         // Add your application code
         
+        //spi_data_in = spi_write_byte(spi_data_out);
         
         if(timer1_flag){
-            spi_data_out++;
+            //spi_data_out++;
             //spi_data_in = spi_write_byte(spi_data_out);
             LATBbits.LATB6 ^= 1;
             adc_out = adc_read();
             adc_temp = adc_temp_convert(adc_out);
-            //prox_data = apds9960_get_prox();
+            prox_data = apds9960_get_prox();
+            spi_data_out = prox_data;
             timer1_flag = 0; //Clear Timer 1 Flag     
         }
         

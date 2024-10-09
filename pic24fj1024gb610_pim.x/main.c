@@ -66,7 +66,7 @@ void spi_init_master(void){
     SPI1CON1bits.SMP = 0; // Input data sampled at mid-bit
     SPI1CON1bits.CKP = 0; // Idle is SCK low
     SPI1CON1bits.CKE = 1; // Data changes on SCK falling edge
-    SPI1BRGL = 39; // Baud rate divisor FCY/100k
+    SPI1BRGL = 1; // Baud rate divisor FCY/100k
     SPI1CON1bits.MSTEN = 1; // Set for master mode
     SPI1CON2 = 0; // Fully disable frame mode
     
@@ -152,9 +152,9 @@ int main ( void )
         adcResult = ADC_Read10bit( ADC_CHANNEL_POTENTIOMETER );
 
         RTCC_TimeGet( &time );
-        LATGbits.LATG9 = 0;
-        spi_data_in = spi_write_byte(spi_data_out);
-        LATGbits.LATG9 = 1;
+        //LATGbits.LATG9 = 0;
+        //spi_data_in = spi_write_byte(spi_data_out);
+        //LATGbits.LATG9 = 1;
        
         //Only print if the ADC value or time has changed since the last time 
         // around the loop and we haven't updated recently too recently.
@@ -173,7 +173,8 @@ int main ( void )
 //                        time.second, 
 //                        adcResult
 //                      );
-                printf("DataOut: 0X%x   DataIn: 0X%x\r\n", spi_data_out, spi_data_in);
+                //printf("\r\n\r\n"); //Clear screen
+                printf("DataOut: 0X%02x   DataIn: 0X%02x\r\n", spi_data_out, spi_data_in);
                 //printf("DataIn: 0X%x\r", spi_data_in);
                 
                 lastAdcResult = adcResult;

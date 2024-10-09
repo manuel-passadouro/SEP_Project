@@ -7,15 +7,18 @@
 
 #include "spi.h"
 
-volatile int spi_data_out = 0x01;
+volatile int spi_data_out = 0x00;
 volatile int spi_data_in = 0x00;
 
 // SPI1 ISR example
-void __attribute__((__interrupt__, auto_psv)) _SPI1Interrupt(void) {
+void __attribute__((__interrupt__, auto_psv)) _SPI1RXInterrupt(void) {
     // Clear the interrupt flag
-    IFS0bits.SPI1IF = 0;
+    IFS3bits.SPI1RXIF = 0;
+
+    //IFS0bits.SPI1IF = 0;
 
     // Read the received data
+    //spi_data_out++;
     spi_data_in = spi_write_byte(spi_data_out);
 
 }
@@ -23,9 +26,14 @@ void __attribute__((__interrupt__, auto_psv)) _SPI1Interrupt(void) {
 void spi_init_slave(){
     
     SPI1CON1bits.SPIEN = 0;  // Disable the SPI peripheral during configuration
-    IFS0bits.SPI1IF = 0;     // Clear the SPI peripheral interrupt flag
-    IEC0bits.SPI1IE = 1;     // Enable the SPI peripheral interrupt flag
-    IPC2bits.SPI1IP = 4; // Set SPI interrupt priority (1-7, 7 being the highest)
+    //IFS0bits.SPI1IF = 0;     // Clear the SPI peripheral interrupt flag
+    //IPC2bits.SPI1IP = 4;     // Set SPI interrupt priority (1-7, 7 being the highest)
+    //IEC0bits.SPI1IE = 1;     // Enable the SPI peripheral interrupt flag
+    IFS3bits.SPI1RXIF = 0;
+    IEC3bits.SPI1RXIE = 1;
+    IPC14bits.SPI1RXIP = 4;
+    SPI1IMSKLbits.SPIRBFEN = 1;
+    //SPI1STATLbits.SPIROV = 0; //Clear Recieve Overflow bit
     SPI1CON1bits.DISSCK = 0; // Enable generation of SCK signal
     SPI1CON1bits.DISSDO = 0; // Enable generation of SDO signal
     SPI1CON1bits.MODE16 = 0; // Set 8-bit mode
