@@ -20,6 +20,27 @@
 
 <!-- NEW LOG ENTRY STARTS HERE -->
 
+## 09/10/2024
+
+### Notes:
+- SPI working with interrupts, now we can control the flow of
+  messages;
+- Needed to configure Rx Buffer interrupt, instead of just spi1interrupt
+  as we thought at first. Many options to trigger spi interrupts;
+- Can read from sensor periodically and send data to bridge;
+- ADC still not sending out reliable read outs;
+- Must test with sleep mode when not aquiring data;
+- Adjusted bridge display to printf 2 digits of hex data,
+  must remove irrelevant code from bridge;
+- For 1st Demo:
+  - Aquire sensor data periodically, LED On when done;
+  - Send data to bridge when requested
+   (button on bridge triggers spi master send), LED Off when done;
+  - Button selects what data is sent;
+  - Sleep while not aquiring sensor data nor sending to bridge.
+
+<!-- NEW LOG ENTRY ENDS HERE -->
+
 ## 03/10/2024
 
 ### Notes:
@@ -36,8 +57,6 @@
   but control register does not inidicate sleep? ;
 - Development is going at a good pace, can start to
   draw out software flowchart.
-
-<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 01/10/2024
 
