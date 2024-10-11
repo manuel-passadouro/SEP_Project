@@ -113,22 +113,38 @@ int main(void){
         //spi_data_in = spi_write_byte(spi_data_out);
         
         if(timer1_flag){
-            //spi_data_out++;
-            //spi_data_in = spi_write_byte(spi_data_out);
-            LATBbits.LATB6 ^= 1;
+            timer1_flag = 0; //Clear Timer 1 Flag 
+            
             adc_out = adc_read();
             adc_temp = adc_temp_convert(adc_out);
             prox_data = apds9960_get_prox();
-            spi_data_out = prox_data;
-            timer1_flag = 0; //Clear Timer 1 Flag     
+            
+            
+            switch (spi_data_in) {
+                case 0xA0:
+
+                    spi_data_out = adc_temp; //Send temp
+
+                    break;
+
+                case 0xB0:
+
+                    spi_data_out = prox_data; //Send prox
+
+                    break;
+
+                default:
+
+                    break;
+            }
+            
+            LATBbits.LATB6 = 1; //turn on LED, mark acq complete
+                
         }
         
-        //ADC readout           
-        //adc_out = adc_read();
-        //adc_temp = adc_temp_convert((float)adc_out);
-        //adc_temp = adc_temp;
         
         //test_sleep();
+        Sleep();
        
         CLEAR_WDT; //Watchdog reset  
     }

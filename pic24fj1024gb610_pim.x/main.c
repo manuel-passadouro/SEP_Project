@@ -54,6 +54,10 @@ static volatile bool allowScreenUpdate = true;
 
 #define SPI_CS LATGbits.LATG9
 
+#define CMD_SHOW_TEMP 0xA0
+#define CMD_SHOW_PROX 0xB0
+#define CMD_SHOW_LIGHT 0xB1
+
 void spi_init_master(void){
     
    
@@ -124,6 +128,9 @@ int main ( void )
     LED_Enable ( LED_BUTTON_PRESSED );
 
     BUTTON_Enable ( BUTTON_DEMO );
+    BUTTON_Enable ( BUTTON_TEMP );
+    BUTTON_Enable ( BUTTON_PROX );
+    
     
     /* Get a timer event once every 100ms for the blink alive. */
     TIMER_SetConfiguration ( TIMER_CONFIGURATION_1MS );
@@ -140,57 +147,27 @@ int main ( void )
     RTCC_BuildTimeGet( &time );
     RTCC_Initialize( &time );
     memset(&lastTime,0,sizeof(lastTime)); 
-
-    ADC_SetConfiguration ( ADC_CONFIGURATION_DEFAULT );
-    ADC_ChannelEnable ( ADC_CHANNEL_POTENTIOMETER );
     
     /* Clear the screen */
     printf( "\f" );   
     
     while ( 1 )
-    {
-        adcResult = ADC_Read10bit( ADC_CHANNEL_POTENTIOMETER );
-
-        RTCC_TimeGet( &time );
-        //LATGbits.LATG9 = 0;
-        //spi_data_in = spi_write_byte(spi_data_out);
-        //LATGbits.LATG9 = 1;
-       
-        //Only print if the ADC value or time has changed since the last time 
-        // around the loop and we haven't updated recently too recently.
-        if(allowScreenUpdate == true)
+{
+        if (allowScreenUpdate == true) //check screen refresh rate
         {
-            if( (adcResult != lastAdcResult) ||
-                (memcmp(&time, &lastTime, sizeof(time)) != MEMCMP_VALUES_IDENTICAL) )
-            {                  
-                //Either ADC or time has changed, and the screen update refresh
-                // limit has expired, update the screen.
-                allowScreenUpdate = false;
-                
-//                printf( "Time %02d:%02d:%02d   Pot = %4d\r\n", 
-//                        time.hour, 
-//                        time.minute, 
-//                        time.second, 
-//                        adcResult
-//                      );
-                //printf("\r\n\r\n"); //Clear screen
-                printf("DataOut: 0X%02x   DataIn: 0X%02x\r\n", spi_data_out, spi_data_in);
-                //printf("DataIn: 0X%x\r", spi_data_in);
-                
-                lastAdcResult = adcResult;
-                memcpy(&lastTime, &time, sizeof(time));
-            }
+            allowScreenUpdate = false; //Clear screen refresh flag
+            printf("MOSI: 0X%02x      DataIn: 0X%02x\r\n", spi_data_out, spi_data_in);
         }
 
-        if(toggleBlinkAlive == true)
+        if (toggleBlinkAlive == true)
         {
-            LED_Toggle( LED_BLINK_ALIVE );
+            LED_Toggle(LED_BLINK_ALIVE);
             toggleBlinkAlive = false;
         }
         
         if(send_spi_flag == true)
         {
-            spi_data_out++;
+            //spi_data_out++;
             //Send data via SPI
             LATGbits.LATG9 = 0;
             spi_data_in = spi_write_byte(spi_data_out);
@@ -201,14 +178,25 @@ int main ( void )
         
         /* To determine how the LED and Buttons are mapped to the actual board
          * features, please see io_mapping.h. */
-        if(BUTTON_IsPressed( BUTTON_DEMO ) == true)
+        
+        if(BUTTON_IsPressed( BUTTON_TEMP ) == true)
         {
-            LED_On( LED_BUTTON_PRESSED );
+            //Send command via SPI
+            spi_data_out = CMD_SHOW_TEMP;
+            //LATGbits.LATG9 = 0;
+            //spi_data_in = spi_write_byte(spi_data_out);
+            //LATGbits.LATG9 = 1;
         }
-        else
+       
+        if(BUTTON_IsPressed( BUTTON_PROX ) == true)
         {
-            LED_Off( LED_BUTTON_PRESSED );
+            //Send command via SPI
+            spi_data_out = CMD_SHOW_PROX;
+            //LATGbits.LATG9 = 0;
+            //spi_data_in = spi_write_byte(spi_data_out);
+            //LATGbits.LATG9 = 1;
         }
+        
     }
 }
 

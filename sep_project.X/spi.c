@@ -7,6 +7,7 @@
 
 #include "spi.h"
 
+//volatile int spi_data_out = 0x00;
 volatile int spi_data_out = 0x00;
 volatile int spi_data_in = 0x00;
 
@@ -14,12 +15,12 @@ volatile int spi_data_in = 0x00;
 void __attribute__((__interrupt__, auto_psv)) _SPI1RXInterrupt(void) {
     // Clear the interrupt flag
     IFS3bits.SPI1RXIF = 0;
-
-    //IFS0bits.SPI1IF = 0;
-
+    
     // Read the received data
     //spi_data_out++;
     spi_data_in = spi_write_byte(spi_data_out);
+    
+    LATBbits.LATB6 = 0;
 
 }
 
@@ -75,9 +76,12 @@ uint8_t spi_write_byte(uint8_t data_out){
     
     uint8_t data_in;
     
-    SPI1BUFL = data_out;            // write to buffer for TX
+    SPI1BUFL = data_out;            // write to buffer for TX (Dummy)
     while(!SPI1STATLbits.SPIRBF);   // wait for transfer to complete
     data_in = SPI1BUFL;             // read the received value
+    
+          
+    
     return data_in;
     //while(SPI1STATLbits.SPITBF);    // wait for transfer to complete
     

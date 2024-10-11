@@ -21,3 +21,6 @@ limitations under the License.
 #define LED_BUTTON_PRESSED LED_D4
 
 #define BUTTON_DEMO BUTTON_S3
+#define BUTTON_TEMP BUTTON_S3
+#define BUTTON_PROX BUTTON_S6
+
