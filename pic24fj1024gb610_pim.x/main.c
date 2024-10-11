@@ -54,6 +54,8 @@ static volatile bool allowScreenUpdate = true;
 
 #define SPI_CS LATGbits.LATG9
 
+#define DUMMY 0xAA
+
 #define CMD_SHOW_TEMP 0xA0
 #define CMD_SHOW_PROX 0xB0
 #define CMD_SHOW_LIGHT 0xB1
@@ -70,7 +72,7 @@ void spi_init_master(void){
     SPI1CON1bits.SMP = 0; // Input data sampled at mid-bit
     SPI1CON1bits.CKP = 0; // Idle is SCK low
     SPI1CON1bits.CKE = 1; // Data changes on SCK falling edge
-    SPI1BRGL = 1; // Baud rate divisor FCY/100k
+    SPI1BRGL = 79; // Baud rate divisor FCY/100k
     SPI1CON1bits.MSTEN = 1; // Set for master mode
     SPI1CON2 = 0; // Fully disable frame mode
     
@@ -97,10 +99,28 @@ void spi_init_master(void){
     SPI1CON1Lbits.SPIEN = 1; // enable SPI port, clear status
 }
 
-uint8_t spi_write_byte(uint8_t data_out){
+uint8_t spi_master_rw(uint8_t data_out){
+    
+    uint8_t miso_dummy;
+    
     SPI1BUFL = data_out; // write to buffer for TX
     while(!SPI1STATLbits.SPIRBF); // wait for transfer to complete
+    miso_dummy = SPI1BUFL; // read the received value
+    
+    SPI1BUFL = DUMMY; // write to buffer for TX (dummy)
+    while(!SPI1STATLbits.SPIRBF); // wait for transfer to complete
+    miso_dummy = SPI1BUFL; // read the received value
+    
+    SPI1BUFL = DUMMY; // write to buffer for TX
+    while(!SPI1STATLbits.SPIRBF); // wait for transfer to complete
     return SPI1BUFL; // read the received value
+    
+}
+
+void delay_nop(unsigned int count) {
+    while (count--) {
+        Nop();  // One NOP takes 1 instruction cycle
+    }
 }
 
 
@@ -116,6 +136,7 @@ int main ( void )
     
     uint8_t spi_data_out = 0x76;
     uint8_t spi_data_in = 0x00;
+    
     
     /* Call the System Initialize routine*/
     SYS_Initialize ( );
@@ -135,7 +156,7 @@ int main ( void )
     /* Get a timer event once every 100ms for the blink alive. */
     TIMER_SetConfiguration ( TIMER_CONFIGURATION_1MS );
     TIMER_RequestTick( &BlinkAliveEventHandler, 500 );
-    TIMER_RequestTick( &SpiSendEventHandler, 1000 );
+    TIMER_RequestTick( &SpiSendEventHandler, 500 );
     TIMER_RequestTick( &ScreenUpdateEventHandler, 170 );
     
     /* The TIMER_1MS configuration should come before the RTCC initialization as
@@ -165,36 +186,47 @@ int main ( void )
             toggleBlinkAlive = false;
         }
         
-        if(send_spi_flag == true)
+        /*
+        if(spi_send_flag == true)
         {
-            //spi_data_out++;
+            spi_send_flag = false;
             //Send data via SPI
             LATGbits.LATG9 = 0;
             spi_data_in = spi_write_byte(spi_data_out);
-            LATGbits.LATG9 = 1;
+            LATGbits.LATG9 = 1;   
             
-            send_spi_flag = false;
         }
-        
+        */
         /* To determine how the LED and Buttons are mapped to the actual board
          * features, please see io_mapping.h. */
         
         if(BUTTON_IsPressed( BUTTON_TEMP ) == true)
-        {
-            //Send command via SPI
-            spi_data_out = CMD_SHOW_TEMP;
-            //LATGbits.LATG9 = 0;
-            //spi_data_in = spi_write_byte(spi_data_out);
-            //LATGbits.LATG9 = 1;
+        {       
+            //spi_send_flag = true;
+            if(send_spi_flag == true){
+                send_spi_flag = false;
+                spi_data_out = CMD_SHOW_TEMP;
+                //Send command via SPI
+                LATGbits.LATG9 = 0;
+                delay_nop(1000);  // Delays for 1000 instruction cycles
+                spi_data_in = spi_master_rw(spi_data_out);
+                LATGbits.LATG9 = 1;
+            }
+            
         }
        
         if(BUTTON_IsPressed( BUTTON_PROX ) == true)
         {
-            //Send command via SPI
-            spi_data_out = CMD_SHOW_PROX;
-            //LATGbits.LATG9 = 0;
-            //spi_data_in = spi_write_byte(spi_data_out);
-            //LATGbits.LATG9 = 1;
+            //spi_send_flag = true;
+            if(send_spi_flag == true){
+                send_spi_flag = false;
+                spi_data_out = CMD_SHOW_PROX;
+                //Send command via SPI
+                LATGbits.LATG9 = 0;
+                delay_nop(1000);  // Delays for 1000 instruction cycles
+                spi_data_in = spi_master_rw(spi_data_out);
+                LATGbits.LATG9 = 1;
+            }
         }
         
     }

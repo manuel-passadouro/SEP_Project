@@ -7,9 +7,21 @@
 
 #include "spi.h"
 
-//volatile int spi_data_out = 0x00;
 volatile int spi_data_out = 0x00;
 volatile int spi_data_in = 0x00;
+
+// SPI1 ISR example
+void __attribute__((__interrupt__, auto_psv)) _IOCInterrupt(void) {
+    // Clear the interrupt flag
+     IFS1bits.IOCIF = 0;       // Clear interrupt flag
+    
+    // Read the received data
+    //spi_data_out++;
+    spi_data_in = spi_slave_rw();
+    
+    LATBbits.LATB6 = 0;
+
+}
 
 // SPI1 ISR example
 void __attribute__((__interrupt__, auto_psv)) _SPI1RXInterrupt(void) {
@@ -18,7 +30,7 @@ void __attribute__((__interrupt__, auto_psv)) _SPI1RXInterrupt(void) {
     
     // Read the received data
     //spi_data_out++;
-    spi_data_in = spi_write_byte(spi_data_out);
+    spi_data_in = spi_slave_rw();
     
     LATBbits.LATB6 = 0;
 
@@ -31,7 +43,7 @@ void spi_init_slave(){
     //IPC2bits.SPI1IP = 4;     // Set SPI interrupt priority (1-7, 7 being the highest)
     //IEC0bits.SPI1IE = 1;     // Enable the SPI peripheral interrupt flag
     IFS3bits.SPI1RXIF = 0;
-    IEC3bits.SPI1RXIE = 1;
+    IEC3bits.SPI1RXIE = 0;
     IPC14bits.SPI1RXIP = 4;
     SPI1IMSKLbits.SPIRBFEN = 1;
     //SPI1STATLbits.SPIROV = 0; //Clear Recieve Overflow bit
@@ -72,17 +84,44 @@ void spi_init_slave(){
 }
 
 
-uint8_t spi_write_byte(uint8_t data_out){  
+uint8_t spi_slave_rw(){  
     
-    uint8_t data_in;
+    uint8_t mosi_cmd;
+    uint8_t mosi_dummy;
+    uint8_t miso_data;
     
-    SPI1BUFL = data_out;            // write to buffer for TX (Dummy)
+    SPI1BUFL = DUMMY;            // write to buffer for TX (Dummy)
     while(!SPI1STATLbits.SPIRBF);   // wait for transfer to complete
-    data_in = SPI1BUFL;             // read the received value
+    mosi_cmd = SPI1BUFL;             // read the received value
     
-          
+    SPI1BUFL = DUMMY;            // write to buffer for TX (Dummy)
+    while(!SPI1STATLbits.SPIRBF);   // wait for transfer to complete
+    mosi_dummy = SPI1BUFL;             // read the received value
     
-    return data_in;
+    switch (mosi_cmd) {
+        case 0xA0:
+
+            miso_data = 0xAB; //Send temp
+
+            break;
+
+        case 0xB0:
+
+            //miso_data = spi_data_out; //Send prox
+            miso_data = spi_data_out;
+
+            break;
+
+        default:
+
+            break;
+    }
+    
+    SPI1BUFL = miso_data;            // write to buffer for TX (sensor data)
+    while(!SPI1STATLbits.SPIRBF);   // wait for transfer to complete
+    mosi_dummy = SPI1BUFL;             // read the received value
+           
+    return mosi_dummy;
     //while(SPI1STATLbits.SPITBF);    // wait for transfer to complete
     
 }
