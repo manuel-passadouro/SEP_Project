@@ -5,9 +5,8 @@
         <group>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/spi.c</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/main.c</file>
-            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/spi.h</file>
-            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/sys_config.h</file>
-            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/i2c.h</file>
+            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/apds9960.h</file>
+            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project.X/apds9960.c</file>
         </group>
     </open-files>
 </project-private>
