@@ -1,24 +1,34 @@
 # SEP Project Logbook
 <!-- TODO STARTS HERE -->
-## To-Do (1st Delivery by 04/10):
+## To-Do (Final Delivery by 01/11):
 
-- [x] GIT repo
-- [x] Google Drive Folder
-- [x] Project logbook
-- [ ] Top-level flowchart and diagram
-- [ ] List of features/requirements
-- [x] PIC setup on breadboard
-- [x] LED test
-- [x] Temp sensor ADC readout
-- [x] APDS 9960 I2C config
-- [x] Timer interrupt
-- [x] SPI initial config
-- [x] Remove MCC files
-- [x] Organize Code file structure
-- [ ] Sensor Node schematic
+- [ ] Top-level flowchart and diagram;
+- [ ] List of features/requirements;
+- [ ] Uart Comunication;
+- [ ] APDS9906 Drivers;
+- [ ] PC GUI;
+- [ ] Full system integration;
+- [ ] Sensor Node schematic and layout;
+- [ ] Sensor Node PCB;
+- [ ] PCB testing;
+- [ ] Presentation Slides.
 <!-- TODO ENDS HERE -->
 
 <!-- NEW LOG ENTRY STARTS HERE -->
+
+## 13/10/2024
+
+### Notes:
+- SPI interrupt method was changed: Instead of buffer full trigger,
+  we changed to an IoC trigger by CS signal. This alow for implementation of a simple write/read flow with dummies;
+- 1st Delivery complete, priority now is to implement UART and close the communication loop between PC and sensor node;
+- How will we use UART to trigger master SPI?
+- Also, finish APDS9906 drivers for prox and rgb data (also test ADC timing);
+- We have to try implementing gesture interrupt, via IoC, try to translate from arduino example.
+- Start PCB design on eagle, draft the schematic and check with prof by the 18th;
+- It's a good idea to clean-up the bridge code some more, change some names and take away stuff that will not be used.
+  
+<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 09/10/2024
 
@@ -38,8 +48,6 @@
    (button on bridge triggers spi master send), LED Off when done;
   - Button selects what data is sent;
   - Sleep while not aquiring sensor data nor sending to bridge.
-
-<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 03/10/2024
 
