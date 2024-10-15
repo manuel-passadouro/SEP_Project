@@ -99,6 +99,49 @@ void spi_init_master(void){
     SPI1CON1Lbits.SPIEN = 1; // enable SPI port, clear status
 }
 
+void uart1_init(){
+    
+    U1BRG = 103; // BRG = (FCY/((16*9600)=)-1 = 103  , uart baudrate = 9600 (low speed)
+
+    U1MODEbits.BRGH = 0; // Low-speed mode (use 16x baud clock)
+    U1MODEbits.PDSEL = 0; // 8-bit data, no parity
+    U1MODEbits.STSEL = 0; // 1 stop bit
+    U1MODEbits.UEN = 0; // only U1TX and U1RX
+    U1STAbits.UTXEN = 1; // Enable transmitter
+    U1STAbits.URXEN = 1;    // Enable receiver
+    //U1STAbits.UTXISEL1 = 0; // Interruptions
+    //U1STAbits.UTXISEL0 = 0; // Interruptions
+    //U1STAbits.OERR = 0;     // Clear Overrun error
+  
+    //PPS for UART1 TX and RX
+    
+    //Disable analog functionality
+    //No analog on RFx pins
+    RPINR18bits.U1RXR = 10; // U1RX on pin 49 (RP10/RF4)
+    //TRISFbits.TRISF4 = 1; //pin 10 CLK (input)
+    
+    RPOR8bits.RP17R = 3; // U1TX on pin 50 (RP17/RF5)
+    //TRISFbits.TRISF5 = 0; //pin 11 MISO (output)
+
+    //U1TXREG = 0xAA;
+    U1MODEbits.UARTEN = 1; // enable UART
+}
+
+void uart1_write(char data)
+{
+    //while(U1STAbits.UTXBF); // Wait while the transmit buffer is full
+    U1TXREG = data;         // Write the data to the transmit register
+    while(!(U1STAbits.TRMT));
+}
+
+char uart1_read(void)
+{
+   while(!U1STAbits.URXDA); // Wait for the receive buffer to have data
+    return U1RXREG;          // Read the received data from the buffer
+}
+
+
+
 uint8_t spi_master_rw(uint8_t data_out){
     
     uint8_t miso_dummy;
@@ -137,11 +180,11 @@ int main ( void )
     uint8_t spi_data_out = 0x76;
     uint8_t spi_data_in = 0x00;
     
-    
+    uint8_t letter = 'a';
     /* Call the System Initialize routine*/
-    SYS_Initialize ( );
-    
-    spi_init_master();
+    SYS_Initialize();   
+    //spi_init_master();
+    //uart1_init();
     
     /* To determine how the LED and Buttons are mapped to the actual board
      * features, please see io_mapping.h. */
@@ -155,7 +198,7 @@ int main ( void )
     
     /* Get a timer event once every 100ms for the blink alive. */
     TIMER_SetConfiguration ( TIMER_CONFIGURATION_1MS );
-    TIMER_RequestTick( &BlinkAliveEventHandler, 500 );
+    TIMER_RequestTick( &BlinkAliveEventHandler, 100 );
     TIMER_RequestTick( &SpiSendEventHandler, 500 );
     TIMER_RequestTick( &ScreenUpdateEventHandler, 170 );
     
@@ -170,10 +213,50 @@ int main ( void )
     memset(&lastTime,0,sizeof(lastTime)); 
     
     /* Clear the screen */
-    printf( "\f" );   
+    printf( "\f" );
+    
+    //UART config
+    
+    U1MODEbits.STSEL = 0; // 1-Stop bit
+    U1MODEbits.PDSEL = 0; // No Parity, 8-Data bits
+    U1MODEbits.ABAUD = 0; // Auto-Baud disabled
+    U1MODEbits.BRGH = 0; // Standard-Speed mode
+    U1BRG = 103; // Baud Rate setting for 9600
+    U1STAbits.UTXISEL0 = 0; // Interrupt after one TX character is transmitted
+    U1STAbits.UTXISEL1 = 0;
+    IEC0bits.U1TXIE = 0; // Enable UART TX interrupt
+    U1MODEbits.UARTEN = 1; // Enable UART
+    U1STAbits.UTXEN = 1; // Enable UART TX
+    
+    //PPS for UART1 TX and RX
+    
+    //Disable analog functionality
+    //No analog on RFx pins
+    RPINR18bits.U1RXR = 10; // U1RX on pin 49 (RP10/RF4)
+    //TRISFbits.TRISF4 = 1; //pin 10 CLK (input)
+    
+    RPOR8bits.RP17R = 3; // U1TX on pin 50 (RP17/RF5)
+    //TRISFbits.TRISF5 = 0; //pin 11 MISO (output)
+
+    //U1TXREG = 0xAA;
+    U1MODEbits.UARTEN = 1; // enable UART
+    
+    /* Wait at least 105 microseconds (1/9600) before sending first char */
+    //DELAY_105uS
+    //U1TXREG = 'a'; // Transmit one character
+
     
     while ( 1 )
 {
+        /*
+        while(1){
+            //uart1_write('H');
+            delay_nop(100000000);
+            U1TXREG = 0xAA;         // Write the data to the transmit register
+            LED_Toggle(LED_BLINK_ALIVE);     
+        }
+        */
+        
         if (allowScreenUpdate == true) //check screen refresh rate
         {
             allowScreenUpdate = false; //Clear screen refresh flag
@@ -182,6 +265,8 @@ int main ( void )
 
         if (toggleBlinkAlive == true)
         {
+            letter = uart1_read();
+            U1TXREG = letter;         // Write the data to the transmit register
             LED_Toggle(LED_BLINK_ALIVE);
             toggleBlinkAlive = false;
         }
