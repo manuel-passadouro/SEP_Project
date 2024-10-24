@@ -48,9 +48,8 @@ void apds9960_init(){
     */
 }
 
-uint8_t apds9960_get_prox(){
+void apds9960_get_prox(uint8_t *prox_data){
     
-    uint8_t prox_data = 0;
     startCondition(); //Start write procedure
     writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
     writeByte(PDATA_ADDR); //send register address
@@ -58,8 +57,101 @@ uint8_t apds9960_get_prox(){
 
     startCondition(); //Start read procedure
     writeByte(I2C_SLAVE_ADDR_READ); //send read address
-    prox_data = readByte();
+    *prox_data = readByte();
     stopCondition(); //End read procedure
-    return prox_data;
 };
+
+
+void apds9960_get_light(uint8_t *light_data_high, uint8_t *light_data_low) {
+    
+    startCondition(); // Start write procedure
+    writeByte(I2C_SLAVE_ADDR_WRITE); // Send write address
+    writeByte(CDATAH_ADDR); // Send register address
+    stopCondition(); // End write procedure
+
+    startCondition(); // Start read procedure
+    writeByte(I2C_SLAVE_ADDR_READ); // Send read address
+    *light_data_high = readByte(); // Store high byte in the passed pointer
+    stopCondition(); // End read procedure
+    
+    startCondition(); // Start write procedure
+    writeByte(I2C_SLAVE_ADDR_WRITE); // Send write address
+    writeByte(CDATAL_ADDR); // Send register address
+    stopCondition(); // End write procedure
+
+    startCondition(); // Start read procedure
+    writeByte(I2C_SLAVE_ADDR_READ); // Send read address
+    *light_data_low = readByte(); // Store high byte in the passed pointer
+    stopCondition(); // End read procedure
+}
+
+void apds9960_get_red(uint8_t *red_data_high, uint8_t *red_data_low) {
+    
+    startCondition(); // Start write procedure
+    writeByte(I2C_SLAVE_ADDR_WRITE); // Send write address
+    writeByte(RDATAH_ADDR); // Send register address
+    stopCondition(); // End write procedure
+
+    startCondition(); // Start read procedure
+    writeByte(I2C_SLAVE_ADDR_READ); // Send read address
+    *red_data_high = readByte(); // Store high byte in the passed pointer
+    stopCondition(); // End read procedure
+    
+    startCondition(); // Start write procedure
+    writeByte(I2C_SLAVE_ADDR_WRITE); // Send write address
+    writeByte(RDATAL_ADDR); // Send register address
+    stopCondition(); // End write procedure
+
+    startCondition(); // Start read procedure
+    writeByte(I2C_SLAVE_ADDR_READ); // Send read address
+    *red_data_low = readByte(); // Store high byte in the passed pointer
+    stopCondition(); // End read procedure
+}
+
+void apds9960_get_green(uint8_t *green_data_high, uint8_t *green_data_low) {
+    
+    startCondition(); // Start write procedure
+    writeByte(I2C_SLAVE_ADDR_WRITE); // Send write address
+    writeByte(GDATAH_ADDR); // Send register address
+    stopCondition(); // End write procedure
+
+    startCondition(); // Start read procedure
+    writeByte(I2C_SLAVE_ADDR_READ); // Send read address
+    *green_data_high = readByte(); // Store high byte in the passed pointer
+    stopCondition(); // End read procedure
+    
+    startCondition(); // Start write procedure
+    writeByte(I2C_SLAVE_ADDR_WRITE); // Send write address
+    writeByte(GDATAL_ADDR); // Send register address
+    stopCondition(); // End write procedure
+
+    startCondition(); // Start read procedure
+    writeByte(I2C_SLAVE_ADDR_READ); // Send read address
+    *green_data_low = readByte(); // Store high byte in the passed pointer
+    stopCondition(); // End read procedure
+}
+
+void apds9960_get_blue(uint8_t *blue_data_high, uint8_t *blue_data_low) {
+    
+    startCondition(); // Start write procedure
+    writeByte(I2C_SLAVE_ADDR_WRITE); // Send write address
+    writeByte(BDATAH_ADDR); // Send register address
+    stopCondition(); // End write procedure
+
+    startCondition(); // Start read procedure
+    writeByte(I2C_SLAVE_ADDR_READ); // Send read address
+    *blue_data_high = readByte(); // Store high byte in the passed pointer
+    stopCondition(); // End read procedure
+    
+    startCondition(); // Start write procedure
+    writeByte(I2C_SLAVE_ADDR_WRITE); // Send write address
+    writeByte(BDATAL_ADDR); // Send register address
+    stopCondition(); // End write procedure
+
+    startCondition(); // Start read procedure
+    writeByte(I2C_SLAVE_ADDR_READ); // Send read address
+    *blue_data_low = readByte(); // Store high byte in the passed pointer
+    stopCondition(); // End read procedure
+}
+
         

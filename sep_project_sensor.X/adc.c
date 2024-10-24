@@ -35,8 +35,9 @@ void adc_init(void) {
  * @brief Perform reading with ADC.
  *
  * @param[in] Void
- * @return Integer with 10 ADC result (2 sample avarage).
+ * @return 16 bit ADC data (split in High and Low Byte).
  */
+/*
 uint16_t adc_read(void) {
     uint16_t adcValue;
     IFS0bits.AD1IF = 0;             // Clear ADC interrupt flag
@@ -48,7 +49,23 @@ uint16_t adc_read(void) {
     adcValue = adcValue >> 1;       //Compute average
     
     return adcValue;
+}*/
+
+void adc_read(uint8_t *high_byte, uint8_t *low_byte) {
+    uint16_t adcValue;
+    IFS0bits.AD1IF = 0;             // Clear ADC interrupt flag
+    AD1CON1bits.ASAM = 1;           // Auto start sampling for 31Tad
+    while (!IFS0bits.AD1IF);        // Wait until the two conversions were performed
+    AD1CON1bits.ASAM = 0;           // Stop sample/convert
+    adcValue = ADC1BUF0;            // Retrieve first sample
+    adcValue += *((&ADC1BUF0) + 1); // Retrieve next sample (next buffer)
+    adcValue = adcValue >> 1;       // Compute average
+
+    // Split the 16-bit adcValue into two bytes
+    *low_byte = adcValue & 0xFF;           // Lower 8 bits (0-7)
+    *high_byte = (adcValue >> 8) & 0xFF;   // Higher 8 bits (8-15)
 }
+
 
 /**
  * @brief Converts an ADC value to Celsius temperature.

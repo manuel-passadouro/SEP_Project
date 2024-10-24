@@ -6,9 +6,13 @@
  */
 
 #include "spi_sensor.h"
+#include "utils.h"
 
-volatile int spi_data_out = 0x00;
-volatile int spi_data_in = 0x00;
+//volatile int spi_data_out = 0x00;
+//volatile uint8_t spi_data_out[12] = {0x00};
+volatile SPIDataOut spi_data_out = {0x00};
+volatile uint8_t spi_data_in = 0x00;
+
 
 // SPI1 ISR example
 void __attribute__((__interrupt__, auto_psv)) _IOCInterrupt(void) {
@@ -79,6 +83,8 @@ uint8_t spi_slave_rw(){
     uint8_t mosi_cmd;
     uint8_t mosi_dummy;
     uint8_t miso_data;
+    uint8_t miso_data_low;
+    uint8_t miso_data_high;
     
     SPI1BUFL = DUMMY;            // write to buffer for TX (Dummy)
     while(!SPI1STATLbits.SPIRBF);   // wait for transfer to complete
@@ -88,18 +94,28 @@ uint8_t spi_slave_rw(){
     while(!SPI1STATLbits.SPIRBF);   // wait for transfer to complete
     mosi_dummy = SPI1BUFL;             // read the received value
     
+    /* slave output options
+     * A0 - temp data (2 bytes)
+     * B0 - prox data (1 byte)
+     * B1 - light data (2 bytes)
+     * B2 - red data (2 bytes)
+     * B3 - green data (2 bytes)
+     * B4 - blue data (2 bytes)
+     */
+    
     switch (mosi_cmd) {
         case 0xA0:
 
-            miso_data = 0xAB; //Send temp
+            miso_data_low = sensor_buffer.temp_data_low; //Send temp
+            miso_data_high = sensor_buffer.temp_data_high; //Send temp
 
             break;
 
         case 0xB0:
 
-            //miso_data = spi_data_out; //Send prox
-            miso_data = spi_data_out;
-
+            miso_data_low = sensor_buffer.prox_data_low; //Send prox
+            miso_data_high = sensor_buffer.prox_data_high; //Send prox
+                       
             break;
 
         default:
@@ -107,7 +123,7 @@ uint8_t spi_slave_rw(){
             break;
     }
     
-    SPI1BUFL = miso_data;            // write to buffer for TX (sensor data)
+    SPI1BUFL = miso_data_low;            // write to buffer for TX (sensor data)
     while(!SPI1STATLbits.SPIRBF);   // wait for transfer to complete
     mosi_dummy = SPI1BUFL;             // read the received value
            

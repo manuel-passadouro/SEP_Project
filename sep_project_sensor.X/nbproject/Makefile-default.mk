@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=adc.c sys_config.c timer.c apds9960.c i2c.c main_sensor.c spi_sensor.c ioc.c
+SOURCEFILES_QUOTED_IF_SPACED=adc.c sys_config.c timer.c apds9960.c i2c.c main_sensor.c spi_sensor.c ioc.c utils.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/adc.o ${OBJECTDIR}/sys_config.o ${OBJECTDIR}/timer.o ${OBJECTDIR}/apds9960.o ${OBJECTDIR}/i2c.o ${OBJECTDIR}/main_sensor.o ${OBJECTDIR}/spi_sensor.o ${OBJECTDIR}/ioc.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/adc.o.d ${OBJECTDIR}/sys_config.o.d ${OBJECTDIR}/timer.o.d ${OBJECTDIR}/apds9960.o.d ${OBJECTDIR}/i2c.o.d ${OBJECTDIR}/main_sensor.o.d ${OBJECTDIR}/spi_sensor.o.d ${OBJECTDIR}/ioc.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/adc.o ${OBJECTDIR}/sys_config.o ${OBJECTDIR}/timer.o ${OBJECTDIR}/apds9960.o ${OBJECTDIR}/i2c.o ${OBJECTDIR}/main_sensor.o ${OBJECTDIR}/spi_sensor.o ${OBJECTDIR}/ioc.o ${OBJECTDIR}/utils.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/adc.o.d ${OBJECTDIR}/sys_config.o.d ${OBJECTDIR}/timer.o.d ${OBJECTDIR}/apds9960.o.d ${OBJECTDIR}/i2c.o.d ${OBJECTDIR}/main_sensor.o.d ${OBJECTDIR}/spi_sensor.o.d ${OBJECTDIR}/ioc.o.d ${OBJECTDIR}/utils.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/adc.o ${OBJECTDIR}/sys_config.o ${OBJECTDIR}/timer.o ${OBJECTDIR}/apds9960.o ${OBJECTDIR}/i2c.o ${OBJECTDIR}/main_sensor.o ${OBJECTDIR}/spi_sensor.o ${OBJECTDIR}/ioc.o
+OBJECTFILES=${OBJECTDIR}/adc.o ${OBJECTDIR}/sys_config.o ${OBJECTDIR}/timer.o ${OBJECTDIR}/apds9960.o ${OBJECTDIR}/i2c.o ${OBJECTDIR}/main_sensor.o ${OBJECTDIR}/spi_sensor.o ${OBJECTDIR}/ioc.o ${OBJECTDIR}/utils.o
 
 # Source Files
-SOURCEFILES=adc.c sys_config.c timer.c apds9960.c i2c.c main_sensor.c spi_sensor.c ioc.c
+SOURCEFILES=adc.c sys_config.c timer.c apds9960.c i2c.c main_sensor.c spi_sensor.c ioc.c utils.c
 
 
 
@@ -137,6 +137,12 @@ ${OBJECTDIR}/ioc.o: ioc.c  .generated_files/flags/default/3e9b33c50cf320c27d2a26
 	@${RM} ${OBJECTDIR}/ioc.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ioc.c  -o ${OBJECTDIR}/ioc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ioc.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/utils.o: utils.c  .generated_files/flags/default/b6a61655d1a6abcbf2111c807644b655dbe5f59d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/utils.o.d 
+	@${RM} ${OBJECTDIR}/utils.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  utils.c  -o ${OBJECTDIR}/utils.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/utils.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 else
 ${OBJECTDIR}/adc.o: adc.c  .generated_files/flags/default/ce24a2a973afe543d78fbc9a10e63e11e5fce945 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -186,6 +192,12 @@ ${OBJECTDIR}/ioc.o: ioc.c  .generated_files/flags/default/849ba2912b69c4f6ebc2cc
 	@${RM} ${OBJECTDIR}/ioc.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ioc.c  -o ${OBJECTDIR}/ioc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ioc.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/utils.o: utils.c  .generated_files/flags/default/8a3098c1d2dacb58a45a7cb4d41c0b409f96b46a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/utils.o.d 
+	@${RM} ${OBJECTDIR}/utils.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  utils.c  -o ${OBJECTDIR}/utils.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/utils.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 endif
 
 # ------------------------------------------------------------------------------------
@@ -205,7 +217,7 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 ${DISTDIR}/sep_project_sensor.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -o ${DISTDIR}/sep_project_sensor.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -D__DEBUG=__DEBUG   -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)      -Wl,--local-stack,,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D__DEBUG=__DEBUG,,$(MP_LINKER_FILE_OPTION),--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--report-mem,--memorysummary,${DISTDIR}/memoryfile.xml$(MP_EXTRA_LD_POST)  -mdfp="${DFP_DIR}/xc16" 
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -o ${DISTDIR}/sep_project_sensor.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -D__DEBUG=__DEBUG   -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)   -mreserve=data@0x800:0x81B -mreserve=data@0x81C:0x81D -mreserve=data@0x81E:0x81F -mreserve=data@0x820:0x821 -mreserve=data@0x822:0x823 -mreserve=data@0x824:0x827 -mreserve=data@0x82A:0x84F   -Wl,--local-stack,,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D__DEBUG=__DEBUG,,$(MP_LINKER_FILE_OPTION),--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--report-mem,--memorysummary,${DISTDIR}/memoryfile.xml$(MP_EXTRA_LD_POST)  -mdfp="${DFP_DIR}/xc16" 
 	
 else
 ${DISTDIR}/sep_project_sensor.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   

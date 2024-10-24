@@ -44,6 +44,7 @@
 
 
 #include "sys_config.h"
+#include "utils.h"
 #include "ioc.h"
 #include "adc.h"
 #include "timer.h"
@@ -57,32 +58,11 @@
 //
 
 
-
 /**
   Section: Function Declarations
 */
-void test_sleep(){
-    
-    uint8_t i = 0;
-    
-    Sleep();
-    while(i < 5){
-        LATBbits.LATB6 ^= 1;
-        __delay_ms(200);
-        i++;
-    }
-    i=0;
-    while(i < 5){
-        LATBbits.LATB6 ^= 1;
-        __delay_ms(500);
-        i++;
-    }   
-}
 
-void led_init(){
-    TRISBbits.TRISB6 = 0;   // Set RB6 as digital output
-    LATBbits.LATB6 = 1;     // Set initial state to high (LED on)
-}
+volatile sensor_buffer_struct sensor_buffer = {0x00};
 
 /*
                          Main application
@@ -91,14 +71,16 @@ int main(void){
     
     float adc_temp;
     float dummy;
-    uint16_t adc_out;
-  //  uint8_t spi_data_out = 0x00;
-   // uint8_t spi_data_in;
+    uint8_t raw_temp_high, raw_temp_low;
     uint8_t prox_data;
+    uint8_t light_data_high, light_data_low;
+    uint8_t red_data_high, red_data_low;
+    uint8_t green_data_high, green_data_low;
+    uint8_t blue_data_high, blue_data_low;
     
     //Device Initialization
     led_init();
-    ioc_init();
+    //ioc_init();
     spi_init_slave();
     timer1_init();
     adc_init();
@@ -110,23 +92,47 @@ int main(void){
     {
         // Add your application code 
        
+        //Data aquisition (every x seconds, see timer 1 config)
         if(timer1_flag){
-            timer1_flag = 0; //Clear Timer 1 Flag 
+            timer1_flag = 0;                               //Clear Timer 1 Flag 
             
-            adc_out = adc_read();
-            adc_temp = adc_temp_convert(adc_out);
-            prox_data = apds9960_get_prox();
-            //send temp data in 2 bytes do not convert to float
-            //spi_data_out[0] = adc_temp;
-            spi_data_out = prox_data;
+            //Temperature
+            adc_read(&raw_temp_high, &raw_temp_low);       //Get temp from ADC
+            sensor_buffer.temp_data_low= raw_temp_low;
+            sensor_buffer.temp_data_high = raw_temp_high;
+            
+            //Proximity 
+            apds9960_get_prox(&prox_data);               //Get prox data from APDS9960
+            sensor_buffer.prox_data_low = prox_data;
+            sensor_buffer.prox_data_high = 0x00;
+            
+            //Light
+            apds9960_get_light(&light_data_high, &light_data_low);               //Get prox data from APDS9960
+            sensor_buffer.light_data_low = light_data_low;
+            sensor_buffer.light_data_high = light_data_high;
+                  
+            //Red
+            apds9960_get_red(&red_data_high, &red_data_low);               //Get prox data from APDS9960
+            sensor_buffer.red_data_low = red_data_low;
+            sensor_buffer.red_data_high = red_data_high;
+            
+            //Green
+            apds9960_get_green(&green_data_high, &green_data_low);               //Get prox data from APDS9960
+            sensor_buffer.green_data_low = green_data_low;
+            sensor_buffer.green_data_high = green_data_high;
+            
+            //Blue
+            apds9960_get_blue(&blue_data_high, &blue_data_low);               //Get prox data from APDS9960
+            sensor_buffer.blue_data_low = blue_data_low;
+            sensor_buffer.blue_data_high = blue_data_high;
             
             LATBbits.LATB6 ^= 1; //turn on LED, mark acq complete
                 
         }
         
-        
         //test_sleep();
-        Sleep();
+        //Prepare for sleep, turn off peripherals?
+        //Sleep();
        
         CLEAR_WDT; //Watchdog reset  
     }

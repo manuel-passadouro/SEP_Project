@@ -21,6 +21,7 @@
       <itemPath>i2c.h</itemPath>
       <itemPath>spi_sensor.h</itemPath>
       <itemPath>ioc.h</itemPath>
+      <itemPath>utils.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -53,6 +54,7 @@
       <itemPath>main_sensor.c</itemPath>
       <itemPath>spi_sensor.c</itemPath>
       <itemPath>ioc.c</itemPath>
+      <itemPath>utils.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -66,7 +68,7 @@
         <targetDevice>PIC24FJ256GA702</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>PK5Tool</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>2.10</languageToolchainVersion>
         <platform>3</platform>
