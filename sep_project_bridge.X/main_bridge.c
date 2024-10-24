@@ -76,7 +76,7 @@ int main ( void )
     uint8_t letter = 'a';
     /* Call the System Initialize routine*/
     SYS_Initialize();   
-    //spi_init_master();
+    spi_init_master();
     uart1_init();
     
     /* To determine how the LED and Buttons are mapped to the actual board
@@ -107,37 +107,6 @@ int main ( void )
     
     /* Clear the screen */
     printf( "\f" );
-    
-    //UART config
-    
-    U1MODEbits.STSEL = 0; // 1-Stop bit
-    U1MODEbits.PDSEL = 0; // No Parity, 8-Data bits
-    U1MODEbits.ABAUD = 0; // Auto-Baud disabled
-    U1MODEbits.BRGH = 0; // Standard-Speed mode
-    U1BRG = 103; // Baud Rate setting for 9600
-    U1STAbits.UTXISEL0 = 0; // Interrupt after one TX character is transmitted
-    U1STAbits.UTXISEL1 = 0;
-    IEC0bits.U1TXIE = 0; // Enable UART TX interrupt
-    U1MODEbits.UARTEN = 1; // Enable UART
-    U1STAbits.UTXEN = 1; // Enable UART TX
-    
-    //PPS for UART1 TX and RX
-    
-    //Disable analog functionality
-    //No analog on RFx pins
-    RPINR18bits.U1RXR = 10; // U1RX on pin 49 (RP10/RF4)
-    //TRISFbits.TRISF4 = 1; //pin 10 CLK (input)
-    
-    RPOR8bits.RP17R = 3; // U1TX on pin 50 (RP17/RF5)
-    //TRISFbits.TRISF5 = 0; //pin 11 MISO (output)
-
-    //U1TXREG = 0xAA;
-    U1MODEbits.UARTEN = 1; // enable UART
-    
-    /* Wait at least 105 microseconds (1/9600) before sending first char */
-    //DELAY_105uS
-    //U1TXREG = 'a'; // Transmit one character
-
     
     while ( 1 )
 {

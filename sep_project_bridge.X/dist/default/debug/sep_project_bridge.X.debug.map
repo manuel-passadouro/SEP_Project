@@ -4,13 +4,13 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.00 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.01 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.02 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.03 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.04 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.05 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.06 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00002098.00 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00002098.01 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00002098.02 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00002098.03 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00002098.04 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00002098.05 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00002098.06 \
   -p24FJ1024GB610 \
   --mdfp=C:/Users/mpass/.mchp_packs/Microchip/PIC24F-GA-GB_DFP/1.3.109/xc16 \
   -o \
@@ -174,11 +174,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100              0x10a4          0x18f6  (6390)
 .const                      0x11a4                0x30            0x48  (72)
-.text                       0x11d4               0xf00          0x1680  (5760)
-.dinit                      0x20d4                0x7a            0xb7  (183)
-.text                       0x214e                0x6e            0xa5  (165)
+.text                       0x11d4               0xece          0x1635  (5685)
+.dinit                      0x20a2                0x7a            0xb7  (183)
+.text                       0x211c                0x6e            0xa5  (165)
 
-                 Total "program" memory used (bytes):         0x311a  (12570) 1%
+                 Total "program" memory used (bytes):         0x30cf  (12495) 1%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x8000]
@@ -298,36 +298,36 @@ External Symbols in Program Memory (by address):
                   0x001c22                  _LED_Enable
                   0x001c74                  _delay_nop
                   0x001c92                  _main
-                  0x001db0                  build/default/debug/main_bridge.o:_BlinkAliveEventHandler
-                  0x001dba                  build/default/debug/main_bridge.o:_SpiSendEventHandler
-                  0x001dc4                  build/default/debug/main_bridge.o:_ScreenUpdateEventHandler
-                  0x001dce                  _ADC_ReadPercentage
-                  0x001e04                  _ADC_Read10bit
-                  0x001e58                  _ADC_ChannelEnable
-                  0x001e74                  _ADC_SetConfiguration
-                  0x001eb8                  _TIMER_CancelTick
-                  0x001eee                  _TIMER_RequestTick
-                  0x001f56                  _TIMER_SetConfiguration
-                  0x001f9c                  _BUTTON_IsPressed
-                  0x002008                  _BUTTON_Enable
-                  0x002040                  _spi_init_master
-                  0x002094                  _spi_master_rw
-                  0x00214e                  _uart1_init
-                  0x002186                  _uart1_write
-                  0x00219e                  _uart1_read
-                  0x0021b4                  _SYS_Initialize
+                  0x001d7e                  build/default/debug/main_bridge.o:_BlinkAliveEventHandler
+                  0x001d88                  build/default/debug/main_bridge.o:_SpiSendEventHandler
+                  0x001d92                  build/default/debug/main_bridge.o:_ScreenUpdateEventHandler
+                  0x001d9c                  _ADC_ReadPercentage
+                  0x001dd2                  _ADC_Read10bit
+                  0x001e26                  _ADC_ChannelEnable
+                  0x001e42                  _ADC_SetConfiguration
+                  0x001e86                  _TIMER_CancelTick
+                  0x001ebc                  _TIMER_RequestTick
+                  0x001f24                  _TIMER_SetConfiguration
+                  0x001f6a                  _BUTTON_IsPressed
+                  0x001fd6                  _BUTTON_Enable
+                  0x00200e                  _spi_init_master
+                  0x002062                  _spi_master_rw
+                  0x00211c                  _uart1_init
+                  0x002154                  _uart1_write
+                  0x00216c                  _uart1_read
+                  0x002182                  _SYS_Initialize
                   0x0abf00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x001e58                  _ADC_ChannelEnable
-                  0x001e04                  _ADC_Read10bit
-                  0x001dce                  _ADC_ReadPercentage
-                  0x001e74                  _ADC_SetConfiguration
+                  0x001e26                  _ADC_ChannelEnable
+                  0x001dd2                  _ADC_Read10bit
+                  0x001d9c                  _ADC_ReadPercentage
+                  0x001e42                  _ADC_SetConfiguration
                   0x0015ba                  _BSP_RTCC_Initialize
                   0x0015c6                  _BSP_RTCC_TimeGet
-                  0x002008                  _BUTTON_Enable
-                  0x001f9c                  _BUTTON_IsPressed
+                  0x001fd6                  _BUTTON_Enable
+                  0x001f6a                  _BUTTON_IsPressed
                   0x0017c8                  _LCD_ClearScreen
                   0x001984                  _LCD_CursorEnable
                   0x0015d2                  _LCD_Initialize
@@ -341,10 +341,10 @@ External Symbols in Program Memory (by name):
                   0x0011d4                  _RTCC_BuildTimeGet
                   0x0013f2                  _RTCC_Initialize
                   0x0014c0                  _RTCC_TimeGet
-                  0x0021b4                  _SYS_Initialize
-                  0x001eb8                  _TIMER_CancelTick
-                  0x001eee                  _TIMER_RequestTick
-                  0x001f56                  _TIMER_SetConfiguration
+                  0x002182                  _SYS_Initialize
+                  0x001e86                  _TIMER_CancelTick
+                  0x001ebc                  _TIMER_RequestTick
+                  0x001f24                  _TIMER_SetConfiguration
                   0x0002d6                  __AddressError
                   0x000318                  __DefaultInterrupt
                   0x0abf00                  __FSEC.sec
@@ -397,18 +397,18 @@ External Symbols in Program Memory (by name):
                   0x000362                  _memset
                   0x000e80                  _putc
                   0x00042a                  _putchar
-                  0x002040                  _spi_init_master
-                  0x002094                  _spi_master_rw
+                  0x00200e                  _spi_init_master
+                  0x002062                  _spi_master_rw
                   0x000e82                  _strlen
                   0x000ec6                  _tolower
                   0x000ed4                  _toupper
-                  0x00214e                  _uart1_init
-                  0x00219e                  _uart1_read
-                  0x002186                  _uart1_write
+                  0x00211c                  _uart1_init
+                  0x00216c                  _uart1_read
+                  0x002154                  _uart1_write
                   0x00032e                  _write
-                  0x001db0                  build/default/debug/main_bridge.o:_BlinkAliveEventHandler
-                  0x001dc4                  build/default/debug/main_bridge.o:_ScreenUpdateEventHandler
-                  0x001dba                  build/default/debug/main_bridge.o:_SpiSendEventHandler
+                  0x001d7e                  build/default/debug/main_bridge.o:_BlinkAliveEventHandler
+                  0x001d92                  build/default/debug/main_bridge.o:_ScreenUpdateEventHandler
+                  0x001d88                  build/default/debug/main_bridge.o:_SpiSendEventHandler
 
 Memory Configuration
 
@@ -737,7 +737,7 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x5dff
+.debug_info       0x000000       0x57bb
  *(.debug_info)
  .debug_info      0x000000        0xb9e build/default/debug/bsp/adc.o
  .debug_info      0x000b9e        0x59c build/default/debug/bsp/rtcc.o
@@ -748,14 +748,14 @@ __FDEVOPT1
  .debug_info      0x002db7        0x8c0 build/default/debug/bsp/timer_1ms.o
  .debug_info      0x003677        0x27e build/default/debug/system.o
  .debug_info      0x0038f5        0x85d build/default/debug/uart_bridge.o
- .debug_info      0x004152        0xc2a build/default/debug/main_bridge.o
- .debug_info      0x004d7c        0xeda build/default/debug/spi_bridge.o
- .debug_info      0x005c56         0x90 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
- .debug_info      0x005ce6         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
- .debug_info      0x005d73         0x8c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
+ .debug_info      0x004152        0x5e6 build/default/debug/main_bridge.o
+ .debug_info      0x004738        0xeda build/default/debug/spi_bridge.o
+ .debug_info      0x005612         0x90 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
+ .debug_info      0x0056a2         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
+ .debug_info      0x00572f         0x8c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0xbb2
+.debug_abbrev     0x000000        0xb77
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x10c build/default/debug/bsp/adc.o
  .debug_abbrev    0x00010c        0x118 build/default/debug/bsp/rtcc.o
@@ -766,13 +766,13 @@ __FDEVOPT1
  .debug_abbrev    0x0005cd        0x1a5 build/default/debug/bsp/timer_1ms.o
  .debug_abbrev    0x000772         0x92 build/default/debug/system.o
  .debug_abbrev    0x000804        0x102 build/default/debug/uart_bridge.o
- .debug_abbrev    0x000906        0x150 build/default/debug/main_bridge.o
- .debug_abbrev    0x000a56        0x120 build/default/debug/spi_bridge.o
- .debug_abbrev    0x000b76         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
- .debug_abbrev    0x000b8a         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
- .debug_abbrev    0x000b9e         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
+ .debug_abbrev    0x000906        0x115 build/default/debug/main_bridge.o
+ .debug_abbrev    0x000a1b        0x120 build/default/debug/spi_bridge.o
+ .debug_abbrev    0x000b3b         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
+ .debug_abbrev    0x000b4f         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
+ .debug_abbrev    0x000b63         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
 
-.debug_line       0x000000        0xe6c
+.debug_line       0x000000        0xe5f
  *(.debug_line)
  .debug_line      0x000000        0x138 build/default/debug/bsp/adc.o
  .debug_line      0x000138        0x196 build/default/debug/bsp/rtcc.o
@@ -783,11 +783,11 @@ __FDEVOPT1
  .debug_line      0x000778        0x154 build/default/debug/bsp/timer_1ms.o
  .debug_line      0x0008cc        0x11b build/default/debug/system.o
  .debug_line      0x0009e7        0x10e build/default/debug/uart_bridge.o
- .debug_line      0x000af5        0x17e build/default/debug/main_bridge.o
- .debug_line      0x000c73        0x11c build/default/debug/spi_bridge.o
- .debug_line      0x000d8f         0x59 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
- .debug_line      0x000de8         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
- .debug_line      0x000e32         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
+ .debug_line      0x000af5        0x171 build/default/debug/main_bridge.o
+ .debug_line      0x000c66        0x11c build/default/debug/spi_bridge.o
+ .debug_line      0x000d82         0x59 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
+ .debug_line      0x000ddb         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
+ .debug_line      0x000e25         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
 
 .debug_frame      0x000000        0x666
  *(.debug_frame)
@@ -803,7 +803,7 @@ __FDEVOPT1
  .debug_frame     0x00057a         0xa4 build/default/debug/main_bridge.o
  .debug_frame     0x00061e         0x48 build/default/debug/spi_bridge.o
 
-.debug_str        0x000000        0x236
+.debug_str        0x000000        0x202
  *(.debug_str)
  .debug_str       0x000000         0x3e build/default/debug/bsp/adc.o
  .debug_str       0x00003e         0x40 build/default/debug/bsp/rtcc.o
@@ -813,8 +813,8 @@ __FDEVOPT1
  .debug_str       0x000104         0x22 build/default/debug/bsp/timer_1ms.o
  .debug_str       0x000126          0xc build/default/debug/system.o
  .debug_str       0x000132         0x34 build/default/debug/uart_bridge.o
- .debug_str       0x000166         0x3d build/default/debug/main_bridge.o
- .debug_str       0x0001a3         0x93 build/default/debug/spi_bridge.o
+ .debug_str       0x000166          0x9 build/default/debug/main_bridge.o
+ .debug_str       0x00016f         0x93 build/default/debug/spi_bridge.o
 
 .debug_loc
  *(.debug_loc)
@@ -2988,7 +2988,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000170        0x7c6
+                  0x000170        0x727
  .debug_pubtypes
                   0x000170         0xd7 build/default/debug/bsp/adc.o
  .debug_pubtypes
@@ -3008,104 +3008,104 @@ LOAD data_init
  .debug_pubtypes
                   0x0005eb         0xbe build/default/debug/uart_bridge.o
  .debug_pubtypes
-                  0x0006a9         0xf9 build/default/debug/main_bridge.o
+                  0x0006a9         0x5a build/default/debug/main_bridge.o
  .debug_pubtypes
-                  0x0007a2        0x194 build/default/debug/spi_bridge.o
+                  0x000703        0x194 build/default/debug/spi_bridge.o
 
 __c30_signature
-                  0x000936        0x114
+                  0x000897        0x114
  __c30_signature
-                  0x000936          0x6 build/default/debug/bsp/adc.o
+                  0x000897          0x6 build/default/debug/bsp/adc.o
  __c30_signature
-                  0x00093c          0x6 build/default/debug/bsp/rtcc.o
+                  0x00089d          0x6 build/default/debug/bsp/rtcc.o
  __c30_signature
-                  0x000942          0x6 build/default/debug/bsp/buttons.o
+                  0x0008a3          0x6 build/default/debug/bsp/buttons.o
  __c30_signature
-                  0x000948          0x6 build/default/debug/bsp/lcd.o
+                  0x0008a9          0x6 build/default/debug/bsp/lcd.o
  __c30_signature
-                  0x00094e          0x6 build/default/debug/bsp/leds.o
+                  0x0008af          0x6 build/default/debug/bsp/leds.o
  __c30_signature
-                  0x000954          0x6 build/default/debug/bsp/lcd_printf.o
+                  0x0008b5          0x6 build/default/debug/bsp/lcd_printf.o
  __c30_signature
-                  0x00095a          0x6 build/default/debug/bsp/timer_1ms.o
+                  0x0008bb          0x6 build/default/debug/bsp/timer_1ms.o
  __c30_signature
-                  0x000960          0x6 build/default/debug/system.o
+                  0x0008c1          0x6 build/default/debug/system.o
  __c30_signature
-                  0x000966          0x6 build/default/debug/uart_bridge.o
+                  0x0008c7          0x6 build/default/debug/uart_bridge.o
  __c30_signature
-                  0x00096c          0x6 build/default/debug/main_bridge.o
+                  0x0008cd          0x6 build/default/debug/main_bridge.o
  __c30_signature
-                  0x000972          0x6 build/default/debug/spi_bridge.o
+                  0x0008d3          0x6 build/default/debug/spi_bridge.o
  __c30_signature
-                  0x000978          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
+                  0x0008d9          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
  __c30_signature
-                  0x00097e          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
+                  0x0008df          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
  __c30_signature
-                  0x000984          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__sio_printf_doux.DA_o)
+                  0x0008e5          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__sio_printf_doux.DA_o)
  __c30_signature
-                  0x00098a          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(memset.DA_o)
+                  0x0008eb          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(memset.DA_o)
  __c30_signature
-                  0x000990          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(putchar.DA_o)
+                  0x0008f1          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(putchar.DA_o)
  __c30_signature
-                  0x000996          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(stdout.DA_o)
+                  0x0008f7          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(stdout.DA_o)
  __c30_signature
-                  0x00099c          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_d.DA_o)
+                  0x0008fd          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_d.DA_o)
  __c30_signature
-                  0x0009a2          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_o.DA_o)
+                  0x000903          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_o.DA_o)
  __c30_signature
-                  0x0009a8          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_s.DA_o)
+                  0x000909          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_s.DA_o)
  __c30_signature
-                  0x0009ae          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_u.DA_o)
+                  0x00090f          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_u.DA_o)
  __c30_signature
-                  0x0009b4          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_x.DA_o)
+                  0x000915          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_x.DA_o)
  __c30_signature
-                  0x0009ba          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__int_vfprintf.DA_o)
+                  0x00091b          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__int_vfprintf.DA_o)
  __c30_signature
-                  0x0009c0          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__io_init_needed.DA_o)
+                  0x000921          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__io_init_needed.DA_o)
  __c30_signature
-                  0x0009c6          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__out.DA_o)
+                  0x000927          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__out.DA_o)
  __c30_signature
-                  0x0009cc          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__pop_int.DA_o)
+                  0x00092d          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__pop_int.DA_o)
  __c30_signature
-                  0x0009d2          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__pop_ptr.DA_o)
+                  0x000933          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__pop_ptr.DA_o)
  __c30_signature
-                  0x0009d8          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__printf_core.DA_o)
+                  0x000939          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__printf_core.DA_o)
  __c30_signature
-                  0x0009de          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__stdio_close.DA_o)
+                  0x00093f          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__stdio_close.DA_o)
  __c30_signature
-                  0x0009e4          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(atoi.DA_o)
+                  0x000945          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(atoi.DA_o)
  __c30_signature
-                  0x0009ea          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(lseek.DA_o)
+                  0x00094b          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(lseek.DA_o)
  __c30_signature
-                  0x0009f0          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(memcpy.DA_o)
+                  0x000951          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(memcpy.DA_o)
  __c30_signature
-                  0x0009f6          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(putc.DA_o)
+                  0x000957          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(putc.DA_o)
  __c30_signature
-                  0x0009fc          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
+                  0x00095d          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
  __c30_signature
-                  0x000a02          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(syscall_ret.DA_o)
+                  0x000963          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(syscall_ret.DA_o)
  __c30_signature
-                  0x000a08          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(tolower.DA_o)
+                  0x000969          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(tolower.DA_o)
  __c30_signature
-                  0x000a0e          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(toupper.DA_o)
+                  0x00096f          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(toupper.DA_o)
  __c30_signature
-                  0x000a14          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.DA_o)
+                  0x000975          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.DA_o)
  __c30_signature
-                  0x000a1a          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__init_stdio.DA_o)
+                  0x00097b          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__init_stdio.DA_o)
  __c30_signature
-                  0x000a20          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__io_file_needed.DA_o)
+                  0x000981          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__io_file_needed.DA_o)
  __c30_signature
-                  0x000a26          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__pop_float.DA_o)
+                  0x000987          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__pop_float.DA_o)
  __c30_signature
-                  0x000a2c          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(closeda.Meo)
+                  0x00098d          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(closeda.Meo)
  __c30_signature
-                  0x000a32          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
+                  0x000993          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
  __c30_signature
-                  0x000a38          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
+                  0x000999          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
  __c30_signature
-                  0x000a3e          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
+                  0x00099f          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
  __c30_signature
-                  0x000a44          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divmoddi3.DA_o)
+                  0x0009a5          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divmoddi3.DA_o)
 
 __xc_reference_data
 
@@ -3190,7 +3190,7 @@ epmp_cs1            0x20000          0x4
  .const             0x91a4         0x24 build/default/debug/main_bridge.o
  .const             0x91c8          0xc build/default/debug/bsp/rtcc.o
 
-.text             0x0011d4        0xf00
+.text             0x0011d4        0xece
  .text            0x0011d4        0x3fe build/default/debug/bsp/rtcc.o
                   0x0011d4                  _RTCC_BuildTimeGet
                   0x0013f2                  _RTCC_Initialize
@@ -3209,35 +3209,35 @@ epmp_cs1            0x20000          0x4
                   0x001a68                  _LED_Toggle
                   0x001b68                  _LED_Get
                   0x001c22                  _LED_Enable
- .text            0x001c74        0x15a build/default/debug/main_bridge.o
+ .text            0x001c74        0x128 build/default/debug/main_bridge.o
                   0x001c74                  _delay_nop
                   0x001c92                  _main
-                  0x001db0                  build/default/debug/main_bridge.o:_BlinkAliveEventHandler
-                  0x001dba                  build/default/debug/main_bridge.o:_SpiSendEventHandler
-                  0x001dc4                  build/default/debug/main_bridge.o:_ScreenUpdateEventHandler
- .text            0x001dce         0xea build/default/debug/bsp/adc.o
-                  0x001dce                  _ADC_ReadPercentage
-                  0x001e04                  _ADC_Read10bit
-                  0x001e58                  _ADC_ChannelEnable
-                  0x001e74                  _ADC_SetConfiguration
- .text            0x001eb8         0xe4 build/default/debug/bsp/timer_1ms.o
-                  0x001eb8                  _TIMER_CancelTick
-                  0x001eee                  _TIMER_RequestTick
-                  0x001f56                  _TIMER_SetConfiguration
- .text            0x001f9c         0xa4 build/default/debug/bsp/buttons.o
-                  0x001f9c                  _BUTTON_IsPressed
-                  0x002008                  _BUTTON_Enable
- .text            0x002040         0x94 build/default/debug/spi_bridge.o
-                  0x002040                  _spi_init_master
-                  0x002094                  _spi_master_rw
+                  0x001d7e                  build/default/debug/main_bridge.o:_BlinkAliveEventHandler
+                  0x001d88                  build/default/debug/main_bridge.o:_SpiSendEventHandler
+                  0x001d92                  build/default/debug/main_bridge.o:_ScreenUpdateEventHandler
+ .text            0x001d9c         0xea build/default/debug/bsp/adc.o
+                  0x001d9c                  _ADC_ReadPercentage
+                  0x001dd2                  _ADC_Read10bit
+                  0x001e26                  _ADC_ChannelEnable
+                  0x001e42                  _ADC_SetConfiguration
+ .text            0x001e86         0xe4 build/default/debug/bsp/timer_1ms.o
+                  0x001e86                  _TIMER_CancelTick
+                  0x001ebc                  _TIMER_RequestTick
+                  0x001f24                  _TIMER_SetConfiguration
+ .text            0x001f6a         0xa4 build/default/debug/bsp/buttons.o
+                  0x001f6a                  _BUTTON_IsPressed
+                  0x001fd6                  _BUTTON_Enable
+ .text            0x00200e         0x94 build/default/debug/spi_bridge.o
+                  0x00200e                  _spi_init_master
+                  0x002062                  _spi_master_rw
 
-.dinit            0x0020d4         0x7a
- .dinit           0x0020d4         0x7a data_init
+.dinit            0x0020a2         0x7a
+ .dinit           0x0020a2         0x7a data_init
 
-.text             0x00214e         0x6e
- .text            0x00214e         0x66 build/default/debug/uart_bridge.o
-                  0x00214e                  _uart1_init
-                  0x002186                  _uart1_write
-                  0x00219e                  _uart1_read
- .text            0x0021b4          0x8 build/default/debug/system.o
-                  0x0021b4                  _SYS_Initialize
+.text             0x00211c         0x6e
+ .text            0x00211c         0x66 build/default/debug/uart_bridge.o
+                  0x00211c                  _uart1_init
+                  0x002154                  _uart1_write
+                  0x00216c                  _uart1_read
+ .text            0x002182          0x8 build/default/debug/system.o
+                  0x002182                  _SYS_Initialize
