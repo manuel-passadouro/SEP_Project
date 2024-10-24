@@ -20,7 +20,6 @@
       <itemPath>timer.h</itemPath>
       <itemPath>apds9960.h</itemPath>
       <itemPath>i2c.h</itemPath>
-      <itemPath>uart.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -52,7 +51,6 @@
       <itemPath>timer.c</itemPath>
       <itemPath>apds9960.c</itemPath>
       <itemPath>i2c.c</itemPath>
-      <itemPath>uart.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -66,7 +64,7 @@
         <targetDevice>PIC24FJ256GA702</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PK5Tool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>2.10</languageToolchainVersion>
         <platform>3</platform>

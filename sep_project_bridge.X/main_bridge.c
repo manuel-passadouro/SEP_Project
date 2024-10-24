@@ -28,6 +28,7 @@ limitations under the License.
 #include "bsp/rtcc.h"
  
 #include "io_mapping.h"
+#include "spi_bridge.h"
 #include "uart_bridge.h"
 
 // *****************************************************************************

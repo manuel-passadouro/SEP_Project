@@ -83,6 +83,19 @@ void led_init(){
     LATBbits.LATB6 = 1;     // Set initial state to high (LED on)
 }
 
+void ioc_init(){
+    //Interrupt On Change Setup
+    
+    PADCONbits.IOCON = 1; // Enables the IoC functionality for all pins
+    IOCPBbits.IOCPB14 = 0; // Disables rising edge detection
+    IOCNBbits.IOCNB14 = 1; // Enables falling edge detection
+    IOCFBbits.IOCFB14 = 0; // Clear the individual interrupt flag for RA1
+    IFS1bits.IOCIF = 0; // Clear overall IoC interrupt flag
+    IPC4bits.IOCIP = 1; // Configure the IoC interrupts priority to value 1
+    IEC1bits.IOCIE = 1; // Enable the IoC interrupts
+    INTCON2bits.GIE = 1;  //Enables Global Interrupt
+}
+
 
 
 /*
@@ -99,24 +112,14 @@ int main(void){
     
     //Device Initialization
     led_init();
+    ioc_init();
     spi_init_slave();
     timer1_init();
     adc_init();
     i2c_master_init();
     apds9960_init();
     
-    //Interrupt On Change Setup
-    
-    PADCONbits.IOCON = 1; // Enables the IoC functionality for all pins
-    IOCPBbits.IOCPB14 = 0; // Disables rising edge detection
-    IOCNBbits.IOCNB14 = 1; // Enables falling edge detection
-    IOCFBbits.IOCFB14 = 0; // Clear the individual interrupt flag for RA1
-    IFS1bits.IOCIF = 0; // Clear overall IoC interrupt flag
-    IPC4bits.IOCIP = 1; // Configure the IoC interrupts priority to value 1
-    IEC1bits.IOCIE = 1; // Enable the IoC interrupts
-    INTCON2bits.GIE = 1;  //Enables Global Interrupt
-    
-    
+   
     while (1)
     {
         // Add your application code

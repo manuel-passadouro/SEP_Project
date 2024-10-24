@@ -4,13 +4,13 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005b80.00 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005b80.01 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005b80.02 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005b80.03 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005b80.04 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005b80.05 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005b80.06 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.00 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.01 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.02 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.03 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.04 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.05 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp000033dc.06 \
   -p24FJ1024GB610 \
   --mdfp=C:/Users/mpass/.mchp_packs/Microchip/PIC24F-GA-GB_DFP/1.3.109/xc16 \
   -o \
@@ -737,7 +737,7 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x5e35
+.debug_info       0x000000       0x5dff
  *(.debug_info)
  .debug_info      0x000000        0xb9e build/default/debug/bsp/adc.o
  .debug_info      0x000b9e        0x59c build/default/debug/bsp/rtcc.o
@@ -748,14 +748,14 @@ __FDEVOPT1
  .debug_info      0x002db7        0x8c0 build/default/debug/bsp/timer_1ms.o
  .debug_info      0x003677        0x27e build/default/debug/system.o
  .debug_info      0x0038f5        0x85d build/default/debug/uart_bridge.o
- .debug_info      0x004152        0xc60 build/default/debug/main_bridge.o
- .debug_info      0x004db2        0xeda build/default/debug/spi_bridge.o
- .debug_info      0x005c8c         0x90 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
- .debug_info      0x005d1c         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
- .debug_info      0x005da9         0x8c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
+ .debug_info      0x004152        0xc2a build/default/debug/main_bridge.o
+ .debug_info      0x004d7c        0xeda build/default/debug/spi_bridge.o
+ .debug_info      0x005c56         0x90 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
+ .debug_info      0x005ce6         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
+ .debug_info      0x005d73         0x8c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0xbdc
+.debug_abbrev     0x000000        0xbb2
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x10c build/default/debug/bsp/adc.o
  .debug_abbrev    0x00010c        0x118 build/default/debug/bsp/rtcc.o
@@ -766,11 +766,11 @@ __FDEVOPT1
  .debug_abbrev    0x0005cd        0x1a5 build/default/debug/bsp/timer_1ms.o
  .debug_abbrev    0x000772         0x92 build/default/debug/system.o
  .debug_abbrev    0x000804        0x102 build/default/debug/uart_bridge.o
- .debug_abbrev    0x000906        0x17a build/default/debug/main_bridge.o
- .debug_abbrev    0x000a80        0x120 build/default/debug/spi_bridge.o
- .debug_abbrev    0x000ba0         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
- .debug_abbrev    0x000bb4         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
- .debug_abbrev    0x000bc8         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
+ .debug_abbrev    0x000906        0x150 build/default/debug/main_bridge.o
+ .debug_abbrev    0x000a56        0x120 build/default/debug/spi_bridge.o
+ .debug_abbrev    0x000b76         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
+ .debug_abbrev    0x000b8a         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
+ .debug_abbrev    0x000b9e         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
 
 .debug_line       0x000000        0xe6c
  *(.debug_line)
@@ -803,7 +803,7 @@ __FDEVOPT1
  .debug_frame     0x00057a         0xa4 build/default/debug/main_bridge.o
  .debug_frame     0x00061e         0x48 build/default/debug/spi_bridge.o
 
-.debug_str        0x000000        0x244
+.debug_str        0x000000        0x236
  *(.debug_str)
  .debug_str       0x000000         0x3e build/default/debug/bsp/adc.o
  .debug_str       0x00003e         0x40 build/default/debug/bsp/rtcc.o
@@ -813,8 +813,8 @@ __FDEVOPT1
  .debug_str       0x000104         0x22 build/default/debug/bsp/timer_1ms.o
  .debug_str       0x000126          0xc build/default/debug/system.o
  .debug_str       0x000132         0x34 build/default/debug/uart_bridge.o
- .debug_str       0x000166         0x4b build/default/debug/main_bridge.o
- .debug_str       0x0001b1         0x93 build/default/debug/spi_bridge.o
+ .debug_str       0x000166         0x3d build/default/debug/main_bridge.o
+ .debug_str       0x0001a3         0x93 build/default/debug/spi_bridge.o
 
 .debug_loc
  *(.debug_loc)
