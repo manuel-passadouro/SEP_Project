@@ -138,7 +138,7 @@ int main(void){
         
         
         //test_sleep();
-        //Sleep();
+        Sleep();
        
         CLEAR_WDT; //Watchdog reset  
     }
