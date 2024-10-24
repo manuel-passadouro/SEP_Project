@@ -13,7 +13,7 @@ extern "C" {
 #endif
 
 #include "mcc_generated_files/system.h"
-#define FCY 16000000UL
+//#define FCY 16000000UL
 #include <libpic30.h>
 #include <stdbool.h>
     

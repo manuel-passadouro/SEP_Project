@@ -83,6 +83,19 @@ void led_init(){
     LATBbits.LATB6 = 1;     // Set initial state to high (LED on)
 }
 
+void ioc_init(){
+    //Interrupt On Change Setup
+    
+    PADCONbits.IOCON = 1; // Enables the IoC functionality for all pins
+    IOCPBbits.IOCPB14 = 0; // Disables rising edge detection
+    IOCNBbits.IOCNB14 = 1; // Enables falling edge detection
+    IOCFBbits.IOCFB14 = 0; // Clear the individual interrupt flag for RA1
+    IFS1bits.IOCIF = 0; // Clear overall IoC interrupt flag
+    IPC4bits.IOCIP = 1; // Configure the IoC interrupts priority to value 1
+    IEC1bits.IOCIE = 1; // Enable the IoC interrupts
+    INTCON2bits.GIE = 1;  //Enables Global Interrupt
+}
+
 
 
 /*
@@ -93,39 +106,42 @@ int main(void){
     float adc_temp;
     float dummy;
     uint16_t adc_out;
-    uint8_t spi_data_out = 0x00;
-    uint8_t spi_data_in;
+  //  uint8_t spi_data_out = 0x00;
+   // uint8_t spi_data_in;
     uint8_t prox_data;
     
     //Device Initialization
     led_init();
-    timer1_init();
+    ioc_init();
     spi_init_slave();
+    timer1_init();
     adc_init();
     i2c_master_init();
     apds9960_init();
-     
+    
+   
     while (1)
     {
         // Add your application code
         
-        //spi_data_in = spi_write_byte(spi_data_out);
-        
+       
         if(timer1_flag){
-            //spi_data_out++;
-            LATBbits.LATB6 ^= 1;
+            timer1_flag = 0; //Clear Timer 1 Flag 
+            
             adc_out = adc_read();
             adc_temp = adc_temp_convert(adc_out);
-            //prox_data = apds9960_get_prox();
-            timer1_flag = 0; //Clear Timer 1 Flag     
+            prox_data = apds9960_get_prox();
+            //send temp data in 2 bytes do not convert to float
+            //spi_data_out[0] = adc_temp;
+            spi_data_out = prox_data;
+            
+            LATBbits.LATB6 ^= 1; //turn on LED, mark acq complete
+                
         }
         
-        //ADC readout           
-        //adc_out = adc_read();
-        //adc_temp = adc_temp_convert((float)adc_out);
-        //adc_temp = adc_temp;
         
         //test_sleep();
+        Sleep();
        
         CLEAR_WDT; //Watchdog reset  
     }
