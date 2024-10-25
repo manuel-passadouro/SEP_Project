@@ -4,17 +4,32 @@
 
 - [ ] Top-level flowchart and diagram;
 - [ ] List of features/requirements;
-- [ ] Uart Comunication;
-- [ ] APDS9906 Drivers;
+- [x] Uart Comunication;
+- [x] APDS9906 Drivers;
 - [ ] PC GUI;
 - [ ] Full system integration;
-- [ ] Sensor Node schematic and layout;
+- [x] Sensor Node schematic and layout;
 - [ ] Sensor Node PCB;
 - [ ] PCB testing;
 - [ ] Presentation Slides.
 <!-- TODO ENDS HERE -->
 
 <!-- NEW LOG ENTRY STARTS HERE -->
+
+## 25/10/2024
+
+### Notes:
+- PCB has been designed and assembled, still need to cut and solder 
+  components and headers;
+- BOM can be extracted from schematic;
+- Basic UART-SPI relay is working, can send sensor data to PC;
+- Final step to close communication loop is to send commands from and display data on GUI;
+- Some data processing (8-bit RGB, Temp in Celsius, Timestamp) should also be done in GUI;
+- Gesture detection conflicts with Prox and RGB data acquisition, it is unlikely that there will be time to correctly implement and test;
+- Sleep will only be tested after communication loop is fully tested.
+
+  
+<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 13/10/2024
 
@@ -27,8 +42,6 @@
 - We have to try implementing gesture interrupt, via IoC, try to translate from arduino example.
 - Start PCB design on eagle, draft the schematic and check with prof by the 18th;
 - It's a good idea to clean-up the bridge code some more, change some names and take away stuff that will not be used.
-  
-<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 09/10/2024
 
