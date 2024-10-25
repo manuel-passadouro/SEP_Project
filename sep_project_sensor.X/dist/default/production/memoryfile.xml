@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/default/production/sep_project.X.production.elf">
+  <executable name="dist/default/production/sep_project_sensor.X.production.elf">
     <memory name="data">
       <units>bytes</units>
       <length>16384</length>
-      <used>8</used>
-      <free>16376</free>
+      <used>30</used>
+      <free>16354</free>
     </memory>
     <memory name="program">
       <units>bytes</units>
       <length>263424</length>
-      <used>4437</used>
-      <free>258987</free>
+      <used>5082</used>
+      <free>258342</free>
     </memory>
   </executable>
 </project>

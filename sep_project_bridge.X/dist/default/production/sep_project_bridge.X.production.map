@@ -4,17 +4,10 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00003fb0.00 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00003fb0.01 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00003fb0.02 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00003fb0.03 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00003fb0.04 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00003fb0.05 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00003fb0.06 \
   -p24FJ1024GB610 \
   --mdfp=C:/Users/mpass/.mchp_packs/Microchip/PIC24F-GA-GB_DFP/1.3.109/xc16 \
   -o \
-  dist/default/debug/sep_project_bridge.X.debug.elf \
+  dist/default/production/sep_project_bridge.X.production.elf \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/.. \
   -LC:/Users/mpass/.mchp_packs/Microchip/PIC24F-GA-GB_DFP/1.3.109/xc16/bin/../support/PIC24F/gld \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../lib \
@@ -25,23 +18,20 @@ Command:
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33C/gld \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33F/gld \
-  build/default/debug/bsp/adc.o \
-  build/default/debug/bsp/rtcc.o \
-  build/default/debug/bsp/buttons.o \
-  build/default/debug/bsp/lcd.o \
-  build/default/debug/bsp/leds.o \
-  build/default/debug/bsp/lcd_printf.o \
-  build/default/debug/bsp/timer_1ms.o \
-  build/default/debug/system.o \
-  build/default/debug/uart_bridge.o \
-  build/default/debug/main_bridge.o \
-  build/default/debug/spi_bridge.o \
+  build/default/production/bsp/adc.o \
+  build/default/production/bsp/rtcc.o \
+  build/default/production/bsp/buttons.o \
+  build/default/production/bsp/lcd.o \
+  build/default/production/bsp/leds.o \
+  build/default/production/bsp/lcd_printf.o \
+  build/default/production/bsp/timer_1ms.o \
+  build/default/production/system.o \
+  build/default/production/uart_bridge.o \
+  build/default/production/main_bridge.o \
+  build/default/production/spi_bridge.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
-  --defsym=__MPLAB_DEBUG=1 \
-  --defsym=__DEBUG=1 \
-  --defsym=__MPLAB_DEBUGGER_PK3=1 \
-  -Tp24FJ1024GB610.gld.07 \
+  -Tp24FJ1024GB610.gld.00 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -53,10 +43,10 @@ Command:
   --stackguard=16 \
   --no-force-link \
   --smart-io \
-  -Map=dist/default/debug/sep_project_bridge.X.debug.map \
+  -Map=dist/default/production/sep_project_bridge.X.production.map \
   --report-mem \
   --memorysummary \
-  dist/default/debug/memoryfile.xml \
+  dist/default/production/memoryfile.xml \
   -start-group \
   --library=c99-pic30-elf \
   --library=m-elf \
@@ -74,13 +64,13 @@ c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
                               (__crt_start_mode_normal)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__sio_printf_doux.DA_o)
-                              build/default/debug/main_bridge.o (__printf_cdnopuxX)
+                              build/default/production/main_bridge.o (__printf_cdnopuxX)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__sio_sprintf_doux.DA_o)
-                              build/default/debug/uart_bridge.o (__sprintf_cdnopuxX)
+                              build/default/production/uart_bridge.o (__sprintf_cdnopuxX)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(memset.DA_o)
-                              build/default/debug/bsp/timer_1ms.o (_memset)
+                              build/default/production/bsp/timer_1ms.o (_memset)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(putchar.DA_o)
-                              build/default/debug/main_bridge.o (_putchar)
+                              build/default/production/main_bridge.o (_putchar)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(stdout.DA_o)
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__sio_printf_doux.DA_o) (__stdout)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__fmt_d.DA_o)
@@ -191,21 +181,13 @@ section                    address   length (PC units)   length (bytes) (dec)
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-reserve_data_0x800           0x800                0x1c            0x1c  (28)
-reserve_data_0x81c           0x81c                 0x2             0x2  (2)
-reserve_data_0x81e           0x81e                 0x2             0x2  (2)
-reserve_data_0x820           0x820                 0x2             0x2  (2)
-reserve_data_0x822           0x822                 0x2             0x2  (2)
-reserve_data_0x824           0x824                 0x4             0x4  (4)
-.nbss                        0x828                   0             0x2  (2)
-reserve_data_0x82a           0x82a                0x26            0x26  (38)
-.nbss                        0x850                   0             0x4  (4)
-.ndata                       0x854                   0             0x2  (2)
-.bss                         0x856                   0            0x64  (100)
-.data                        0x8ba                   0            0x60  (96)
-.bss                         0x91a                   0            0x12  (18)
+.nbss                        0x800                   0             0x6  (6)
+.ndata                       0x806                   0             0x2  (2)
+.bss                         0x808                   0            0x64  (100)
+.data                        0x86c                   0            0x60  (96)
+.bss                         0x8cc                   0            0x12  (18)
 
-                 Total "data" memory used (bytes):          0x12c  (300) <1%
+                 Total "data" memory used (bytes):           0xde  (222) <1%
 
 
 Dynamic Memory Usage
@@ -213,31 +195,31 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x92c                              0x76d4  (30420)
+stack                        0x8de                              0x7722  (30498)
 
-                 Maximum dynamic memory (bytes):         0x76d4  (30420)
+                 Maximum dynamic memory (bytes):         0x7722  (30498)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
 
 External Symbols in Data Memory (by address):
 
-                    0x08ba                  __stdout
-                    0x08bc                  ___stdout_used
-                    0x092a                  ___errno_val
+                    0x086c                  __stdout
+                    0x086e                  ___stdout_used
+                    0x08dc                  ___errno_val
 
 External Symbols in Data Memory (by name):
 
-                    0x092a                  ___errno_val
-                    0x08bc                  ___stdout_used
-                    0x08ba                  __stdout
+                    0x08dc                  ___errno_val
+                    0x086e                  ___stdout_used
+                    0x086c                  __stdout
 
 External Symbols in Program Memory (by address):
 
                   0x000100                  __resetPRI
                   0x00013c                  __psv_init
-                  0x000152                  __data_init
                   0x000152                  __data_init_da
+                  0x000152                  __data_init
                   0x00021c                  __T3Interrupt
                   0x0002c0                  __OscillatorFail
                   0x0002d6                  __AddressError
@@ -307,9 +289,9 @@ External Symbols in Program Memory (by address):
                   0x001c96                  _LED_Enable
                   0x001ce8                  _delay_nop
                   0x001d06                  _main
-                  0x001e24                  build/default/debug/main_bridge.o:_BlinkAliveEventHandler
-                  0x001e2e                  build/default/debug/main_bridge.o:_SpiSendEventHandler
-                  0x001e38                  build/default/debug/main_bridge.o:_ScreenUpdateEventHandler
+                  0x001e24                  build/default/production/main_bridge.o:_BlinkAliveEventHandler
+                  0x001e2e                  build/default/production/main_bridge.o:_SpiSendEventHandler
+                  0x001e38                  build/default/production/main_bridge.o:_ScreenUpdateEventHandler
                   0x001e42                  _spi_init_master
                   0x001e96                  _spi_master_rw
                   0x001eb0                  _spi_master_handle
@@ -420,9 +402,9 @@ External Symbols in Program Memory (by name):
                   0x0020ee                  _uart1_read
                   0x00206e                  _uart1_write
                   0x00032e                  _write
-                  0x001e24                  build/default/debug/main_bridge.o:_BlinkAliveEventHandler
-                  0x001e38                  build/default/debug/main_bridge.o:_ScreenUpdateEventHandler
-                  0x001e2e                  build/default/debug/main_bridge.o:_SpiSendEventHandler
+                  0x001e24                  build/default/production/main_bridge.o:_BlinkAliveEventHandler
+                  0x001e38                  build/default/production/main_bridge.o:_ScreenUpdateEventHandler
+                  0x001e2e                  build/default/production/main_bridge.o:_SpiSendEventHandler
 
 Memory Configuration
 
@@ -445,56 +427,18 @@ FDEVOPT1         0x0abf2c           0x000002
 
 Linker script and memory map
 
-
-reserve_data_0x800
-                    0x0800         0x1c
-                    0x081c                  . = 0x1c
- *fill*             0x0800         0x1c00
-
-reserve_data_0x81c
-                    0x081c          0x2
-                    0x081e                  . = 0x2
- *fill*             0x081c          0x200
-
-reserve_data_0x81e
-                    0x081e          0x2
-                    0x0820                  . = 0x2
- *fill*             0x081e          0x200
-
-reserve_data_0x820
-                    0x0820          0x2
-                    0x0822                  . = 0x2
- *fill*             0x0820          0x200
-
-reserve_data_0x822
-                    0x0822          0x2
-                    0x0824                  . = 0x2
- *fill*             0x0822          0x200
-
-reserve_data_0x824
-                    0x0824          0x4
-                    0x0828                  . = 0x4
- *fill*             0x0824          0x400
-
-reserve_data_0x82a
-                    0x082a         0x26
-                    0x0850                  . = 0x26
- *fill*             0x082a         0x2600
-LOAD build/default/debug/bsp/adc.o
-LOAD build/default/debug/bsp/rtcc.o
-LOAD build/default/debug/bsp/buttons.o
-LOAD build/default/debug/bsp/lcd.o
-LOAD build/default/debug/bsp/leds.o
-LOAD build/default/debug/bsp/lcd_printf.o
-LOAD build/default/debug/bsp/timer_1ms.o
-LOAD build/default/debug/system.o
-LOAD build/default/debug/uart_bridge.o
-LOAD build/default/debug/main_bridge.o
-LOAD build/default/debug/spi_bridge.o
+LOAD build/default/production/bsp/adc.o
+LOAD build/default/production/bsp/rtcc.o
+LOAD build/default/production/bsp/buttons.o
+LOAD build/default/production/bsp/lcd.o
+LOAD build/default/production/bsp/leds.o
+LOAD build/default/production/bsp/lcd_printf.o
+LOAD build/default/production/bsp/timer_1ms.o
+LOAD build/default/production/system.o
+LOAD build/default/production/uart_bridge.o
+LOAD build/default/production/main_bridge.o
+LOAD build/default/production/spi_bridge.o
                     0x0001                  __MPLAB_BUILD = 0x1
-                    0x0001                  __MPLAB_DEBUG = 0x1
-                    0x0001                  __DEBUG = 0x1
-                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
 LOAD pPIC24Fxxx
 LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
                     0x801800                  __FBOOT = 0x801800
@@ -532,9 +476,9 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
  *(.handle)
  .handle          0x000204         0x18 jump_table
  *(.isr*)
- .isr.text        0x00021c         0xa4 build/default/debug/bsp/timer_1ms.o
+ .isr.text        0x00021c         0xa4 build/default/production/bsp/timer_1ms.o
                   0x00021c                  __T3Interrupt
- .isr.text        0x0002c0         0x58 build/default/debug/system.o
+ .isr.text        0x0002c0         0x58 build/default/production/system.o
                   0x0002c0                  __OscillatorFail
                   0x0002d6                  __AddressError
                   0x0002ec                  __StackError
@@ -547,7 +491,7 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
  *(.libm)
  *(.libdsp)
  *(.lib*)
- .libc.write      0x00032e         0x14 build/default/debug/bsp/lcd_printf.o
+ .libc.write      0x00032e         0x14 build/default/production/bsp/lcd_printf.o
                   0x00032e                  _write
  .libpic30_crt_start_mode
                   0x000342          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
@@ -766,17 +710,17 @@ __FDEVOPT1
 
 .debug_info       0x000000       0x57eb
  *(.debug_info)
- .debug_info      0x000000        0xb9e build/default/debug/bsp/adc.o
- .debug_info      0x000b9e        0x59c build/default/debug/bsp/rtcc.o
- .debug_info      0x00113a        0x979 build/default/debug/bsp/buttons.o
- .debug_info      0x001ab3        0xc6e build/default/debug/bsp/lcd.o
- .debug_info      0x002721        0x511 build/default/debug/bsp/leds.o
- .debug_info      0x002c32        0x185 build/default/debug/bsp/lcd_printf.o
- .debug_info      0x002db7        0x8c0 build/default/debug/bsp/timer_1ms.o
- .debug_info      0x003677        0x27e build/default/debug/system.o
- .debug_info      0x0038f5        0x90a build/default/debug/uart_bridge.o
- .debug_info      0x0041ff        0x4ca build/default/debug/main_bridge.o
- .debug_info      0x0046c9        0xf79 build/default/debug/spi_bridge.o
+ .debug_info      0x000000        0xb9e build/default/production/bsp/adc.o
+ .debug_info      0x000b9e        0x59c build/default/production/bsp/rtcc.o
+ .debug_info      0x00113a        0x979 build/default/production/bsp/buttons.o
+ .debug_info      0x001ab3        0xc6e build/default/production/bsp/lcd.o
+ .debug_info      0x002721        0x511 build/default/production/bsp/leds.o
+ .debug_info      0x002c32        0x185 build/default/production/bsp/lcd_printf.o
+ .debug_info      0x002db7        0x8c0 build/default/production/bsp/timer_1ms.o
+ .debug_info      0x003677        0x27e build/default/production/system.o
+ .debug_info      0x0038f5        0x90a build/default/production/uart_bridge.o
+ .debug_info      0x0041ff        0x4ca build/default/production/main_bridge.o
+ .debug_info      0x0046c9        0xf79 build/default/production/spi_bridge.o
  .debug_info      0x005642         0x90 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
  .debug_info      0x0056d2         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
  .debug_info      0x00575f         0x8c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
@@ -784,63 +728,63 @@ __FDEVOPT1
 
 .debug_abbrev     0x000000        0xbb0
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x10c build/default/debug/bsp/adc.o
- .debug_abbrev    0x00010c        0x118 build/default/debug/bsp/rtcc.o
- .debug_abbrev    0x000224         0xf4 build/default/debug/bsp/buttons.o
- .debug_abbrev    0x000318        0x177 build/default/debug/bsp/lcd.o
- .debug_abbrev    0x00048f         0xf0 build/default/debug/bsp/leds.o
- .debug_abbrev    0x00057f         0x4e build/default/debug/bsp/lcd_printf.o
- .debug_abbrev    0x0005cd        0x1a5 build/default/debug/bsp/timer_1ms.o
- .debug_abbrev    0x000772         0x92 build/default/debug/system.o
- .debug_abbrev    0x000804        0x137 build/default/debug/uart_bridge.o
- .debug_abbrev    0x00093b         0xd8 build/default/debug/main_bridge.o
- .debug_abbrev    0x000a13        0x161 build/default/debug/spi_bridge.o
+ .debug_abbrev    0x000000        0x10c build/default/production/bsp/adc.o
+ .debug_abbrev    0x00010c        0x118 build/default/production/bsp/rtcc.o
+ .debug_abbrev    0x000224         0xf4 build/default/production/bsp/buttons.o
+ .debug_abbrev    0x000318        0x177 build/default/production/bsp/lcd.o
+ .debug_abbrev    0x00048f         0xf0 build/default/production/bsp/leds.o
+ .debug_abbrev    0x00057f         0x4e build/default/production/bsp/lcd_printf.o
+ .debug_abbrev    0x0005cd        0x1a5 build/default/production/bsp/timer_1ms.o
+ .debug_abbrev    0x000772         0x92 build/default/production/system.o
+ .debug_abbrev    0x000804        0x137 build/default/production/uart_bridge.o
+ .debug_abbrev    0x00093b         0xd8 build/default/production/main_bridge.o
+ .debug_abbrev    0x000a13        0x161 build/default/production/spi_bridge.o
  .debug_abbrev    0x000b74         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
  .debug_abbrev    0x000b88         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
  .debug_abbrev    0x000b9c         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
 
 .debug_line       0x000000        0xe28
  *(.debug_line)
- .debug_line      0x000000        0x138 build/default/debug/bsp/adc.o
- .debug_line      0x000138        0x196 build/default/debug/bsp/rtcc.o
- .debug_line      0x0002ce        0x12d build/default/debug/bsp/buttons.o
- .debug_line      0x0003fb        0x1a2 build/default/debug/bsp/lcd.o
- .debug_line      0x00059d        0x19b build/default/debug/bsp/leds.o
- .debug_line      0x000738         0x40 build/default/debug/bsp/lcd_printf.o
- .debug_line      0x000778        0x154 build/default/debug/bsp/timer_1ms.o
- .debug_line      0x0008cc        0x11b build/default/debug/system.o
- .debug_line      0x0009e7        0x128 build/default/debug/uart_bridge.o
- .debug_line      0x000b0f        0x108 build/default/debug/main_bridge.o
- .debug_line      0x000c17        0x134 build/default/debug/spi_bridge.o
+ .debug_line      0x000000        0x138 build/default/production/bsp/adc.o
+ .debug_line      0x000138        0x196 build/default/production/bsp/rtcc.o
+ .debug_line      0x0002ce        0x12d build/default/production/bsp/buttons.o
+ .debug_line      0x0003fb        0x1a2 build/default/production/bsp/lcd.o
+ .debug_line      0x00059d        0x19b build/default/production/bsp/leds.o
+ .debug_line      0x000738         0x40 build/default/production/bsp/lcd_printf.o
+ .debug_line      0x000778        0x154 build/default/production/bsp/timer_1ms.o
+ .debug_line      0x0008cc        0x11b build/default/production/system.o
+ .debug_line      0x0009e7        0x128 build/default/production/uart_bridge.o
+ .debug_line      0x000b0f        0x108 build/default/production/main_bridge.o
+ .debug_line      0x000c17        0x134 build/default/production/spi_bridge.o
  .debug_line      0x000d4b         0x59 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
  .debug_line      0x000da4         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
  .debug_line      0x000dee         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
 
 .debug_frame      0x000000        0x690
  *(.debug_frame)
- .debug_frame     0x000000         0x7c build/default/debug/bsp/adc.o
- .debug_frame     0x00007c         0xd2 build/default/debug/bsp/rtcc.o
- .debug_frame     0x00014e         0x48 build/default/debug/bsp/buttons.o
- .debug_frame     0x000196        0x158 build/default/debug/bsp/lcd.o
- .debug_frame     0x0002ee         0x96 build/default/debug/bsp/leds.o
- .debug_frame     0x000384         0x2e build/default/debug/bsp/lcd_printf.o
- .debug_frame     0x0003b2         0xa8 build/default/debug/bsp/timer_1ms.o
- .debug_frame     0x00045a         0xbe build/default/debug/system.o
- .debug_frame     0x000518         0x6a build/default/debug/uart_bridge.o
- .debug_frame     0x000582         0xa4 build/default/debug/main_bridge.o
- .debug_frame     0x000626         0x6a build/default/debug/spi_bridge.o
+ .debug_frame     0x000000         0x7c build/default/production/bsp/adc.o
+ .debug_frame     0x00007c         0xd2 build/default/production/bsp/rtcc.o
+ .debug_frame     0x00014e         0x48 build/default/production/bsp/buttons.o
+ .debug_frame     0x000196        0x158 build/default/production/bsp/lcd.o
+ .debug_frame     0x0002ee         0x96 build/default/production/bsp/leds.o
+ .debug_frame     0x000384         0x2e build/default/production/bsp/lcd_printf.o
+ .debug_frame     0x0003b2         0xa8 build/default/production/bsp/timer_1ms.o
+ .debug_frame     0x00045a         0xbe build/default/production/system.o
+ .debug_frame     0x000518         0x6a build/default/production/uart_bridge.o
+ .debug_frame     0x000582         0xa4 build/default/production/main_bridge.o
+ .debug_frame     0x000626         0x6a build/default/production/spi_bridge.o
 
 .debug_str        0x000000        0x1f9
  *(.debug_str)
- .debug_str       0x000000         0x3e build/default/debug/bsp/adc.o
- .debug_str       0x00003e         0x40 build/default/debug/bsp/rtcc.o
- .debug_str       0x00007e         0x3a build/default/debug/bsp/buttons.o
- .debug_str       0x0000b8         0x39 build/default/debug/bsp/lcd.o
- .debug_str       0x0000f1         0x13 build/default/debug/bsp/leds.o
- .debug_str       0x000104         0x22 build/default/debug/bsp/timer_1ms.o
- .debug_str       0x000126          0xc build/default/debug/system.o
- .debug_str       0x000132         0x34 build/default/debug/uart_bridge.o
- .debug_str       0x000166         0x93 build/default/debug/spi_bridge.o
+ .debug_str       0x000000         0x3e build/default/production/bsp/adc.o
+ .debug_str       0x00003e         0x40 build/default/production/bsp/rtcc.o
+ .debug_str       0x00007e         0x3a build/default/production/bsp/buttons.o
+ .debug_str       0x0000b8         0x39 build/default/production/bsp/lcd.o
+ .debug_str       0x0000f1         0x13 build/default/production/bsp/leds.o
+ .debug_str       0x000104         0x22 build/default/production/bsp/timer_1ms.o
+ .debug_str       0x000126          0xc build/default/production/system.o
+ .debug_str       0x000132         0x34 build/default/production/uart_bridge.o
+ .debug_str       0x000166         0x93 build/default/production/spi_bridge.o
 
 .debug_loc
  *(.debug_loc)
@@ -852,27 +796,27 @@ __FDEVOPT1
                   0x000000        0x386
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x6a build/default/debug/bsp/adc.o
+                  0x000000         0x6a build/default/production/bsp/adc.o
  .debug_pubnames
-                  0x00006a         0x7a build/default/debug/bsp/rtcc.o
+                  0x00006a         0x7a build/default/production/bsp/rtcc.o
  .debug_pubnames
-                  0x0000e4         0x39 build/default/debug/bsp/buttons.o
+                  0x0000e4         0x39 build/default/production/bsp/buttons.o
  .debug_pubnames
-                  0x00011d         0x70 build/default/debug/bsp/lcd.o
+                  0x00011d         0x70 build/default/production/bsp/lcd.o
  .debug_pubnames
-                  0x00018d         0x53 build/default/debug/bsp/leds.o
+                  0x00018d         0x53 build/default/production/bsp/leds.o
  .debug_pubnames
-                  0x0001e0         0x1c build/default/debug/bsp/lcd_printf.o
+                  0x0001e0         0x1c build/default/production/bsp/lcd_printf.o
  .debug_pubnames
-                  0x0001fc         0x69 build/default/debug/bsp/timer_1ms.o
+                  0x0001fc         0x69 build/default/production/bsp/timer_1ms.o
  .debug_pubnames
-                  0x000265         0x6a build/default/debug/system.o
+                  0x000265         0x6a build/default/production/system.o
  .debug_pubnames
-                  0x0002cf         0x40 build/default/debug/uart_bridge.o
+                  0x0002cf         0x40 build/default/production/uart_bridge.o
  .debug_pubnames
-                  0x00030f         0x29 build/default/debug/main_bridge.o
+                  0x00030f         0x29 build/default/production/main_bridge.o
  .debug_pubnames
-                  0x000338         0x4e build/default/debug/spi_bridge.o
+                  0x000338         0x4e build/default/production/spi_bridge.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -880,27 +824,27 @@ __FDEVOPT1
 .debug_aranges    0x000000        0x170
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/debug/bsp/adc.o
+                  0x000000         0x18 build/default/production/bsp/adc.o
  .debug_aranges
-                  0x000018         0x18 build/default/debug/bsp/rtcc.o
+                  0x000018         0x18 build/default/production/bsp/rtcc.o
  .debug_aranges
-                  0x000030         0x18 build/default/debug/bsp/buttons.o
+                  0x000030         0x18 build/default/production/bsp/buttons.o
  .debug_aranges
-                  0x000048         0x18 build/default/debug/bsp/lcd.o
+                  0x000048         0x18 build/default/production/bsp/lcd.o
  .debug_aranges
-                  0x000060         0x18 build/default/debug/bsp/leds.o
+                  0x000060         0x18 build/default/production/bsp/leds.o
  .debug_aranges
-                  0x000078         0x20 build/default/debug/bsp/lcd_printf.o
+                  0x000078         0x20 build/default/production/bsp/lcd_printf.o
  .debug_aranges
-                  0x000098         0x18 build/default/debug/bsp/timer_1ms.o
+                  0x000098         0x18 build/default/production/bsp/timer_1ms.o
  .debug_aranges
-                  0x0000b0         0x18 build/default/debug/system.o
+                  0x0000b0         0x18 build/default/production/system.o
  .debug_aranges
-                  0x0000c8         0x18 build/default/debug/uart_bridge.o
+                  0x0000c8         0x18 build/default/production/uart_bridge.o
  .debug_aranges
-                  0x0000e0         0x18 build/default/debug/main_bridge.o
+                  0x0000e0         0x18 build/default/production/main_bridge.o
  .debug_aranges
-                  0x0000f8         0x18 build/default/debug/spi_bridge.o
+                  0x0000f8         0x18 build/default/production/spi_bridge.o
  .debug_aranges
                   0x000110         0x20 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
  .debug_aranges
@@ -3007,7 +2951,7 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a
 LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a
 END GROUP
-OUTPUT(dist/default/debug/sep_project_bridge.X.debug.elf elf32-pic30)
+OUTPUT(dist/default/production/sep_project_bridge.X.production.elf elf32-pic30)
 LOAD /CW/_FSEC
 LOAD jump_table
 LOAD default_isr
@@ -3016,52 +2960,52 @@ LOAD data_init
 .debug_pubtypes
                   0x000170        0x709
  .debug_pubtypes
-                  0x000170         0xd7 build/default/debug/bsp/adc.o
+                  0x000170         0xd7 build/default/production/bsp/adc.o
  .debug_pubtypes
-                  0x000247         0x62 build/default/debug/bsp/rtcc.o
+                  0x000247         0x62 build/default/production/bsp/rtcc.o
  .debug_pubtypes
-                  0x0002a9         0xe0 build/default/debug/bsp/buttons.o
+                  0x0002a9         0xe0 build/default/production/bsp/buttons.o
  .debug_pubtypes
-                  0x000389         0xe1 build/default/debug/bsp/lcd.o
+                  0x000389         0xe1 build/default/production/bsp/lcd.o
  .debug_pubtypes
-                  0x00046a         0x63 build/default/debug/bsp/leds.o
+                  0x00046a         0x63 build/default/production/bsp/leds.o
  .debug_pubtypes
-                  0x0004cd         0x12 build/default/debug/bsp/lcd_printf.o
+                  0x0004cd         0x12 build/default/production/bsp/lcd_printf.o
  .debug_pubtypes
-                  0x0004df         0xca build/default/debug/bsp/timer_1ms.o
+                  0x0004df         0xca build/default/production/bsp/timer_1ms.o
  .debug_pubtypes
-                  0x0005a9         0x42 build/default/debug/system.o
+                  0x0005a9         0x42 build/default/production/system.o
  .debug_pubtypes
-                  0x0005eb         0xca build/default/debug/uart_bridge.o
+                  0x0005eb         0xca build/default/production/uart_bridge.o
  .debug_pubtypes
-                  0x0006b5         0x30 build/default/debug/main_bridge.o
+                  0x0006b5         0x30 build/default/production/main_bridge.o
  .debug_pubtypes
-                  0x0006e5        0x194 build/default/debug/spi_bridge.o
+                  0x0006e5        0x194 build/default/production/spi_bridge.o
 
 __c30_signature
                   0x000879        0x126
  __c30_signature
-                  0x000879          0x6 build/default/debug/bsp/adc.o
+                  0x000879          0x6 build/default/production/bsp/adc.o
  __c30_signature
-                  0x00087f          0x6 build/default/debug/bsp/rtcc.o
+                  0x00087f          0x6 build/default/production/bsp/rtcc.o
  __c30_signature
-                  0x000885          0x6 build/default/debug/bsp/buttons.o
+                  0x000885          0x6 build/default/production/bsp/buttons.o
  __c30_signature
-                  0x00088b          0x6 build/default/debug/bsp/lcd.o
+                  0x00088b          0x6 build/default/production/bsp/lcd.o
  __c30_signature
-                  0x000891          0x6 build/default/debug/bsp/leds.o
+                  0x000891          0x6 build/default/production/bsp/leds.o
  __c30_signature
-                  0x000897          0x6 build/default/debug/bsp/lcd_printf.o
+                  0x000897          0x6 build/default/production/bsp/lcd_printf.o
  __c30_signature
-                  0x00089d          0x6 build/default/debug/bsp/timer_1ms.o
+                  0x00089d          0x6 build/default/production/bsp/timer_1ms.o
  __c30_signature
-                  0x0008a3          0x6 build/default/debug/system.o
+                  0x0008a3          0x6 build/default/production/system.o
  __c30_signature
-                  0x0008a9          0x6 build/default/debug/uart_bridge.o
+                  0x0008a9          0x6 build/default/production/uart_bridge.o
  __c30_signature
-                  0x0008af          0x6 build/default/debug/main_bridge.o
+                  0x0008af          0x6 build/default/production/main_bridge.o
  __c30_signature
-                  0x0008b5          0x6 build/default/debug/spi_bridge.o
+                  0x0008b5          0x6 build/default/production/spi_bridge.o
  __c30_signature
                   0x0008bb          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
  __c30_signature
@@ -3142,130 +3086,128 @@ __c30_signature
 __xc_reference_data
 
 epmp_cs1            0x20000          0x4
- epmp_cs1           0x20000          0x4 build/default/debug/bsp/lcd.o
+ epmp_cs1           0x20000          0x4 build/default/production/bsp/lcd.o
 
-.nbss               0x0828          0x2
- .nbss              0x0828          0x2 build/default/debug/bsp/lcd.o
+.nbss               0x0800          0x6
+ .nbss              0x0800          0x2 build/default/production/bsp/lcd.o
+ .nbss              0x0802          0x2 build/default/production/bsp/timer_1ms.o
+ .nbss              0x0804          0x2 build/default/production/main_bridge.o
 
-.nbss               0x0850          0x4
- .nbss              0x0850          0x2 build/default/debug/bsp/timer_1ms.o
- .nbss              0x0852          0x2 build/default/debug/main_bridge.o
+.ndata              0x0806          0x2
+ .ndata             0x0806          0x2 build/default/production/main_bridge.o
 
-.ndata              0x0854          0x2
- .ndata             0x0854          0x2 build/default/debug/main_bridge.o
+.bss                0x0808         0x64
+ .bss               0x0808         0x64 build/default/production/bsp/timer_1ms.o
 
-.bss                0x0856         0x64
- .bss               0x0856         0x64 build/default/debug/bsp/timer_1ms.o
+.data               0x086c         0x60
+ .data              0x086c         0x42 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(stdout.DA_o)
+                    0x086c                  __stdout
+                    0x086e                  ___stdout_used
+ .data              0x08ae         0x1e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__printf_core.DA_o)
 
-.data               0x08ba         0x60
- .data              0x08ba         0x42 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(stdout.DA_o)
-                    0x08ba                  __stdout
-                    0x08bc                  ___stdout_used
- .data              0x08fc         0x1e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__printf_core.DA_o)
-
-.bss                0x091a         0x12
- .bss               0x091a         0x10 build/default/debug/main_bridge.o
- .bss               0x092a          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.DA_o)
-                    0x092a                  ___errno_val
+.bss                0x08cc         0x12
+ .bss               0x08cc         0x10 build/default/production/main_bridge.o
+ .bss               0x08dc          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.DA_o)
+                    0x08dc                  ___errno_val
 
 .ivt._T3Interrupt
                   0x000024          0x2
  .ivt._T3Interrupt
-                  0x000024          0x2 build/default/debug/bsp/timer_1ms.o
+                  0x000024          0x2 build/default/production/bsp/timer_1ms.o
 
 .config_ALTVREF
                   0x0abf2c          0x2
  .config_ALTVREF
-                  0x0abf2c          0x2 build/default/debug/system.o
+                  0x0abf2c          0x2 build/default/production/system.o
 
 .config_BTSWP     0x0abf28          0x2
- .config_BTSWP    0x0abf28          0x2 build/default/debug/system.o
+ .config_BTSWP    0x0abf28          0x2 build/default/production/system.o
 
 .config_DNVPEN    0x0abf24          0x2
  .config_DNVPEN
-                  0x0abf24          0x2 build/default/debug/system.o
+                  0x0abf24          0x2 build/default/production/system.o
 
 .config_WDTCLK    0x0abf20          0x2
  .config_WDTCLK
-                  0x0abf20          0x2 build/default/debug/system.o
+                  0x0abf20          0x2 build/default/production/system.o
 
 .config_FCKSM     0x0abf1c          0x2
- .config_FCKSM    0x0abf1c          0x2 build/default/debug/system.o
+ .config_FCKSM    0x0abf1c          0x2 build/default/production/system.o
 
 .config_IESO      0x0abf18          0x2
- .config_IESO     0x0abf18          0x2 build/default/debug/system.o
+ .config_IESO     0x0abf18          0x2 build/default/production/system.o
 
 .config_BSLIM     0x0abf10          0x2
- .config_BSLIM    0x0abf10          0x2 build/default/debug/system.o
+ .config_BSLIM    0x0abf10          0x2 build/default/production/system.o
 
 .ivt._OscillatorFail
                   0x000004          0x2
  .ivt._OscillatorFail
-                  0x000004          0x2 build/default/debug/system.o
+                  0x000004          0x2 build/default/production/system.o
 
 .ivt._AddressError
                   0x000006          0x2
  .ivt._AddressError
-                  0x000006          0x2 build/default/debug/system.o
+                  0x000006          0x2 build/default/production/system.o
 
 .ivt._StackError
                   0x00000a          0x2
  .ivt._StackError
-                  0x00000a          0x2 build/default/debug/system.o
+                  0x00000a          0x2 build/default/production/system.o
 
 .ivt._MathError
                   0x00000c          0x2
  .ivt._MathError
-                  0x00000c          0x2 build/default/debug/system.o
+                  0x00000c          0x2 build/default/production/system.o
 
 .const              0x9210         0x38 load address 0x001210  
- .const             0x9210         0x28 build/default/debug/main_bridge.o
- .const             0x9238          0xc build/default/debug/bsp/rtcc.o
- .const             0x9244          0x4 build/default/debug/uart_bridge.o
+ .const             0x9210         0x28 build/default/production/main_bridge.o
+ .const             0x9238          0xc build/default/production/bsp/rtcc.o
+ .const             0x9244          0x4 build/default/production/uart_bridge.o
 
 .text             0x001248       0x105e
- .text            0x001248        0x3fe build/default/debug/bsp/rtcc.o
+ .text            0x001248        0x3fe build/default/production/bsp/rtcc.o
                   0x001248                  _RTCC_BuildTimeGet
                   0x001466                  _RTCC_Initialize
                   0x001534                  _RTCC_TimeGet
                   0x00162e                  _BSP_RTCC_Initialize
                   0x00163a                  _BSP_RTCC_TimeGet
- .text            0x001646        0x3f2 build/default/debug/bsp/lcd.o
+ .text            0x001646        0x3f2 build/default/production/bsp/lcd.o
                   0x001646                  _LCD_Initialize
                   0x001758                  _LCD_PutString
                   0x001792                  _LCD_PutChar
                   0x00183c                  _LCD_ClearScreen
                   0x0019f8                  _LCD_CursorEnable
- .text            0x001a38        0x2b0 build/default/debug/bsp/leds.o
+ .text            0x001a38        0x2b0 build/default/production/bsp/leds.o
                   0x001a38                  _LED_On
                   0x001a8a                  _LED_Off
                   0x001adc                  _LED_Toggle
                   0x001bdc                  _LED_Get
                   0x001c96                  _LED_Enable
- .text            0x001ce8        0x15a build/default/debug/main_bridge.o
+ .text            0x001ce8        0x15a build/default/production/main_bridge.o
                   0x001ce8                  _delay_nop
                   0x001d06                  _main
-                  0x001e24                  build/default/debug/main_bridge.o:_BlinkAliveEventHandler
-                  0x001e2e                  build/default/debug/main_bridge.o:_SpiSendEventHandler
-                  0x001e38                  build/default/debug/main_bridge.o:_ScreenUpdateEventHandler
- .text            0x001e42        0x10a build/default/debug/spi_bridge.o
+                  0x001e24                  build/default/production/main_bridge.o:_BlinkAliveEventHandler
+                  0x001e2e                  build/default/production/main_bridge.o:_SpiSendEventHandler
+                  0x001e38                  build/default/production/main_bridge.o:_ScreenUpdateEventHandler
+ .text            0x001e42        0x10a build/default/production/spi_bridge.o
                   0x001e42                  _spi_init_master
                   0x001e96                  _spi_master_rw
                   0x001eb0                  _spi_master_handle
- .text            0x001f4c         0xea build/default/debug/bsp/adc.o
+ .text            0x001f4c         0xea build/default/production/bsp/adc.o
                   0x001f4c                  _ADC_ReadPercentage
                   0x001f82                  _ADC_Read10bit
                   0x001fd6                  _ADC_ChannelEnable
                   0x001ff2                  _ADC_SetConfiguration
- .text            0x002036         0xe8 build/default/debug/uart_bridge.o
+ .text            0x002036         0xe8 build/default/production/uart_bridge.o
                   0x002036                  _uart1_init
                   0x00206e                  _uart1_write
                   0x0020ee                  _uart1_read
- .text            0x00211e         0xe4 build/default/debug/bsp/timer_1ms.o
+ .text            0x00211e         0xe4 build/default/production/bsp/timer_1ms.o
                   0x00211e                  _TIMER_CancelTick
                   0x002154                  _TIMER_RequestTick
                   0x0021bc                  _TIMER_SetConfiguration
- .text            0x002202         0xa4 build/default/debug/bsp/buttons.o
+ .text            0x002202         0xa4 build/default/production/bsp/buttons.o
                   0x002202                  _BUTTON_IsPressed
                   0x00226e                  _BUTTON_Enable
 
@@ -3273,5 +3215,5 @@ epmp_cs1            0x20000          0x4
  .dinit           0x0022a6         0x7a data_init
 
 .text             0x002320          0x8
- .text            0x002320          0x8 build/default/debug/system.o
+ .text            0x002320          0x8 build/default/production/system.o
                   0x002320                  _SYS_Initialize

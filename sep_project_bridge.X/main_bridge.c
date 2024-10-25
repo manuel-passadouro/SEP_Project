@@ -52,6 +52,7 @@ static volatile bool allowScreenUpdate = true;
 #define CMD_SHOW_TEMP 0xA0
 #define CMD_SHOW_PROX 0xB0
 #define CMD_SHOW_LIGHT 0xB1
+#define CMD_SHOW_RGB 0xB2
 
 
 void delay_nop(unsigned int count) {
@@ -67,13 +68,14 @@ void delay_nop(unsigned int count) {
 // *****************************************************************************
 int main ( void )
 {
-    uint16_t adcResult;
-    uint16_t lastAdcResult = 0xFFFF;
-    
+   
     uint8_t spi_data_out = 0x76;
     uint8_t spi_data_in = 0x00;
     
-    uint8_t letter = 'a';
+    uint8_t uart_bytes_recieved; 
+    uint8_t uart_rx_buff[RX_MAX_SIZE];
+    uint8_t uart_tx_buff[TX_MAX_SIZE];
+    uint8_t cmd;
     /* Call the System Initialize routine*/
     SYS_Initialize();   
     spi_init_master();
@@ -87,6 +89,7 @@ int main ( void )
     BUTTON_Enable ( BUTTON_DEMO );
     BUTTON_Enable ( BUTTON_TEMP );
     BUTTON_Enable ( BUTTON_PROX );
+    BUTTON_Enable ( BUTTON_RGB );
     
     
     /* Get a timer event once every 100ms for the blink alive. */
@@ -110,27 +113,32 @@ int main ( void )
     
     while ( 1 )
 {
-        /*
-        while(1){
-            //uart1_write('H');
-            delay_nop(100000000);
-            U1TXREG = 0xAA;         // Write the data to the transmit register
-            LED_Toggle(LED_BLINK_ALIVE);     
-        }
-        */
         
         if (allowScreenUpdate == true) //check screen refresh rate
         {
             allowScreenUpdate = false; //Clear screen refresh flag
-            printf("MOSI: 0X%02x      DataIn: 0X%02x\r\n", spi_data_out, spi_data_in);
+            //printf("MOSI: 0X%02x      DataIn: 0X%02x\r\n", cmd, uart_tx_buff[1]);
+            printf("MOSI: 0X%02x      MISO: 0X%02x 0X%02x\r\n", cmd, uart_tx_buff[2], uart_tx_buff[1]);
+
         }
 
         if (toggleBlinkAlive == true)
         {
-            letter = uart1_read();
-            if (letter != NULL){
-                uart1_write(letter);
+            //Poll UART (non-blocking)
+            
+            uart_bytes_recieved = uart1_read(uart_rx_buff, sizeof(uart_rx_buff));
+            //uart_bytes_sent = uart1_read()
+            //Get uart buffer (should be only 1 command byte)
+            //cmd = uart_rx_buff[0];
+            cmd = 0xB0;
+            uart_tx_buff[0] = cmd;
+            if (uart_bytes_recieved != 0){ //If command was sent, reply with data
+                //first byte of tx buffer should be command byte
+                spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer
+                uart1_write(uart_tx_buff, sizeof(uart_tx_buff));
             }
+            
+            
             LED_Toggle(LED_BLINK_ALIVE);
             toggleBlinkAlive = false;
         }
@@ -139,32 +147,41 @@ int main ( void )
         /* To determine how the LED and Buttons are mapped to the actual board
          * features, please see io_mapping.h. */
         
-        if(BUTTON_IsPressed( BUTTON_TEMP ) == true)
+        if(BUTTON_IsPressed( BUTTON_TEMP ) == true) //S3 button
         {       
             //spi_send_flag = true;
             if(send_spi_flag == true){
                 send_spi_flag = false;
-                spi_data_out = CMD_SHOW_TEMP;
+                cmd = CMD_SHOW_TEMP;
                 //Send command via SPI
-                LATGbits.LATG9 = 0;
-                delay_nop(1000);  // Delays for 1000 instruction cycles
-                spi_data_in = spi_master_rw(spi_data_out);
-                LATGbits.LATG9 = 1;
+                uart_tx_buff[0] = cmd;
+                spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer
+                               
             }
             
         }
        
-        if(BUTTON_IsPressed( BUTTON_PROX ) == true)
+        if(BUTTON_IsPressed( BUTTON_PROX ) == true) //S6 button
         {
             //spi_send_flag = true;
             if(send_spi_flag == true){
                 send_spi_flag = false;
-                spi_data_out = CMD_SHOW_PROX;
+                cmd = CMD_SHOW_PROX;
                 //Send command via SPI
-                LATGbits.LATG9 = 0;
-                delay_nop(1000);  // Delays for 1000 instruction cycles
-                spi_data_in = spi_master_rw(spi_data_out);
-                LATGbits.LATG9 = 1;
+                uart_tx_buff[0] = cmd;
+                spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer
+            }
+        }
+        
+        if(BUTTON_IsPressed( BUTTON_RGB ) == true) //S5 button
+        {
+            //spi_send_flag = true;
+            if(send_spi_flag == true){
+                send_spi_flag = false;
+                cmd = CMD_SHOW_RGB;
+                //Send command via SPI
+                uart_tx_buff[0] = cmd;
+                spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer
             }
         }
         

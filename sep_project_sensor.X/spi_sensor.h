@@ -49,7 +49,8 @@ extern volatile SPIDataOut spi_data_out;
 
 
 void spi_init_slave(void);
-uint8_t spi_slave_rw() ;
+void spi_slave_handle(void);
+uint8_t spi_slave_rw(uint8_t) ;
 
 
 #ifdef	__cplusplus

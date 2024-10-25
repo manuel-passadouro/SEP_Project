@@ -5,7 +5,10 @@
         <group>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_sensor.X/spi_sensor.h</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_sensor.X/adc.c</file>
+            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_sensor.X/ioc.h</file>
+            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_sensor.X/i2c.c</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_sensor.X/utils.c</file>
+            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_sensor.X/ioc.c</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_sensor.X/apds9960.h</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_sensor.X/utils.h</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_sensor.X/apds9960.c</file>

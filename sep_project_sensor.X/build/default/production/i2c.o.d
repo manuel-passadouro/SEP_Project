@@ -1,5 +1,5 @@
-build/default/production/i2c.o: i2c.c i2c.h mcc_generated_files/system.h
+build/default/production/i2c.o: i2c.c i2c.h sys_config.h
 
 i2c.h:
 
-mcc_generated_files/system.h:
+sys_config.h:

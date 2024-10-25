@@ -13,21 +13,6 @@
 volatile SPIDataOut spi_data_out = {0x00};
 volatile uint8_t spi_data_in = 0x00;
 
-
-// SPI1 ISR example
-void __attribute__((__interrupt__, auto_psv)) _IOCInterrupt(void) {
-    // Clear the interrupt flag
-     IFS1bits.IOCIF = 0;       // Clear interrupt flag
-    
-    // Read the received data
-    //spi_data_out++;
-    spi_data_in = spi_slave_rw();
-    
-    LATBbits.LATB6 = 0;
-
-}
-
-
 void spi_init_slave(){
     
     SPI1CON1bits.SPIEN = 0;  // Disable the SPI peripheral during configuration
@@ -77,8 +62,14 @@ void spi_init_slave(){
     
 }
 
+uint8_t spi_slave_rw(uint8_t miso_byte){
+    SPI1BUFL = miso_byte;               // write to buffer for TX
+    while(!SPI1STATLbits.SPIRBF);       // wait for transfer to complete
+    return SPI1BUFL;                    // read the received value 
+}
 
-uint8_t spi_slave_rw(){  
+
+void spi_slave_handle(){  
     
     uint8_t mosi_cmd;
     uint8_t mosi_dummy;
@@ -86,49 +77,79 @@ uint8_t spi_slave_rw(){
     uint8_t miso_data_low;
     uint8_t miso_data_high;
     
-    SPI1BUFL = DUMMY;            // write to buffer for TX (Dummy)
-    while(!SPI1STATLbits.SPIRBF);   // wait for transfer to complete
-    mosi_cmd = SPI1BUFL;             // read the received value
-    
-    SPI1BUFL = DUMMY;            // write to buffer for TX (Dummy)
-    while(!SPI1STATLbits.SPIRBF);   // wait for transfer to complete
-    mosi_dummy = SPI1BUFL;             // read the received value
+    //Recive Master Command (Send Dummy)
+    mosi_cmd = spi_slave_rw(DUMMY);
+          
+    //Recieve Master Dummy (Send Dummy)
+    mosi_dummy = spi_slave_rw(DUMMY);
     
     /* slave output options
      * A0 - temp data (2 bytes)
      * B0 - prox data (1 byte)
      * B1 - light data (2 bytes)
-     * B2 - red data (2 bytes)
-     * B3 - green data (2 bytes)
-     * B4 - blue data (2 bytes)
+     * B2 - RGB data (6 bytes)
+     * B3 - Gesture data (1 byte?)
+     * (...)
      */
     
     switch (mosi_cmd) {
         case 0xA0:
-
-            miso_data_low = sensor_buffer.temp_data_low; //Send temp
-            miso_data_high = sensor_buffer.temp_data_high; //Send temp
-
+            //Get data from buffer    
+            miso_data_low = sensor_buffer.temp_data_low;
+            miso_data_high = sensor_buffer.temp_data_high;
+            //Send data bytes
+            mosi_dummy = spi_slave_rw(miso_data_low);
+            mosi_dummy = spi_slave_rw(miso_data_high);
+           
             break;
 
         case 0xB0:
+            //Get data from buffer
+            miso_data_low = sensor_buffer.prox_data_low;
+            miso_data_high = sensor_buffer.prox_data_high;
+            //Send data bytes
+            mosi_dummy = spi_slave_rw(miso_data_low);
+            mosi_dummy = spi_slave_rw(miso_data_high);
 
-            miso_data_low = sensor_buffer.prox_data_low; //Send prox
-            miso_data_high = sensor_buffer.prox_data_high; //Send prox
-                       
+            break;
+
+        case 0xB1:
+            //Get data from buffer
+            miso_data_low = sensor_buffer.light_data_low;
+            miso_data_high = sensor_buffer.light_data_high;
+            //Send data bytes
+            mosi_dummy = spi_slave_rw(miso_data_low);
+            mosi_dummy = spi_slave_rw(miso_data_high);
+
+            break;
+
+        case 0xB2:
+            //Get data from buffer
+            miso_data_low = sensor_buffer.red_data_low;
+            miso_data_high = sensor_buffer.red_data_high;
+            //Send data bytes
+            mosi_dummy = spi_slave_rw(miso_data_low);
+            mosi_dummy = spi_slave_rw(miso_data_high);
+            
+            miso_data_low = sensor_buffer.green_data_low;
+            miso_data_high = sensor_buffer.green_data_high;
+            //Send data bytes
+            mosi_dummy = spi_slave_rw(miso_data_low);
+            mosi_dummy = spi_slave_rw(miso_data_high);
+            
+            miso_data_low = sensor_buffer.blue_data_low;
+            miso_data_high = sensor_buffer.blue_data_high;
+            //Send data bytes
+            mosi_dummy = spi_slave_rw(miso_data_low);
+            mosi_dummy = spi_slave_rw(miso_data_high);
+
             break;
 
         default:
 
             break;
     }
-    
-    SPI1BUFL = miso_data_low;            // write to buffer for TX (sensor data)
-    while(!SPI1STATLbits.SPIRBF);   // wait for transfer to complete
-    mosi_dummy = SPI1BUFL;             // read the received value
-           
-    return mosi_dummy;
-    //while(SPI1STATLbits.SPITBF);    // wait for transfer to complete
-    
+         
+    return;    
 }
 

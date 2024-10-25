@@ -30,6 +30,7 @@ extern "C" {
 
 void spi_init_master(void);
 uint8_t spi_master_rw(uint8_t);
+void spi_master_handle(uint8_t , uint8_t *);
 
 
 #ifdef	__cplusplus

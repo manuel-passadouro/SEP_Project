@@ -43,6 +43,8 @@
 */
 
 
+#include <libpic30.h>
+
 #include "sys_config.h"
 #include "utils.h"
 #include "ioc.h"
@@ -80,7 +82,7 @@ int main(void){
     
     //Device Initialization
     led_init();
-    //ioc_init();
+    ioc_init();
     spi_init_slave();
     timer1_init();
     adc_init();
@@ -98,8 +100,10 @@ int main(void){
             
             //Temperature
             adc_read(&raw_temp_high, &raw_temp_low);       //Get temp from ADC
-            sensor_buffer.temp_data_low= raw_temp_low;
+            sensor_buffer.temp_data_low = raw_temp_low;
             sensor_buffer.temp_data_high = raw_temp_high;
+            
+            //__delay_ms(200); //Delay for ADC integration???
             
             //Proximity 
             apds9960_get_prox(&prox_data);               //Get prox data from APDS9960

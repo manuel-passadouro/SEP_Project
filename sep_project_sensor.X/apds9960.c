@@ -10,27 +10,32 @@
 
 void apds9960_init(){
     //Enable proximity and light detection
-    startCondition(); //Start write procedure
-    writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
-    writeByte(ENABLE_ADDR); //send register address
+    startCondition();                 //Start write procedure
+    writeByte(I2C_SLAVE_ADDR_WRITE);  //send write address
+    writeByte(ENABLE_ADDR);           //send register address
     writeByte(ENABLE_BYTE);
-    stopCondition(); //End write procedure
+    stopCondition();                  //End write procedure
 
     //Set snesor gain
-    startCondition(); //Start write procedure
+    startCondition();                //Start write procedure
     writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
-    writeByte(CONTROL_ADDR); //send register address
+    writeByte(CONTROL_ADDR);         //send register address
     writeByte(GAIN_BYTE);
-    stopCondition(); //End write procedure
-
-    /*
-     * //Set ADC time
-    startCondition(); //Start write procedure
+    stopCondition();                 //End write procedure
+    
+    //Set ADC time
+    startCondition();                //Start write procedure
     writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
-    writeByte(CONTROL_ADDR); //send register address
-    writeByte(ADC_TIME_BYTE);
-    stopCondition(); //End write procedure
-     */
+    writeByte(ATIME_ADDR);           //send register address
+    writeByte(ATIME_BYTE);
+    stopCondition();                 //End write procedure
+    
+    //Set Config 2 (LED boost)
+    startCondition();                //Start write procedure
+    writeByte(I2C_SLAVE_ADDR_WRITE); //send write address
+    writeByte(CONFIG2_ADDR);           //send register address
+    writeByte(CONFIG2_BYTE);
+    stopCondition();                 //End write procedure
 
     //Gesture engine enable
     /*

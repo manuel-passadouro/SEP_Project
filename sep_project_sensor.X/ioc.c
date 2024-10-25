@@ -6,6 +6,18 @@
  */
 
 #include "ioc.h"
+// SPI1 ISR example
+void __attribute__((__interrupt__, auto_psv)) _IOCInterrupt(void) {
+    
+    // Clear the interrupt flag
+    IFS1bits.IOCIF = 0;       // Clear interrupt flag
+    
+    //SPI Comunication
+    spi_slave_handle();
+    
+    LATBbits.LATB6 = 0;
+
+}
 
 void ioc_init(){
     //Interrupt On Change Setup

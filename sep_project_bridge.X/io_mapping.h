@@ -23,4 +23,5 @@ limitations under the License.
 #define BUTTON_DEMO BUTTON_S3
 #define BUTTON_TEMP BUTTON_S3
 #define BUTTON_PROX BUTTON_S6
+#define BUTTON_RGB BUTTON_S5
 
