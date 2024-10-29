@@ -93,7 +93,7 @@ void spi_slave_handle(){
      */
     
     switch (mosi_cmd) {
-        case 0xA0:
+        case 'A':
             //Get data from buffer    
             miso_data_low = sensor_buffer.temp_data_low;
             miso_data_high = sensor_buffer.temp_data_high;
@@ -103,7 +103,7 @@ void spi_slave_handle(){
            
             break;
 
-        case 0xB0:
+        case 'B':
             //Get data from buffer
             miso_data_low = sensor_buffer.prox_data_low;
             miso_data_high = sensor_buffer.prox_data_high;
@@ -113,7 +113,7 @@ void spi_slave_handle(){
 
             break;
 
-        case 0xB1:
+        case 'C':
             //Get data from buffer
             miso_data_low = sensor_buffer.light_data_low;
             miso_data_high = sensor_buffer.light_data_high;
@@ -123,7 +123,7 @@ void spi_slave_handle(){
 
             break;
 
-        case 0xB2:
+        case 'D':
             //Get data from buffer
             miso_data_low = sensor_buffer.red_data_low;
             miso_data_high = sensor_buffer.red_data_high;

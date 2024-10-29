@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/default/debug/sep_project_bridge.X.debug.elf">
+  <executable name="dist/default/production/sep_project_bridge.X.production.elf">
     <memory name="data">
       <units>bytes</units>
       <length>32768</length>
-      <used>300</used>
-      <free>32468</free>
+      <used>222</used>
+      <free>32546</free>
     </memory>
     <memory name="program">
       <units>bytes</units>

@@ -91,8 +91,9 @@ void spi_master_handle(uint8_t mosi_cmd, char *output_buffer) {
 
     // Retrieve data bytes from the slave into the output buffer
     for (buff_idx = 1; buff_idx < bytes_to_read + 1; buff_idx++) {
-        //output_buffer[buff_idx] = spi_master_rw(DUMMY);  // Store Slave response in buffer (start in second position)
-        output_buffer[buff_idx] = 1;
+        output_buffer[buff_idx] = spi_master_rw(DUMMY);  // Store Slave response in buffer (start in second position)
+        delay_nop(2000);
+        //output_buffer[buff_idx] = 0xBB;
     }
     output_buffer[buff_idx] = '\n'; //Place newline to mark end of uart message
     buff_idx ++;

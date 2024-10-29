@@ -118,7 +118,7 @@ int main ( void )
         if (allowScreenUpdate == true) //check screen refresh rate
         {
             allowScreenUpdate = false; //Clear screen refresh flag
-            printf("MOSI: 0X%02x      MISO: 0X%02x 0X%02x\r\n", cmd, uart_tx_buff[2], uart_tx_buff[1]);
+            printf("MOSI: 0X%02x      MISO: 0X%02x 0X%02x\r\n", cmd, (unsigned char)uart_tx_buff[2], (unsigned char)uart_tx_buff[1]);
 
         }
 
@@ -151,7 +151,7 @@ int main ( void )
             //spi_send_flag = true;
             if(send_spi_flag == true){
                 send_spi_flag = false;
-                cmd = CMD_SHOW_TEMP;
+                cmd = 'A';
                 //Send command via SPI
                 uart_tx_buff[0] = cmd;
                 spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer
@@ -165,7 +165,7 @@ int main ( void )
             //spi_send_flag = true;
             if(send_spi_flag == true){
                 send_spi_flag = false;
-                cmd = CMD_SHOW_PROX;
+                cmd = 'B';
                 //Send command via SPI
                 uart_tx_buff[0] = cmd;
                 spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer
@@ -177,7 +177,7 @@ int main ( void )
             //spi_send_flag = true;
             if(send_spi_flag == true){
                 send_spi_flag = false;
-                cmd = CMD_SHOW_RGB;
+                cmd = 'D';
                 //Send command via SPI
                 uart_tx_buff[0] = cmd;
                 spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer

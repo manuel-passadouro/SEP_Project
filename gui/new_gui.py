@@ -15,6 +15,7 @@ message_count = 0
 log_file = "uart_data_log.csv"
 
 # Initial RGB color for the square (customizable)
+#global rgb_color
 rgb_color = (255, 111, 55)  # Red color
 
 def open_log_file():
@@ -45,25 +46,23 @@ def connect_uart():
         messagebox.showerror("Connection Error", f"Failed to connect: {e}")
 
 def read_uart():
-    global connected, message_count
+    global connected, message_count, rgb_color
     
     while connected:
         try:
             if uart.in_waiting > 0:
-                data = uart.readline().decode('utf-8').strip()  # Read the first byte
-                
-                if data[0] == 'A':  # Check if the data is 'A'
+                data = uart.readline().strip()  #Read up until newline
+                print("Size of data:", len(data))
+
+                if data[0:1].decode('utf-8') == 'A':
                     # Check if at least 2 more bytes are available
-                    print("ambient temp:", end=" ")
-
+                    
                     # Read the next two bytes separately
-                    temp_high = ord(data[1])
-                    temp_low = ord(data[2])
-                    #temp_high = 1
-                    #temp_low = 1
-
+                    temp_low = data[1]
+                    temp_high = data[2]
+                    
                     # Display the high and low bytes separately
-                    text_area.insert(tk.END, f"Ambient Temp: {temp_high}, {temp_low}\n")
+                    text_area.insert(tk.END, f"Ambient Temp [ºC]: {temp_high}, {temp_low}\n")
                     text_area.see(tk.END)
 
                     # Log the temperature bytes
@@ -71,21 +70,92 @@ def read_uart():
                     writer.writerow([timestamp, f"Ambient Temp: {temp_high}, {temp_low}"])
                     csv_file.flush()
                     print(f"Logged: {timestamp}, Ambient Temp: {temp_high}, {temp_low}")
+
+                elif data[0:1].decode('utf-8') == 'B':
+                    # Check if at least 2 more bytes are available
+                    
+                    # Read the next two bytes separately
+                    prox_low = data[1]
+                    prox_high = data[2]
+                    
+                    # Display the high and low bytes separately
+                    text_area.insert(tk.END, f"Prox: {prox_high}, {prox_low}\n")
+                    text_area.see(tk.END)
+
+                    # Log the temperature bytes
+                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    writer.writerow([timestamp, f"Prox: {prox_high}, {prox_low}"])
+                    csv_file.flush()
+                    print(f"Logged: {timestamp}, Prox: {prox_high}, {prox_low}")
+
+                elif data[0:1].decode('utf-8') == 'C':
+                    # Check if at least 2 more bytes are available
+                   
+                    # Read the next two bytes separately
+                    light_low = data[1]
+                    light_high = data[2]
+                    
+                    # Display the high and low bytes separately
+                    text_area.insert(tk.END, f"Light: {light_high}, {light_low}\n")
+                    text_area.see(tk.END)
+
+                    # Log the temperature bytes
+                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    writer.writerow([timestamp, f"Light: {light_high}, {light_low}"])
+                    csv_file.flush()
+                    print(f"Logged: {timestamp}, Light: {light_high}, {light_low}")
+
+                elif data[0:1].decode('utf-8') == 'D':
+                    # Check if at least 2 more bytes are available
+                   
+                    # Read the next two bytes separately
+                    red_low = data[1]
+                    red_high = data[2]
+                    green_low = data[3]
+                    green_high = data[4]
+                    blue_low = data[5]
+                    blue_high = data[6]
+
+                    # Calculate the 16-bit values from high and low bytes
+                    red_16bit = (red_high << 8) | red_low
+                    green_16bit = (green_high << 8) | green_low
+                    blue_16bit = (blue_high << 8) | blue_low
+
+                    # Scale 16-bit values down to 8-bit values by dividing by 256
+                    red_8bit = red_16bit 
+                    green_8bit = green_16bit 
+                    blue_8bit = blue_16bit 
+
+                    # Convert high bytes to integers (or keep them as they are if already integers)
+                    #red_value = ((red_high << 8) + red_low)/8
+                    #green_value = ((green_high << 8) + green_low)/8
+                    #blue_value = ((blue_high << 8) + blue_low)/8
+                    
+                    # Display the high and low bytes separately
+                    rgb_color = (red_8bit, green_8bit, blue_8bit)
+                    update_square_color()
+                    text_area.insert(tk.END, f"RGB: {red_high}, {red_low}, {green_high}, {green_low},"
+                                     f" {blue_high}, {blue_low}\n")
+
+                    text_area.insert(tk.END, f"RGB: {red_8bit}, {green_8bit}, {blue_8bit}\n")
+
+                    text_area.see(tk.END)
+
+                    # Log the temperature bytes
+                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    writer.writerow([timestamp, f"RGB: {red_high}, {red_low}, {green_high}, {green_low},"
+                                     f" {blue_high}, {blue_low}"])
+                    csv_file.flush()
+                    print(f"Logged: {timestamp}, RGB: {red_high}, {red_low}, {green_high}, {green_low},"
+                                     f" {blue_high}, {blue_low}")
                     
                 else:
                     # Handle as a regular string if data is not 'A'
-                    #data = uart.readline().decode('utf-8').strip()  # Read the rest of the line
-                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    text_area.insert(tk.END, data + '\n')
-                    text_area.see(tk.END)
-                    last_data_time_var.set("Last Data Received: " + timestamp)
-                    message_count += 1
-                    message_count_var.set(f"Messages Received: {message_count}")
+                    print(f"Invalid Message Received")
 
-                    # Log the data as a regular string
-                    writer.writerow([timestamp, data])
-                    csv_file.flush()
-                    print(f"Logged: {timestamp}, {data}")
+                last_data_time_var.set("Last Data Received: " + timestamp)
+                message_count += 1
+                message_count_var.set(f"Messages Received: {message_count}")
         except Exception as e:
             print(f"Error reading from UART: {e}")
         time.sleep(0.1)
@@ -106,6 +176,7 @@ def update_time():
 
 # Function to update the color of the square based on the rgb_color variable
 def update_square_color():
+    print(f"Color Update")
     hex_color = "#{:02x}{:02x}{:02x}".format(*rgb_color)
     color_square.config(bg=hex_color)
 

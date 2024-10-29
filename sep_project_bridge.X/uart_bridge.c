@@ -20,7 +20,7 @@ void uart1_init(){
     IEC0bits.U1TXIE = 0;    // Enable UART TX interrupt
     U1MODEbits.UARTEN = 1;  // Enable UART
     U1STAbits.UTXEN = 1;    // Enable UART TX
-    //U1STAbits.URXEN = 1;  // Enable UART RX (not needed???)
+    //U1STAbits.URXEN = 1;  // Enable UART RX (not needed?)
     
     //PPS for UART1 TX and RX
     
@@ -31,84 +31,16 @@ void uart1_init(){
     
 }
 
-/*
-void uart1_write(char data)
-{
-    //while(U1STAbits.UTXBF); // Wait while the transmit buffer is full
-    U1TXREG = data;         // Write the data to the transmit register
-    while(!(U1STAbits.TRMT));
-}
-*/
-
-/*
-void uart1_write(uint8_t* buffer, uint8_t length) {
-    uint8_t index = 0;
-
-    while (index < length) {
-        // Wait while the transmit buffer is full
-        while (U1STAbits.UTXBF);  // Wait until the transmit buffer is not full
-
-        // Write the current byte to the transmit register
-        //U1TXREG = buffer[index] + '0';
-        U1TXREG = '1';
-
-        // Wait until the transmission is complete
-        while (!U1STAbits.TRMT);  // Wait until the transmit shift register is empty
-
-        // Move to the next byte in the buffer
-        index++;
-    }
-}
- */
-
 void uart1_write(char* buffer, uint8_t length) {
     uint8_t index = 0;
-    //char str_buffer[4];  // Temporary buffer for ASCII conversion, up to "255" + null terminator
-
+    
     while (index < length) {
-        // Convert the buffer element to ASCII
-        //sprintf(str_buffer, "%u", buffer[index]);  // Convert buffer[index] to a string
-
-        // Send each character of the ASCII string
-        /*
-        for (int i = 0; str_buffer[i] != '\0'; i++) {
-            // Wait while the transmit buffer is full
-            while (U1STAbits.UTXBF);
-
-            // Write each ASCII character to the transmit register
-            U1TXREG = str_buffer[i];
-        }
-        */
-
+        
         U1TXREG = buffer[index];
-        // Send '\r' and '\n' after each data element for alignment
-        //while (U1STAbits.UTXBF);
-        //U1TXREG = '\r';
-
-        //while (U1STAbits.UTXBF);
-        //U1TXREG = '\n';
-
-        // Move to the next byte in the buffer
+        delay_nop(1000);
         index++;
     }
 }
-
-
-/*
-char uart1_read(void)
-{
-   //while(!U1STAbits.URXDA); // Wait for the receive buffer to have data
-   
-   if(U1STAbits.URXDA == 1)
-   {
-    return U1RXREG;
-   }
-   else{
-       return NULL;
-   }      
-    //return U1RXREG;          // Read the received data from the buffer
-}
- */
 
 uint8_t uart1_read(char* buffer, uint8_t buff_size) {
     uint8_t index = 0;
