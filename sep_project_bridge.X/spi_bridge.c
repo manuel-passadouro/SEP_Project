@@ -51,83 +51,15 @@ uint8_t spi_master_rw(uint8_t mosi_byte){
     return SPI1BUFL;                    // read the received value 
 }
 
-/*
-uint8_t spi_master_handle(uint8_t mosi_cmd){
-    
-    uint8_t miso_dummy;
-    
-    SPI1BUFL = data_out; // write to buffer for TX
-    while(!SPI1STATLbits.SPIRBF); // wait for transfer to complete
-    miso_dummy = SPI1BUFL; // read the received value
-    //Send Command
-    miso_dummy = spi_master_rw(mosi_cmd);
-    
-    SPI1BUFL = DUMMY; // write to buffer for TX (dummy)
-    while(!SPI1STATLbits.SPIRBF); // wait for transfer to complete
-    miso_dummy = SPI1BUFL; // read the received value
-    
-    //Send Dummy
-    miso_dummy = spi_master_rw(DUMMY);
-    
-    //Receive Data Bytes from Slave
-    /* slave output options
-     * A0 - temp data (2 bytes)
-     * B0 - prox data (1 byte)
-     * B1 - light data (2 bytes)
-     * B2 - RGB data (6 bytes)
-     * B3 - Gesture data (1 byte?)
-     * (...)
-    switch (mosi_cmd) {
-        case 0xA0:
-            //Place sensor data in uart tx buffer
-            //output_buff[0] = spi_master_rw(DUMMY);
-            //output_buff[1] = ....
-            //while i = 1, i = bytes_to_send ...
-            //output_buff[i] = spi_master_rw(DUMMY);
-            miso_data_low = spi_master_rw(DUMMY);
-            miso_data_high = spi_master_rw(DUMMY);
-                      
-            break;
 
-        case 0xB0:
-            
-            miso_data_low = spi_master_rw(DUMMY);
-            miso_data_high = spi_master_rw(DUMMY);
-                      
-            break;
-
-        case 0xB1:
-            
-            miso_data_low = spi_master_rw(DUMMY);
-            miso_data_high = spi_master_rw(DUMMY);
-                      
-            break;
-
-        case 0xB2:
-            //Get data from buffer
-            miso_data_low = spi_master_rw(DUMMY);
-            miso_data_high = spi_master_rw(DUMMY);
-                      
-            break;
-
-        default:
-            
-            miso_data_low = spi_master_rw(DUMMY);
-            miso_data_high = spi_master_rw(DUMMY);
-                      
-            break;
-    }
-
-}
- */
-
-void spi_master_handle(uint8_t mosi_cmd, uint8_t *output_buffer) {
+void spi_master_handle(uint8_t mosi_cmd, char *output_buffer) {
     
     uint8_t miso_dummy;
     uint8_t bytes_to_read = 0;              // Determine how many bytes to read based on command
-
+    uint8_t buff_idx = 0;
+    
     LATGbits.LATG9 = 0;                     //Set CS (active low))
-    delay_nop(1000);                        // Delays for 1000 instruction cycles (125 ms)
+    delay_nop(2000);                        // Delays for 1000 instruction cycles (125 ms)
     
     // Send command
     miso_dummy = spi_master_rw(mosi_cmd);
@@ -137,19 +69,19 @@ void spi_master_handle(uint8_t mosi_cmd, uint8_t *output_buffer) {
 
     // Determine the number of bytes to read based on the command
     switch (mosi_cmd) {
-        case 0xA0:
+        case 'A':
             bytes_to_read = 2;              // Temperature data (2 bytes)
             break;
-        case 0xB0:
+        case 'B':
             bytes_to_read = 2;              // Proximity data (1 byte)
             break;
-        case 0xB1:
+        case 'C':
             bytes_to_read = 2;              // Light data (2 bytes)
             break;
-        case 0xB2:
+        case 'D':
             bytes_to_read = 6;              // RGB data (6 bytes)
             break;
-        case 0xB3:
+        case 'E':
             bytes_to_read = 2;  // Gesture data (1 byte)
             break;
         default:
@@ -158,9 +90,13 @@ void spi_master_handle(uint8_t mosi_cmd, uint8_t *output_buffer) {
     }
 
     // Retrieve data bytes from the slave into the output buffer
-    for (uint8_t i = 1; i < bytes_to_read + 1; i++) {
-        output_buffer[i] = spi_master_rw(DUMMY);  // Store Slave response in buffer (start in second position)
+    for (buff_idx = 1; buff_idx < bytes_to_read + 1; buff_idx++) {
+        //output_buffer[buff_idx] = spi_master_rw(DUMMY);  // Store Slave response in buffer (start in second position)
+        output_buffer[buff_idx] = 1;
     }
+    output_buffer[buff_idx] = '\n'; //Place newline to mark end of uart message
+    buff_idx ++;
+    output_buffer[buff_idx] = '\0'; //Place terminator after data
 
     LATGbits.LATG9 = 1;    // CS
     

@@ -50,24 +50,48 @@ def read_uart():
     while connected:
         try:
             if uart.in_waiting > 0:
-                data = uart.readline().decode('utf-8').strip()
-                if data:
+                data = uart.readline().decode('utf-8').strip()  # Read the first byte
+                
+                if data[0] == 'A':  # Check if the data is 'A'
+                    # Check if at least 2 more bytes are available
+                    print("ambient temp:", end=" ")
+
+                    # Read the next two bytes separately
+                    temp_high = ord(data[1])
+                    temp_low = ord(data[2])
+                    #temp_high = 1
+                    #temp_low = 1
+
+                    # Display the high and low bytes separately
+                    text_area.insert(tk.END, f"Ambient Temp: {temp_high}, {temp_low}\n")
+                    text_area.see(tk.END)
+
+                    # Log the temperature bytes
+                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    writer.writerow([timestamp, f"Ambient Temp: {temp_high}, {temp_low}"])
+                    csv_file.flush()
+                    print(f"Logged: {timestamp}, Ambient Temp: {temp_high}, {temp_low}")
+                    
+                else:
+                    # Handle as a regular string if data is not 'A'
+                    #data = uart.readline().decode('utf-8').strip()  # Read the rest of the line
                     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     text_area.insert(tk.END, data + '\n')
                     text_area.see(tk.END)
                     last_data_time_var.set("Last Data Received: " + timestamp)
                     message_count += 1
                     message_count_var.set(f"Messages Received: {message_count}")
-                    
-                    try:
-                        writer.writerow([timestamp, data])
-                        csv_file.flush()
-                        print(f"Logged: {timestamp}, {data}")
-                    except Exception as e:
-                        print(f"Error writing to CSV: {e}")
+
+                    # Log the data as a regular string
+                    writer.writerow([timestamp, data])
+                    csv_file.flush()
+                    print(f"Logged: {timestamp}, {data}")
         except Exception as e:
             print(f"Error reading from UART: {e}")
         time.sleep(0.1)
+
+
+
 
 def send_command(command):
     if uart and connected:
@@ -151,16 +175,16 @@ button_frame = tk.Frame(root)
 button_frame.pack(pady=10)
 
 # Example command buttons
-btn1 = tk.Button(button_frame, text="TEMP", command=lambda: send_command("CMD1"))
+btn1 = tk.Button(button_frame, text="TEMP", command=lambda: send_command("A"))
 btn1.grid(row=0, column=0, padx=5)
 
-btn2 = tk.Button(button_frame, text="PROX", command=lambda: send_command("CMD2"))
+btn2 = tk.Button(button_frame, text="PROX", command=lambda: send_command("B"))
 btn2.grid(row=0, column=1, padx=5)
 
-btn3 = tk.Button(button_frame, text="LIGHT", command=lambda: send_command("CMD3"))
+btn3 = tk.Button(button_frame, text="LIGHT", command=lambda: send_command("C"))
 btn3.grid(row=0, column=2, padx=5)
 
-btn4 = tk.Button(button_frame, text="RGB", command=lambda: send_command("CMD4"))
+btn4 = tk.Button(button_frame, text="RGB", command=lambda: send_command("D"))
 btn4.grid(row=0, column=3, padx=5)
 
 # Labels for time, command, data, and message count

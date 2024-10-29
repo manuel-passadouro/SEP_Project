@@ -73,9 +73,10 @@ int main ( void )
     uint8_t spi_data_in = 0x00;
     
     uint8_t uart_bytes_recieved; 
-    uint8_t uart_rx_buff[RX_MAX_SIZE];
-    uint8_t uart_tx_buff[TX_MAX_SIZE];
-    uint8_t cmd;
+    char uart_rx_buff[RX_MAX_SIZE] = {0};
+    char uart_tx_buff[TX_MAX_SIZE] = {0};
+    char cmd = 0;
+    uint8_t dummy_buff_size;
     /* Call the System Initialize routine*/
     SYS_Initialize();   
     spi_init_master();
@@ -117,7 +118,6 @@ int main ( void )
         if (allowScreenUpdate == true) //check screen refresh rate
         {
             allowScreenUpdate = false; //Clear screen refresh flag
-            //printf("MOSI: 0X%02x      DataIn: 0X%02x\r\n", cmd, uart_tx_buff[1]);
             printf("MOSI: 0X%02x      MISO: 0X%02x 0X%02x\r\n", cmd, uart_tx_buff[2], uart_tx_buff[1]);
 
         }
@@ -127,15 +127,14 @@ int main ( void )
             //Poll UART (non-blocking)
             
             uart_bytes_recieved = uart1_read(uart_rx_buff, sizeof(uart_rx_buff));
-            //uart_bytes_sent = uart1_read()
-            //Get uart buffer (should be only 1 command byte)
-            //cmd = uart_rx_buff[0];
-            cmd = 0xB0;
-            uart_tx_buff[0] = cmd;
+           
             if (uart_bytes_recieved != 0){ //If command was sent, reply with data
                 //first byte of tx buffer should be command byte
+                cmd = uart_rx_buff[0];
+                //cmd = 0xB0;
+                uart_tx_buff[0] = cmd;
                 spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer
-                uart1_write(uart_tx_buff, sizeof(uart_tx_buff));
+                uart1_write(uart_tx_buff, strlen(uart_tx_buff));
             }
             
             

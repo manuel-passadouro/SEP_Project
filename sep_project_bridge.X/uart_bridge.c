@@ -14,7 +14,7 @@ void uart1_init(){
     U1MODEbits.PDSEL = 0;   // No Parity, 8-Data bits
     U1MODEbits.ABAUD = 0;   // Auto-Baud disabled
     U1MODEbits.BRGH = 0;    // Standard-Speed mode
-    U1BRG = UART_BR;        // BRG = (FCY/((16*9600)=)-1 = 103  , uart baudrate = 9600 (low speed)
+    U1BRG = UART_BR;        // Set Baudrate
     U1STAbits.UTXISEL0 = 0; // Interrupt after one TX character is transmitted
     U1STAbits.UTXISEL1 = 0;
     IEC0bits.U1TXIE = 0;    // Enable UART TX interrupt
@@ -61,15 +61,16 @@ void uart1_write(uint8_t* buffer, uint8_t length) {
 }
  */
 
-void uart1_write(uint8_t* buffer, uint8_t length) {
+void uart1_write(char* buffer, uint8_t length) {
     uint8_t index = 0;
-    char str_buffer[4];  // Temporary buffer for ASCII conversion, up to "255" + null terminator
+    //char str_buffer[4];  // Temporary buffer for ASCII conversion, up to "255" + null terminator
 
     while (index < length) {
         // Convert the buffer element to ASCII
-        sprintf(str_buffer, "%u", buffer[index]);  // Convert buffer[index] to a string
+        //sprintf(str_buffer, "%u", buffer[index]);  // Convert buffer[index] to a string
 
         // Send each character of the ASCII string
+        /*
         for (int i = 0; str_buffer[i] != '\0'; i++) {
             // Wait while the transmit buffer is full
             while (U1STAbits.UTXBF);
@@ -77,13 +78,15 @@ void uart1_write(uint8_t* buffer, uint8_t length) {
             // Write each ASCII character to the transmit register
             U1TXREG = str_buffer[i];
         }
+        */
 
+        U1TXREG = buffer[index];
         // Send '\r' and '\n' after each data element for alignment
-        while (U1STAbits.UTXBF);
-        U1TXREG = '\r';
+        //while (U1STAbits.UTXBF);
+        //U1TXREG = '\r';
 
-        while (U1STAbits.UTXBF);
-        U1TXREG = '\n';
+        //while (U1STAbits.UTXBF);
+        //U1TXREG = '\n';
 
         // Move to the next byte in the buffer
         index++;
@@ -107,7 +110,7 @@ char uart1_read(void)
 }
  */
 
-uint8_t uart1_read(uint8_t* buffer, uint8_t buff_size) {
+uint8_t uart1_read(char* buffer, uint8_t buff_size) {
     uint8_t index = 0;
 
     // Check if data is available and read it without blocking
