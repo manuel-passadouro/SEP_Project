@@ -1,0 +1,1002 @@
+7321 1730331689634 XXXX 1730331689634, Thread 7321: XXXX 1730331689634, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689634 XXXX 1730331689634, Thread 7321: XXXX 1730331689634, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689634 XXXX 1730331689634, Thread 7321: XXXX 1730331689634, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689637 XXXX 1730331689637, Thread 7321: XXXX 1730331689637, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689637 XXXX 1730331689637, Thread 7321: XXXX 1730331689637, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689637 XXXX 1730331689637, Thread 7321: XXXX 1730331689637, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689640 XXXX 1730331689640, Thread 7321: XXXX 1730331689640, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689640 XXXX 1730331689640, Thread 7321: XXXX 1730331689640, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689640 XXXX 1730331689640, Thread 7321: XXXX 1730331689640, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689643 XXXX 1730331689643, Thread 7321: XXXX 1730331689643, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689643 XXXX 1730331689643, Thread 7321: XXXX 1730331689643, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689643 XXXX 1730331689643, Thread 7321: XXXX 1730331689643, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689646 XXXX 1730331689646, Thread 7321: XXXX 1730331689646, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689646 XXXX 1730331689646, Thread 7321: XXXX 1730331689646, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689646 XXXX 1730331689646, Thread 7321: XXXX 1730331689646, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689650 XXXX 1730331689650, Thread 7321: XXXX 1730331689650, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689650 XXXX 1730331689650, Thread 7321: XXXX 1730331689650, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689650 XXXX 1730331689650, Thread 7321: XXXX 1730331689650, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689652 XXXX 1730331689652, Thread 7321: XXXX 1730331689652, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689652 XXXX 1730331689652, Thread 7321: XXXX 1730331689652, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689652 XXXX 1730331689652, Thread 7321: XXXX 1730331689652, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689655 XXXX 1730331689655, Thread 7321: XXXX 1730331689655, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689655 XXXX 1730331689655, Thread 7321: XXXX 1730331689655, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689655 XXXX 1730331689655, Thread 7321: XXXX 1730331689655, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689658 XXXX 1730331689658, Thread 7321: XXXX 1730331689658, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689658 XXXX 1730331689658, Thread 7321: XXXX 1730331689658, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689658 XXXX 1730331689658, Thread 7321: XXXX 1730331689658, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689662 XXXX 1730331689662, Thread 7321: XXXX 1730331689662, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689662 XXXX 1730331689662, Thread 7321: XXXX 1730331689662, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689662 XXXX 1730331689662, Thread 7321: XXXX 1730331689662, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689664 XXXX 1730331689664, Thread 7321: XXXX 1730331689664, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689665 XXXX 1730331689665, Thread 7321: XXXX 1730331689665, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689665 XXXX 1730331689665, Thread 7321: XXXX 1730331689665, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689668 XXXX 1730331689668, Thread 7321: XXXX 1730331689668, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689668 XXXX 1730331689668, Thread 7321: XXXX 1730331689668, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689668 XXXX 1730331689668, Thread 7321: XXXX 1730331689668, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689670 XXXX 1730331689670, Thread 7321: XXXX 1730331689670, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689670 XXXX 1730331689670, Thread 7321: XXXX 1730331689670, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689670 XXXX 1730331689670, Thread 7321: XXXX 1730331689670, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689673 XXXX 1730331689673, Thread 7321: XXXX 1730331689673, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689673 XXXX 1730331689673, Thread 7321: XXXX 1730331689673, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689673 XXXX 1730331689673, Thread 7321: XXXX 1730331689673, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689677 XXXX 1730331689677, Thread 7321: XXXX 1730331689677, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689677 XXXX 1730331689677, Thread 7321: XXXX 1730331689677, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689677 XXXX 1730331689677, Thread 7321: XXXX 1730331689677, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689679 XXXX 1730331689679, Thread 7321: XXXX 1730331689679, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689679 XXXX 1730331689679, Thread 7321: XXXX 1730331689679, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689679 XXXX 1730331689679, Thread 7321: XXXX 1730331689679, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689682 XXXX 1730331689682, Thread 7321: XXXX 1730331689682, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689682 XXXX 1730331689682, Thread 7321: XXXX 1730331689682, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689682 XXXX 1730331689682, Thread 7321: XXXX 1730331689682, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689686 XXXX 1730331689686, Thread 7321: XXXX 1730331689686, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689686 XXXX 1730331689686, Thread 7321: XXXX 1730331689686, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689686 XXXX 1730331689686, Thread 7321: XXXX 1730331689686, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689689 XXXX 1730331689689, Thread 7321: XXXX 1730331689689, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689689 XXXX 1730331689689, Thread 7321: XXXX 1730331689689, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689689 XXXX 1730331689689, Thread 7321: XXXX 1730331689689, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689692 XXXX 1730331689692, Thread 7321: XXXX 1730331689692, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689692 XXXX 1730331689692, Thread 7321: XXXX 1730331689692, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689692 XXXX 1730331689692, Thread 7321: XXXX 1730331689692, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689695 XXXX 1730331689695, Thread 7321: XXXX 1730331689695, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689695 XXXX 1730331689695, Thread 7321: XXXX 1730331689695, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689695 XXXX 1730331689695, Thread 7321: XXXX 1730331689695, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689698 XXXX 1730331689698, Thread 7321: XXXX 1730331689698, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689698 XXXX 1730331689698, Thread 7321: XXXX 1730331689698, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689698 XXXX 1730331689698, Thread 7321: XXXX 1730331689698, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689701 XXXX 1730331689701, Thread 7321: XXXX 1730331689701, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689701 XXXX 1730331689701, Thread 7321: XXXX 1730331689701, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689701 XXXX 1730331689701, Thread 7321: XXXX 1730331689701, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689704 XXXX 1730331689704, Thread 7321: XXXX 1730331689704, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689704 XXXX 1730331689704, Thread 7321: XXXX 1730331689704, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689704 XXXX 1730331689704, Thread 7321: XXXX 1730331689704, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689706 XXXX 1730331689706, Thread 7321: XXXX 1730331689706, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689706 XXXX 1730331689706, Thread 7321: XXXX 1730331689706, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689706 XXXX 1730331689706, Thread 7321: XXXX 1730331689706, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689709 XXXX 1730331689709, Thread 7321: XXXX 1730331689709, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689709 XXXX 1730331689709, Thread 7321: XXXX 1730331689709, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689709 XXXX 1730331689709, Thread 7321: XXXX 1730331689709, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689712 XXXX 1730331689712, Thread 7321: XXXX 1730331689712, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689712 XXXX 1730331689712, Thread 7321: XXXX 1730331689712, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689712 XXXX 1730331689712, Thread 7321: XXXX 1730331689712, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689715 XXXX 1730331689715, Thread 7321: XXXX 1730331689715, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689715 XXXX 1730331689715, Thread 7321: XXXX 1730331689715, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689715 XXXX 1730331689715, Thread 7321: XXXX 1730331689715, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689718 XXXX 1730331689718, Thread 7321: XXXX 1730331689718, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689718 XXXX 1730331689718, Thread 7321: XXXX 1730331689718, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689718 XXXX 1730331689718, Thread 7321: XXXX 1730331689718, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689721 XXXX 1730331689721, Thread 7321: XXXX 1730331689721, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689721 XXXX 1730331689721, Thread 7321: XXXX 1730331689721, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689721 XXXX 1730331689721, Thread 7321: XXXX 1730331689721, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689724 XXXX 1730331689724, Thread 7321: XXXX 1730331689724, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689724 XXXX 1730331689724, Thread 7321: XXXX 1730331689724, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689724 XXXX 1730331689724, Thread 7321: XXXX 1730331689724, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689727 XXXX 1730331689727, Thread 7321: XXXX 1730331689727, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689727 XXXX 1730331689727, Thread 7321: XXXX 1730331689727, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689727 XXXX 1730331689727, Thread 7321: XXXX 1730331689727, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689730 XXXX 1730331689730, Thread 7321: XXXX 1730331689730, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689730 XXXX 1730331689730, Thread 7321: XXXX 1730331689730, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689730 XXXX 1730331689730, Thread 7321: XXXX 1730331689730, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689733 XXXX 1730331689733, Thread 7321: XXXX 1730331689733, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689733 XXXX 1730331689733, Thread 7321: XXXX 1730331689733, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689733 XXXX 1730331689733, Thread 7321: XXXX 1730331689733, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689736 XXXX 1730331689736, Thread 7321: XXXX 1730331689736, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689736 XXXX 1730331689736, Thread 7321: XXXX 1730331689736, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689736 XXXX 1730331689736, Thread 7321: XXXX 1730331689736, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689739 XXXX 1730331689739, Thread 7321: XXXX 1730331689739, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689739 XXXX 1730331689739, Thread 7321: XXXX 1730331689739, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689739 XXXX 1730331689739, Thread 7321: XXXX 1730331689739, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689742 XXXX 1730331689742, Thread 7321: XXXX 1730331689742, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689742 XXXX 1730331689742, Thread 7321: XXXX 1730331689742, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689742 XXXX 1730331689742, Thread 7321: XXXX 1730331689742, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689745 XXXX 1730331689745, Thread 7321: XXXX 1730331689745, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689745 XXXX 1730331689745, Thread 7321: XXXX 1730331689745, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689746 XXXX 1730331689745, Thread 7321: XXXX 1730331689745, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689748 XXXX 1730331689748, Thread 7321: XXXX 1730331689748, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689748 XXXX 1730331689748, Thread 7321: XXXX 1730331689748, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689748 XXXX 1730331689748, Thread 7321: XXXX 1730331689748, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689751 XXXX 1730331689751, Thread 7321: XXXX 1730331689751, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689751 XXXX 1730331689751, Thread 7321: XXXX 1730331689751, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689752 XXXX 1730331689752, Thread 7321: XXXX 1730331689752, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689754 XXXX 1730331689754, Thread 7321: XXXX 1730331689754, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689754 XXXX 1730331689754, Thread 7321: XXXX 1730331689754, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689754 XXXX 1730331689754, Thread 7321: XXXX 1730331689754, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689757 XXXX 1730331689757, Thread 7321: XXXX 1730331689757, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689757 XXXX 1730331689757, Thread 7321: XXXX 1730331689757, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689758 XXXX 1730331689757, Thread 7321: XXXX 1730331689757, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689760 XXXX 1730331689760, Thread 7321: XXXX 1730331689760, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689760 XXXX 1730331689760, Thread 7321: XXXX 1730331689760, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689760 XXXX 1730331689760, Thread 7321: XXXX 1730331689760, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689763 XXXX 1730331689763, Thread 7321: XXXX 1730331689763, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689763 XXXX 1730331689763, Thread 7321: XXXX 1730331689763, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689763 XXXX 1730331689763, Thread 7321: XXXX 1730331689763, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689766 XXXX 1730331689766, Thread 7321: XXXX 1730331689766, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689766 XXXX 1730331689766, Thread 7321: XXXX 1730331689766, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689766 XXXX 1730331689766, Thread 7321: XXXX 1730331689766, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689770 XXXX 1730331689770, Thread 7321: XXXX 1730331689770, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689770 XXXX 1730331689770, Thread 7321: XXXX 1730331689770, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689770 XXXX 1730331689770, Thread 7321: XXXX 1730331689770, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689772 XXXX 1730331689772, Thread 7321: XXXX 1730331689772, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689772 XXXX 1730331689772, Thread 7321: XXXX 1730331689772, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689772 XXXX 1730331689772, Thread 7321: XXXX 1730331689772, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689776 XXXX 1730331689776, Thread 7321: XXXX 1730331689776, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689776 XXXX 1730331689776, Thread 7321: XXXX 1730331689776, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689776 XXXX 1730331689776, Thread 7321: XXXX 1730331689776, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689778 XXXX 1730331689778, Thread 7321: XXXX 1730331689778, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689778 XXXX 1730331689778, Thread 7321: XXXX 1730331689778, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689778 XXXX 1730331689778, Thread 7321: XXXX 1730331689778, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689781 XXXX 1730331689781, Thread 7321: XXXX 1730331689781, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689781 XXXX 1730331689781, Thread 7321: XXXX 1730331689781, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689781 XXXX 1730331689781, Thread 7321: XXXX 1730331689781, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689784 XXXX 1730331689784, Thread 7321: XXXX 1730331689784, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689784 XXXX 1730331689784, Thread 7321: XXXX 1730331689784, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689784 XXXX 1730331689784, Thread 7321: XXXX 1730331689784, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689787 XXXX 1730331689787, Thread 7321: XXXX 1730331689787, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689787 XXXX 1730331689787, Thread 7321: XXXX 1730331689787, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689787 XXXX 1730331689787, Thread 7321: XXXX 1730331689787, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689790 XXXX 1730331689790, Thread 7321: XXXX 1730331689790, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689790 XXXX 1730331689790, Thread 7321: XXXX 1730331689790, Entering Thread 7321: Commands::runScriptWithUpload, script name = ReadRAM  
+7321 1730331689790 XXXX 1730331689790, Thread 7321: XXXX 1730331689790, Entering Thread 7321: ToolCommUsb::readTransfer, sideData is 0x28 bytes long, transferDataLength is 0x2 bytes long  
+7321 1730331689794 XXXX 1730331689794, Thread 7321: XXXX 1730331689794, Exiting Thread 7321: ToolCommUsb::readTransfer,  cr.status = 0x0  
+7321 1730331689794 XXXX 1730331689794, Thread 7321: XXXX 1730331689794, Exiting Thread 7321: Commands::runScriptWithUpload  
+7321 1730331689794 XXXX 1730331689794, Thread 7321: XXXX 1730331689794, Entering Thread 7321: Commands::runScriptWithDownload, script name = WriteRAM  
+7321 1730331689796 XXXX 1730331689796, Thread 7321: XXXX 1730331689796, Exiting Thread 7321: Commands::runScriptWithDownload(WriteRAM)  
+7321 1730331689796 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Post:SetFreezePerihperalInfo
+7321 1730331689796 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Return Value
+7321 1730331689796 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 none
+7321 1730331689796 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Return End
+
+7321 1730331689796 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Pre:GetPC
+7321 1730331689796 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Payload
+7321 1730331689796 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 null
+7321 1730331689796 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Payload End
+7321 1730331689796 XXXX 1730331689796, Thread 7321: XXXX 1730331689796, Entering Thread 7321: Commands::runScriptBasic, script name = GetPC, timeOut = -1 ms  
+7321 1730331689798 XXXX 1730331689798, Thread 7321: XXXX 1730331689798, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331689798 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Post:GetPC
+7321 1730331689798 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Return Value
+7321 1730331689798 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 0
+7321 1730331689798 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Return End
+
+7321 1730331689799 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Pre:RunTarget
+7321 1730331689799 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Payload
+7321 1730331689799 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 com.microchip.mplab.mdbcore.RI4Tool.DebugHandler@35d313e0
+7321 1730331689799 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Payload End
+7321 1730331689799 XXXX 1730331689799, Thread 7321: XXXX 1730331689799, Entering Thread 7321: Commands::runScriptBasic, script name = Run, timeOut = -1 ms  
+7321 1730331689800 XXXX 1730331689800, Thread 7321: XXXX 1730331689800, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331689800 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Post:RunTarget
+7321 1730331689800 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Return Value
+7321 1730331689800 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 true
+7321 1730331689800 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC24FJ256GA702 Return End
+7321 1730331690057 XXXX 1730331690057, Thread 7321: XXXX 1730331690057, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331690058 XXXX 1730331690058, Thread 7321: XXXX 1730331690058, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331690157 XXXX 1730331690157, Thread 7321: XXXX 1730331690157, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331690158 XXXX 1730331690158, Thread 7321: XXXX 1730331690158, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331690258 XXXX 1730331690258, Thread 7321: XXXX 1730331690258, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331690259 XXXX 1730331690259, Thread 7321: XXXX 1730331690259, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331690357 XXXX 1730331690357, Thread 7321: XXXX 1730331690357, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331690358 XXXX 1730331690358, Thread 7321: XXXX 1730331690358, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331690457 XXXX 1730331690457, Thread 7321: XXXX 1730331690457, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331690457 XXXX 1730331690457, Thread 7321: XXXX 1730331690457, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331690557 XXXX 1730331690557, Thread 7321: XXXX 1730331690557, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331690558 XXXX 1730331690558, Thread 7321: XXXX 1730331690558, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331690658 XXXX 1730331690658, Thread 7321: XXXX 1730331690658, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331690659 XXXX 1730331690659, Thread 7321: XXXX 1730331690659, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331690758 XXXX 1730331690758, Thread 7321: XXXX 1730331690758, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331690759 XXXX 1730331690759, Thread 7321: XXXX 1730331690759, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331690860 XXXX 1730331690860, Thread 7321: XXXX 1730331690860, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331690861 XXXX 1730331690861, Thread 7321: XXXX 1730331690861, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331690961 XXXX 1730331690961, Thread 7321: XXXX 1730331690961, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331690962 XXXX 1730331690962, Thread 7321: XXXX 1730331690962, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331691061 XXXX 1730331691061, Thread 7321: XXXX 1730331691061, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331691063 XXXX 1730331691063, Thread 7321: XXXX 1730331691063, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331691161 XXXX 1730331691161, Thread 7321: XXXX 1730331691161, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331691163 XXXX 1730331691163, Thread 7321: XXXX 1730331691163, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331691261 XXXX 1730331691261, Thread 7321: XXXX 1730331691261, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331691262 XXXX 1730331691262, Thread 7321: XXXX 1730331691262, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331691361 XXXX 1730331691361, Thread 7321: XXXX 1730331691361, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331691362 XXXX 1730331691362, Thread 7321: XXXX 1730331691362, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331691463 XXXX 1730331691463, Thread 7321: XXXX 1730331691463, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331691464 XXXX 1730331691464, Thread 7321: XXXX 1730331691464, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331691563 XXXX 1730331691563, Thread 7321: XXXX 1730331691563, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331691563 XXXX 1730331691563, Thread 7321: XXXX 1730331691563, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331691664 XXXX 1730331691664, Thread 7321: XXXX 1730331691664, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331691665 XXXX 1730331691665, Thread 7321: XXXX 1730331691665, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331691764 XXXX 1730331691764, Thread 7321: XXXX 1730331691764, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331691765 XXXX 1730331691765, Thread 7321: XXXX 1730331691765, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331691865 XXXX 1730331691865, Thread 7321: XXXX 1730331691865, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331691866 XXXX 1730331691866, Thread 7321: XXXX 1730331691866, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331691965 XXXX 1730331691965, Thread 7321: XXXX 1730331691965, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331691968 XXXX 1730331691968, Thread 7321: XXXX 1730331691968, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331692065 XXXX 1730331692065, Thread 7321: XXXX 1730331692065, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331692065 XXXX 1730331692065, Thread 7321: XXXX 1730331692065, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331692165 XXXX 1730331692165, Thread 7321: XXXX 1730331692165, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331692166 XXXX 1730331692166, Thread 7321: XXXX 1730331692166, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331692265 XXXX 1730331692265, Thread 7321: XXXX 1730331692265, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331692266 XXXX 1730331692266, Thread 7321: XXXX 1730331692266, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331692365 XXXX 1730331692365, Thread 7321: XXXX 1730331692365, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331692367 XXXX 1730331692367, Thread 7321: XXXX 1730331692367, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331692466 XXXX 1730331692466, Thread 7321: XXXX 1730331692466, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331692468 XXXX 1730331692468, Thread 7321: XXXX 1730331692468, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331692566 XXXX 1730331692566, Thread 7321: XXXX 1730331692566, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331692567 XXXX 1730331692567, Thread 7321: XXXX 1730331692567, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331692666 XXXX 1730331692666, Thread 7321: XXXX 1730331692666, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331692666 XXXX 1730331692666, Thread 7321: XXXX 1730331692666, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331692767 XXXX 1730331692767, Thread 7321: XXXX 1730331692767, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331692768 XXXX 1730331692768, Thread 7321: XXXX 1730331692768, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331692867 XXXX 1730331692867, Thread 7321: XXXX 1730331692867, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331692868 XXXX 1730331692868, Thread 7321: XXXX 1730331692868, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331692967 XXXX 1730331692967, Thread 7321: XXXX 1730331692967, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331692969 XXXX 1730331692969, Thread 7321: XXXX 1730331692969, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331693067 XXXX 1730331693067, Thread 7321: XXXX 1730331693067, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331693068 XXXX 1730331693068, Thread 7321: XXXX 1730331693068, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331693167 XXXX 1730331693167, Thread 7321: XXXX 1730331693167, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331693168 XXXX 1730331693168, Thread 7321: XXXX 1730331693168, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331693268 XXXX 1730331693268, Thread 7321: XXXX 1730331693268, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331693269 XXXX 1730331693269, Thread 7321: XXXX 1730331693269, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331693368 XXXX 1730331693368, Thread 7321: XXXX 1730331693368, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331693369 XXXX 1730331693369, Thread 7321: XXXX 1730331693369, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331693468 XXXX 1730331693468, Thread 7321: XXXX 1730331693468, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331693468 XXXX 1730331693468, Thread 7321: XXXX 1730331693468, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331693569 XXXX 1730331693569, Thread 7321: XXXX 1730331693569, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331693571 XXXX 1730331693571, Thread 7321: XXXX 1730331693571, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331693672 XXXX 1730331693672, Thread 7321: XXXX 1730331693672, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331693672 XXXX 1730331693672, Thread 7321: XXXX 1730331693672, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331693774 XXXX 1730331693774, Thread 7321: XXXX 1730331693774, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331693775 XXXX 1730331693775, Thread 7321: XXXX 1730331693775, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331693876 XXXX 1730331693876, Thread 7321: XXXX 1730331693876, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331693877 XXXX 1730331693877, Thread 7321: XXXX 1730331693877, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331693977 XXXX 1730331693977, Thread 7321: XXXX 1730331693977, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331693978 XXXX 1730331693978, Thread 7321: XXXX 1730331693978, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331694077 XXXX 1730331694077, Thread 7321: XXXX 1730331694077, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331694078 XXXX 1730331694078, Thread 7321: XXXX 1730331694078, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331694177 XXXX 1730331694177, Thread 7321: XXXX 1730331694177, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331694180 XXXX 1730331694180, Thread 7321: XXXX 1730331694180, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331694278 XXXX 1730331694278, Thread 7321: XXXX 1730331694278, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331694279 XXXX 1730331694279, Thread 7321: XXXX 1730331694279, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331694378 XXXX 1730331694378, Thread 7321: XXXX 1730331694378, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331694379 XXXX 1730331694379, Thread 7321: XXXX 1730331694379, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331694479 XXXX 1730331694479, Thread 7321: XXXX 1730331694479, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331694481 XXXX 1730331694481, Thread 7321: XXXX 1730331694481, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331694579 XXXX 1730331694579, Thread 7321: XXXX 1730331694579, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331694580 XXXX 1730331694580, Thread 7321: XXXX 1730331694580, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331694680 XXXX 1730331694680, Thread 7321: XXXX 1730331694680, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331694681 XXXX 1730331694681, Thread 7321: XXXX 1730331694681, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331694780 XXXX 1730331694780, Thread 7321: XXXX 1730331694780, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331694781 XXXX 1730331694781, Thread 7321: XXXX 1730331694781, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331694880 XXXX 1730331694880, Thread 7321: XXXX 1730331694880, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331694882 XXXX 1730331694882, Thread 7321: XXXX 1730331694882, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331694981 XXXX 1730331694981, Thread 7321: XXXX 1730331694981, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331694982 XXXX 1730331694982, Thread 7321: XXXX 1730331694982, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331695082 XXXX 1730331695082, Thread 7321: XXXX 1730331695082, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331695084 XXXX 1730331695084, Thread 7321: XXXX 1730331695084, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331695182 XXXX 1730331695182, Thread 7321: XXXX 1730331695182, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331695183 XXXX 1730331695183, Thread 7321: XXXX 1730331695183, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331695282 XXXX 1730331695282, Thread 7321: XXXX 1730331695282, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331695284 XXXX 1730331695284, Thread 7321: XXXX 1730331695284, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331695383 XXXX 1730331695383, Thread 7321: XXXX 1730331695383, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331695384 XXXX 1730331695384, Thread 7321: XXXX 1730331695384, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331695483 XXXX 1730331695483, Thread 7321: XXXX 1730331695483, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331695485 XXXX 1730331695485, Thread 7321: XXXX 1730331695485, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331695585 XXXX 1730331695585, Thread 7321: XXXX 1730331695585, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331695585 XXXX 1730331695585, Thread 7321: XXXX 1730331695585, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331695686 XXXX 1730331695686, Thread 7321: XXXX 1730331695686, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331695687 XXXX 1730331695687, Thread 7321: XXXX 1730331695687, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331695786 XXXX 1730331695786, Thread 7321: XXXX 1730331695786, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331695787 XXXX 1730331695787, Thread 7321: XXXX 1730331695787, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331695887 XXXX 1730331695887, Thread 7321: XXXX 1730331695887, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331695888 XXXX 1730331695888, Thread 7321: XXXX 1730331695888, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331695988 XXXX 1730331695988, Thread 7321: XXXX 1730331695988, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331695989 XXXX 1730331695989, Thread 7321: XXXX 1730331695989, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331696089 XXXX 1730331696089, Thread 7321: XXXX 1730331696089, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331696090 XXXX 1730331696090, Thread 7321: XXXX 1730331696090, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331696191 XXXX 1730331696191, Thread 7321: XXXX 1730331696191, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331696191 XXXX 1730331696191, Thread 7321: XXXX 1730331696191, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331696292 XXXX 1730331696292, Thread 7321: XXXX 1730331696292, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331696293 XXXX 1730331696293, Thread 7321: XXXX 1730331696293, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331696392 XXXX 1730331696392, Thread 7321: XXXX 1730331696392, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331696393 XXXX 1730331696393, Thread 7321: XXXX 1730331696393, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331696493 XXXX 1730331696493, Thread 7321: XXXX 1730331696493, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331696494 XXXX 1730331696494, Thread 7321: XXXX 1730331696494, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331696595 XXXX 1730331696595, Thread 7321: XXXX 1730331696595, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331696595 XXXX 1730331696595, Thread 7321: XXXX 1730331696595, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331696695 XXXX 1730331696695, Thread 7321: XXXX 1730331696695, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331696696 XXXX 1730331696696, Thread 7321: XXXX 1730331696696, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331696795 XXXX 1730331696795, Thread 7321: XXXX 1730331696795, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331696795 XXXX 1730331696795, Thread 7321: XXXX 1730331696795, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331696897 XXXX 1730331696897, Thread 7321: XXXX 1730331696897, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331696897 XXXX 1730331696897, Thread 7321: XXXX 1730331696897, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331696997 XXXX 1730331696997, Thread 7321: XXXX 1730331696997, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331696998 XXXX 1730331696998, Thread 7321: XXXX 1730331696998, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331697098 XXXX 1730331697098, Thread 7321: XXXX 1730331697098, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331697098 XXXX 1730331697098, Thread 7321: XXXX 1730331697098, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331697198 XXXX 1730331697198, Thread 7321: XXXX 1730331697198, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331697199 XXXX 1730331697199, Thread 7321: XXXX 1730331697199, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331697298 XXXX 1730331697298, Thread 7321: XXXX 1730331697298, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331697299 XXXX 1730331697299, Thread 7321: XXXX 1730331697299, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331697399 XXXX 1730331697399, Thread 7321: XXXX 1730331697399, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331697401 XXXX 1730331697401, Thread 7321: XXXX 1730331697401, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331697500 XXXX 1730331697500, Thread 7321: XXXX 1730331697500, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331697500 XXXX 1730331697500, Thread 7321: XXXX 1730331697500, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331697600 XXXX 1730331697600, Thread 7321: XXXX 1730331697600, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331697602 XXXX 1730331697602, Thread 7321: XXXX 1730331697602, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331697701 XXXX 1730331697701, Thread 7321: XXXX 1730331697701, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331697703 XXXX 1730331697703, Thread 7321: XXXX 1730331697703, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331697802 XXXX 1730331697802, Thread 7321: XXXX 1730331697802, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331697803 XXXX 1730331697803, Thread 7321: XXXX 1730331697802, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331697903 XXXX 1730331697903, Thread 7321: XXXX 1730331697903, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331697905 XXXX 1730331697905, Thread 7321: XXXX 1730331697905, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331698003 XXXX 1730331698003, Thread 7321: XXXX 1730331698003, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331698004 XXXX 1730331698004, Thread 7321: XXXX 1730331698004, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331698104 XXXX 1730331698104, Thread 7321: XXXX 1730331698104, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331698105 XXXX 1730331698105, Thread 7321: XXXX 1730331698105, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331698205 XXXX 1730331698205, Thread 7321: XXXX 1730331698205, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331698206 XXXX 1730331698206, Thread 7321: XXXX 1730331698206, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331698305 XXXX 1730331698305, Thread 7321: XXXX 1730331698305, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331698308 XXXX 1730331698308, Thread 7321: XXXX 1730331698308, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331698406 XXXX 1730331698406, Thread 7321: XXXX 1730331698406, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331698407 XXXX 1730331698407, Thread 7321: XXXX 1730331698407, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331698507 XXXX 1730331698507, Thread 7321: XXXX 1730331698507, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331698508 XXXX 1730331698508, Thread 7321: XXXX 1730331698508, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331698607 XXXX 1730331698607, Thread 7321: XXXX 1730331698607, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331698609 XXXX 1730331698609, Thread 7321: XXXX 1730331698609, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331698708 XXXX 1730331698708, Thread 7321: XXXX 1730331698708, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331698710 XXXX 1730331698710, Thread 7321: XXXX 1730331698710, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331698809 XXXX 1730331698809, Thread 7321: XXXX 1730331698809, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331698810 XXXX 1730331698810, Thread 7321: XXXX 1730331698810, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331698911 XXXX 1730331698911, Thread 7321: XXXX 1730331698911, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331698911 XXXX 1730331698911, Thread 7321: XXXX 1730331698911, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331699013 XXXX 1730331699013, Thread 7321: XXXX 1730331699013, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331699014 XXXX 1730331699014, Thread 7321: XXXX 1730331699014, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331699113 XXXX 1730331699113, Thread 7321: XXXX 1730331699113, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331699115 XXXX 1730331699115, Thread 7321: XXXX 1730331699115, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331699213 XXXX 1730331699213, Thread 7321: XXXX 1730331699213, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331699215 XXXX 1730331699215, Thread 7321: XXXX 1730331699215, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331699313 XXXX 1730331699313, Thread 7321: XXXX 1730331699313, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331699314 XXXX 1730331699314, Thread 7321: XXXX 1730331699314, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331699414 XXXX 1730331699414, Thread 7321: XXXX 1730331699414, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331699415 XXXX 1730331699415, Thread 7321: XXXX 1730331699415, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331699514 XXXX 1730331699514, Thread 7321: XXXX 1730331699514, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331699515 XXXX 1730331699515, Thread 7321: XXXX 1730331699515, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331699615 XXXX 1730331699615, Thread 7321: XXXX 1730331699615, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331699616 XXXX 1730331699616, Thread 7321: XXXX 1730331699616, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331699715 XXXX 1730331699715, Thread 7321: XXXX 1730331699715, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331699717 XXXX 1730331699717, Thread 7321: XXXX 1730331699717, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331699817 XXXX 1730331699817, Thread 7321: XXXX 1730331699817, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331699818 XXXX 1730331699818, Thread 7321: XXXX 1730331699818, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331699917 XXXX 1730331699917, Thread 7321: XXXX 1730331699917, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331699917 XXXX 1730331699917, Thread 7321: XXXX 1730331699917, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331700018 XXXX 1730331700018, Thread 7321: XXXX 1730331700018, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331700019 XXXX 1730331700019, Thread 7321: XXXX 1730331700019, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331700118 XXXX 1730331700118, Thread 7321: XXXX 1730331700118, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331700120 XXXX 1730331700120, Thread 7321: XXXX 1730331700120, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331700218 XXXX 1730331700218, Thread 7321: XXXX 1730331700218, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331700220 XXXX 1730331700220, Thread 7321: XXXX 1730331700220, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331700318 XXXX 1730331700318, Thread 7321: XXXX 1730331700318, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331700318 XXXX 1730331700318, Thread 7321: XXXX 1730331700318, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331700420 XXXX 1730331700420, Thread 7321: XXXX 1730331700420, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331700421 XXXX 1730331700421, Thread 7321: XXXX 1730331700421, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331700520 XXXX 1730331700520, Thread 7321: XXXX 1730331700520, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331700521 XXXX 1730331700521, Thread 7321: XXXX 1730331700521, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331700620 XXXX 1730331700620, Thread 7321: XXXX 1730331700620, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331700622 XXXX 1730331700622, Thread 7321: XXXX 1730331700622, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331700721 XXXX 1730331700721, Thread 7321: XXXX 1730331700721, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331700722 XXXX 1730331700722, Thread 7321: XXXX 1730331700722, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331700822 XXXX 1730331700822, Thread 7321: XXXX 1730331700822, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331700823 XXXX 1730331700823, Thread 7321: XXXX 1730331700823, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331700923 XXXX 1730331700923, Thread 7321: XXXX 1730331700923, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331700924 XXXX 1730331700924, Thread 7321: XXXX 1730331700924, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331701023 XXXX 1730331701023, Thread 7321: XXXX 1730331701023, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331701024 XXXX 1730331701024, Thread 7321: XXXX 1730331701024, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331701125 XXXX 1730331701125, Thread 7321: XXXX 1730331701125, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331701125 XXXX 1730331701125, Thread 7321: XXXX 1730331701125, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331701227 XXXX 1730331701227, Thread 7321: XXXX 1730331701227, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331701228 XXXX 1730331701228, Thread 7321: XXXX 1730331701228, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331701327 XXXX 1730331701327, Thread 7321: XXXX 1730331701327, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331701327 XXXX 1730331701327, Thread 7321: XXXX 1730331701327, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331701429 XXXX 1730331701429, Thread 7321: XXXX 1730331701429, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331701430 XXXX 1730331701430, Thread 7321: XXXX 1730331701430, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331701530 XXXX 1730331701530, Thread 7321: XXXX 1730331701530, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331701530 XXXX 1730331701530, Thread 7321: XXXX 1730331701530, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331701630 XXXX 1730331701630, Thread 7321: XXXX 1730331701630, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331701631 XXXX 1730331701631, Thread 7321: XXXX 1730331701631, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331701731 XXXX 1730331701731, Thread 7321: XXXX 1730331701731, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331701732 XXXX 1730331701732, Thread 7321: XXXX 1730331701732, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331701831 XXXX 1730331701831, Thread 7321: XXXX 1730331701831, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331701832 XXXX 1730331701832, Thread 7321: XXXX 1730331701832, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331701931 XXXX 1730331701931, Thread 7321: XXXX 1730331701931, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331701933 XXXX 1730331701933, Thread 7321: XXXX 1730331701933, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331702031 XXXX 1730331702031, Thread 7321: XXXX 1730331702031, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331702031 XXXX 1730331702031, Thread 7321: XXXX 1730331702031, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331702133 XXXX 1730331702133, Thread 7321: XXXX 1730331702133, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331702134 XXXX 1730331702134, Thread 7321: XXXX 1730331702134, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331702233 XXXX 1730331702233, Thread 7321: XXXX 1730331702233, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331702233 XXXX 1730331702233, Thread 7321: XXXX 1730331702233, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331702335 XXXX 1730331702335, Thread 7321: XXXX 1730331702335, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331702336 XXXX 1730331702336, Thread 7321: XXXX 1730331702336, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331702435 XXXX 1730331702435, Thread 7321: XXXX 1730331702435, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331702436 XXXX 1730331702436, Thread 7321: XXXX 1730331702436, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331702536 XXXX 1730331702535, Thread 7321: XXXX 1730331702535, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331702536 XXXX 1730331702536, Thread 7321: XXXX 1730331702536, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331702637 XXXX 1730331702637, Thread 7321: XXXX 1730331702637, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331702638 XXXX 1730331702638, Thread 7321: XXXX 1730331702638, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331702737 XXXX 1730331702737, Thread 7321: XXXX 1730331702737, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331702738 XXXX 1730331702738, Thread 7321: XXXX 1730331702738, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331702838 XXXX 1730331702838, Thread 7321: XXXX 1730331702838, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331702839 XXXX 1730331702839, Thread 7321: XXXX 1730331702839, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331702939 XXXX 1730331702939, Thread 7321: XXXX 1730331702939, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331702940 XXXX 1730331702940, Thread 7321: XXXX 1730331702940, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331703039 XXXX 1730331703039, Thread 7321: XXXX 1730331703039, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331703040 XXXX 1730331703040, Thread 7321: XXXX 1730331703040, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331703139 XXXX 1730331703139, Thread 7321: XXXX 1730331703139, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331703140 XXXX 1730331703140, Thread 7321: XXXX 1730331703140, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331703239 XXXX 1730331703239, Thread 7321: XXXX 1730331703239, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331703240 XXXX 1730331703240, Thread 7321: XXXX 1730331703240, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331703340 XXXX 1730331703340, Thread 7321: XXXX 1730331703340, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331703340 XXXX 1730331703340, Thread 7321: XXXX 1730331703340, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331703441 XXXX 1730331703441, Thread 7321: XXXX 1730331703441, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331703442 XXXX 1730331703442, Thread 7321: XXXX 1730331703442, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331703541 XXXX 1730331703541, Thread 7321: XXXX 1730331703541, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331703542 XXXX 1730331703542, Thread 7321: XXXX 1730331703542, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331703641 XXXX 1730331703641, Thread 7321: XXXX 1730331703641, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331703642 XXXX 1730331703642, Thread 7321: XXXX 1730331703642, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331703742 XXXX 1730331703742, Thread 7321: XXXX 1730331703742, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331703743 XXXX 1730331703743, Thread 7321: XXXX 1730331703743, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331703842 XXXX 1730331703842, Thread 7321: XXXX 1730331703842, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331703843 XXXX 1730331703843, Thread 7321: XXXX 1730331703843, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331703943 XXXX 1730331703943, Thread 7321: XXXX 1730331703943, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331703944 XXXX 1730331703944, Thread 7321: XXXX 1730331703944, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331704043 XXXX 1730331704043, Thread 7321: XXXX 1730331704043, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331704044 XXXX 1730331704044, Thread 7321: XXXX 1730331704044, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331704145 XXXX 1730331704145, Thread 7321: XXXX 1730331704145, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331704147 XXXX 1730331704147, Thread 7321: XXXX 1730331704147, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331704246 XXXX 1730331704246, Thread 7321: XXXX 1730331704246, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331704247 XXXX 1730331704247, Thread 7321: XXXX 1730331704247, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331704346 XXXX 1730331704346, Thread 7321: XXXX 1730331704346, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331704347 XXXX 1730331704347, Thread 7321: XXXX 1730331704347, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331704447 XXXX 1730331704447, Thread 7321: XXXX 1730331704447, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331704447 XXXX 1730331704447, Thread 7321: XXXX 1730331704447, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331704549 XXXX 1730331704549, Thread 7321: XXXX 1730331704549, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331704551 XXXX 1730331704551, Thread 7321: XXXX 1730331704551, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331704649 XXXX 1730331704649, Thread 7321: XXXX 1730331704649, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331704650 XXXX 1730331704650, Thread 7321: XXXX 1730331704650, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331704750 XXXX 1730331704750, Thread 7321: XXXX 1730331704750, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331704751 XXXX 1730331704751, Thread 7321: XXXX 1730331704751, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331704850 XXXX 1730331704850, Thread 7321: XXXX 1730331704850, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331704851 XXXX 1730331704851, Thread 7321: XXXX 1730331704851, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331704951 XXXX 1730331704951, Thread 7321: XXXX 1730331704951, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331704952 XXXX 1730331704952, Thread 7321: XXXX 1730331704952, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331705053 XXXX 1730331705053, Thread 7321: XXXX 1730331705053, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331705054 XXXX 1730331705054, Thread 7321: XXXX 1730331705054, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331705153 XXXX 1730331705153, Thread 7321: XXXX 1730331705153, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331705155 XXXX 1730331705155, Thread 7321: XXXX 1730331705155, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331705253 XXXX 1730331705253, Thread 7321: XXXX 1730331705253, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331705255 XXXX 1730331705255, Thread 7321: XXXX 1730331705255, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331705354 XXXX 1730331705354, Thread 7321: XXXX 1730331705354, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331705355 XXXX 1730331705355, Thread 7321: XXXX 1730331705355, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331705455 XXXX 1730331705455, Thread 7321: XXXX 1730331705455, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331705456 XXXX 1730331705456, Thread 7321: XXXX 1730331705456, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331705555 XXXX 1730331705555, Thread 7321: XXXX 1730331705555, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331705556 XXXX 1730331705556, Thread 7321: XXXX 1730331705556, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331705655 XXXX 1730331705655, Thread 7321: XXXX 1730331705655, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331705656 XXXX 1730331705656, Thread 7321: XXXX 1730331705656, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331705756 XXXX 1730331705756, Thread 7321: XXXX 1730331705756, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331705757 XXXX 1730331705757, Thread 7321: XXXX 1730331705757, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331705856 XXXX 1730331705856, Thread 7321: XXXX 1730331705856, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331705857 XXXX 1730331705857, Thread 7321: XXXX 1730331705857, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331705956 XXXX 1730331705956, Thread 7321: XXXX 1730331705956, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331705957 XXXX 1730331705956, Thread 7321: XXXX 1730331705956, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331706057 XXXX 1730331706057, Thread 7321: XXXX 1730331706057, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331706058 XXXX 1730331706058, Thread 7321: XXXX 1730331706058, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331706158 XXXX 1730331706158, Thread 7321: XXXX 1730331706158, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331706159 XXXX 1730331706159, Thread 7321: XXXX 1730331706159, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331706258 XXXX 1730331706258, Thread 7321: XXXX 1730331706258, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331706259 XXXX 1730331706259, Thread 7321: XXXX 1730331706259, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331706359 XXXX 1730331706359, Thread 7321: XXXX 1730331706359, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331706360 XXXX 1730331706360, Thread 7321: XXXX 1730331706360, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331706460 XXXX 1730331706460, Thread 7321: XXXX 1730331706460, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331706461 XXXX 1730331706461, Thread 7321: XXXX 1730331706461, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331706561 XXXX 1730331706561, Thread 7321: XXXX 1730331706561, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331706562 XXXX 1730331706562, Thread 7321: XXXX 1730331706562, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331706662 XXXX 1730331706662, Thread 7321: XXXX 1730331706662, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331706663 XXXX 1730331706663, Thread 7321: XXXX 1730331706663, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331706762 XXXX 1730331706762, Thread 7321: XXXX 1730331706762, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331706763 XXXX 1730331706763, Thread 7321: XXXX 1730331706763, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331706863 XXXX 1730331706863, Thread 7321: XXXX 1730331706863, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331706863 XXXX 1730331706863, Thread 7321: XXXX 1730331706863, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331706965 XXXX 1730331706965, Thread 7321: XXXX 1730331706965, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331706965 XXXX 1730331706965, Thread 7321: XXXX 1730331706965, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331707066 XXXX 1730331707066, Thread 7321: XXXX 1730331707066, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331707068 XXXX 1730331707068, Thread 7321: XXXX 1730331707068, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331707166 XXXX 1730331707166, Thread 7321: XXXX 1730331707166, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331707167 XXXX 1730331707167, Thread 7321: XXXX 1730331707167, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331707266 XXXX 1730331707266, Thread 7321: XXXX 1730331707266, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331707267 XXXX 1730331707267, Thread 7321: XXXX 1730331707267, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331707368 XXXX 1730331707368, Thread 7321: XXXX 1730331707368, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331707368 XXXX 1730331707368, Thread 7321: XXXX 1730331707368, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331707468 XXXX 1730331707468, Thread 7321: XXXX 1730331707468, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331707469 XXXX 1730331707469, Thread 7321: XXXX 1730331707469, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331707568 XXXX 1730331707568, Thread 7321: XXXX 1730331707568, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331707569 XXXX 1730331707569, Thread 7321: XXXX 1730331707569, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331707669 XXXX 1730331707669, Thread 7321: XXXX 1730331707669, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331707669 XXXX 1730331707669, Thread 7321: XXXX 1730331707669, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331707769 XXXX 1730331707769, Thread 7321: XXXX 1730331707769, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331707770 XXXX 1730331707770, Thread 7321: XXXX 1730331707770, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331707871 XXXX 1730331707871, Thread 7321: XXXX 1730331707871, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331707872 XXXX 1730331707872, Thread 7321: XXXX 1730331707872, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331707972 XXXX 1730331707972, Thread 7321: XXXX 1730331707972, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331707973 XXXX 1730331707973, Thread 7321: XXXX 1730331707973, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331708073 XXXX 1730331708073, Thread 7321: XXXX 1730331708073, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331708074 XXXX 1730331708074, Thread 7321: XXXX 1730331708074, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331708174 XXXX 1730331708174, Thread 7321: XXXX 1730331708174, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331708175 XXXX 1730331708175, Thread 7321: XXXX 1730331708175, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331708274 XXXX 1730331708274, Thread 7321: XXXX 1730331708274, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331708276 XXXX 1730331708276, Thread 7321: XXXX 1730331708276, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331708375 XXXX 1730331708375, Thread 7321: XXXX 1730331708375, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331708376 XXXX 1730331708376, Thread 7321: XXXX 1730331708376, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331708475 XXXX 1730331708475, Thread 7321: XXXX 1730331708475, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331708476 XXXX 1730331708476, Thread 7321: XXXX 1730331708476, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331708577 XXXX 1730331708577, Thread 7321: XXXX 1730331708577, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331708577 XXXX 1730331708577, Thread 7321: XXXX 1730331708577, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331708676 XXXX 1730331708676, Thread 7321: XXXX 1730331708676, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331708678 XXXX 1730331708678, Thread 7321: XXXX 1730331708678, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331708777 XXXX 1730331708777, Thread 7321: XXXX 1730331708777, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331708778 XXXX 1730331708778, Thread 7321: XXXX 1730331708778, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331708877 XXXX 1730331708877, Thread 7321: XXXX 1730331708877, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331708877 XXXX 1730331708877, Thread 7321: XXXX 1730331708877, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331708977 XXXX 1730331708977, Thread 7321: XXXX 1730331708977, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331708978 XXXX 1730331708978, Thread 7321: XXXX 1730331708978, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331709079 XXXX 1730331709079, Thread 7321: XXXX 1730331709079, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331709079 XXXX 1730331709079, Thread 7321: XXXX 1730331709079, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331709181 XXXX 1730331709181, Thread 7321: XXXX 1730331709181, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331709183 XXXX 1730331709183, Thread 7321: XXXX 1730331709183, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331709281 XXXX 1730331709281, Thread 7321: XXXX 1730331709281, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331709282 XXXX 1730331709282, Thread 7321: XXXX 1730331709282, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331709382 XXXX 1730331709382, Thread 7321: XXXX 1730331709382, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331709383 XXXX 1730331709383, Thread 7321: XXXX 1730331709383, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331709483 XXXX 1730331709483, Thread 7321: XXXX 1730331709483, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331709484 XXXX 1730331709484, Thread 7321: XXXX 1730331709484, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331709583 XXXX 1730331709583, Thread 7321: XXXX 1730331709583, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331709583 XXXX 1730331709583, Thread 7321: XXXX 1730331709583, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331709684 XXXX 1730331709684, Thread 7321: XXXX 1730331709684, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331709684 XXXX 1730331709684, Thread 7321: XXXX 1730331709684, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331709784 XXXX 1730331709784, Thread 7321: XXXX 1730331709784, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331709786 XXXX 1730331709786, Thread 7321: XXXX 1730331709786, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331709884 XXXX 1730331709884, Thread 7321: XXXX 1730331709884, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331709886 XXXX 1730331709886, Thread 7321: XXXX 1730331709886, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331709984 XXXX 1730331709984, Thread 7321: XXXX 1730331709984, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331709984 XXXX 1730331709984, Thread 7321: XXXX 1730331709984, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331710086 XXXX 1730331710086, Thread 7321: XXXX 1730331710086, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331710088 XXXX 1730331710088, Thread 7321: XXXX 1730331710088, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331710187 XXXX 1730331710187, Thread 7321: XXXX 1730331710187, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331710188 XXXX 1730331710188, Thread 7321: XXXX 1730331710188, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331710287 XXXX 1730331710287, Thread 7321: XXXX 1730331710287, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331710289 XXXX 1730331710289, Thread 7321: XXXX 1730331710289, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331710387 XXXX 1730331710387, Thread 7321: XXXX 1730331710387, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331710389 XXXX 1730331710389, Thread 7321: XXXX 1730331710389, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331710488 XXXX 1730331710488, Thread 7321: XXXX 1730331710488, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331710489 XXXX 1730331710489, Thread 7321: XXXX 1730331710489, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331710588 XXXX 1730331710588, Thread 7321: XXXX 1730331710588, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331710589 XXXX 1730331710589, Thread 7321: XXXX 1730331710589, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331710689 XXXX 1730331710689, Thread 7321: XXXX 1730331710689, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331710690 XXXX 1730331710690, Thread 7321: XXXX 1730331710690, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331710789 XXXX 1730331710789, Thread 7321: XXXX 1730331710789, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331710789 XXXX 1730331710789, Thread 7321: XXXX 1730331710789, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331710891 XXXX 1730331710891, Thread 7321: XXXX 1730331710891, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331710891 XXXX 1730331710891, Thread 7321: XXXX 1730331710891, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331710993 XXXX 1730331710993, Thread 7321: XXXX 1730331710993, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331710994 XXXX 1730331710994, Thread 7321: XXXX 1730331710994, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331711094 XXXX 1730331711094, Thread 7321: XXXX 1730331711094, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331711096 XXXX 1730331711096, Thread 7321: XXXX 1730331711096, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331711194 XXXX 1730331711194, Thread 7321: XXXX 1730331711194, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331711196 XXXX 1730331711196, Thread 7321: XXXX 1730331711196, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331711294 XXXX 1730331711294, Thread 7321: XXXX 1730331711294, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331711296 XXXX 1730331711296, Thread 7321: XXXX 1730331711296, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331711394 XXXX 1730331711394, Thread 7321: XXXX 1730331711394, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331711396 XXXX 1730331711396, Thread 7321: XXXX 1730331711396, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331711495 XXXX 1730331711495, Thread 7321: XXXX 1730331711495, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331711496 XXXX 1730331711496, Thread 7321: XXXX 1730331711496, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331711595 XXXX 1730331711595, Thread 7321: XXXX 1730331711595, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331711595 XXXX 1730331711595, Thread 7321: XXXX 1730331711595, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331711698 XXXX 1730331711698, Thread 7321: XXXX 1730331711698, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331711699 XXXX 1730331711699, Thread 7321: XXXX 1730331711699, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331711799 XXXX 1730331711799, Thread 7321: XXXX 1730331711799, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331711800 XXXX 1730331711800, Thread 7321: XXXX 1730331711800, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331711899 XXXX 1730331711899, Thread 7321: XXXX 1730331711899, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331711899 XXXX 1730331711899, Thread 7321: XXXX 1730331711899, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331712001 XXXX 1730331712001, Thread 7321: XXXX 1730331712001, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331712002 XXXX 1730331712002, Thread 7321: XXXX 1730331712002, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331712101 XXXX 1730331712101, Thread 7321: XXXX 1730331712101, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331712102 XXXX 1730331712102, Thread 7321: XXXX 1730331712102, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331712202 XXXX 1730331712202, Thread 7321: XXXX 1730331712202, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331712203 XXXX 1730331712203, Thread 7321: XXXX 1730331712203, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331712303 XXXX 1730331712303, Thread 7321: XXXX 1730331712303, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331712303 XXXX 1730331712303, Thread 7321: XXXX 1730331712303, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331712404 XXXX 1730331712404, Thread 7321: XXXX 1730331712404, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331712405 XXXX 1730331712405, Thread 7321: XXXX 1730331712405, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331712505 XXXX 1730331712505, Thread 7321: XXXX 1730331712505, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331712506 XXXX 1730331712506, Thread 7321: XXXX 1730331712506, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331712605 XXXX 1730331712605, Thread 7321: XXXX 1730331712605, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331712606 XXXX 1730331712606, Thread 7321: XXXX 1730331712606, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331712705 XXXX 1730331712705, Thread 7321: XXXX 1730331712705, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331712707 XXXX 1730331712707, Thread 7321: XXXX 1730331712707, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331712806 XXXX 1730331712806, Thread 7321: XXXX 1730331712806, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331712807 XXXX 1730331712807, Thread 7321: XXXX 1730331712807, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331712906 XXXX 1730331712906, Thread 7321: XXXX 1730331712906, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331712907 XXXX 1730331712907, Thread 7321: XXXX 1730331712907, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331713008 XXXX 1730331713008, Thread 7321: XXXX 1730331713008, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331713009 XXXX 1730331713009, Thread 7321: XXXX 1730331713009, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331713109 XXXX 1730331713109, Thread 7321: XXXX 1730331713109, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331713110 XXXX 1730331713110, Thread 7321: XXXX 1730331713110, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331713209 XXXX 1730331713209, Thread 7321: XXXX 1730331713209, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331713210 XXXX 1730331713210, Thread 7321: XXXX 1730331713210, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331713311 XXXX 1730331713311, Thread 7321: XXXX 1730331713311, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331713312 XXXX 1730331713312, Thread 7321: XXXX 1730331713312, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331713411 XXXX 1730331713411, Thread 7321: XXXX 1730331713411, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331713411 XXXX 1730331713411, Thread 7321: XXXX 1730331713411, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331713512 XXXX 1730331713512, Thread 7321: XXXX 1730331713512, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331713513 XXXX 1730331713513, Thread 7321: XXXX 1730331713513, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331713612 XXXX 1730331713612, Thread 7321: XXXX 1730331713612, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331713613 XXXX 1730331713613, Thread 7321: XXXX 1730331713613, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331713712 XXXX 1730331713712, Thread 7321: XXXX 1730331713712, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331713713 XXXX 1730331713713, Thread 7321: XXXX 1730331713713, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331713813 XXXX 1730331713813, Thread 7321: XXXX 1730331713813, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331713814 XXXX 1730331713814, Thread 7321: XXXX 1730331713814, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331713913 XXXX 1730331713913, Thread 7321: XXXX 1730331713913, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331713914 XXXX 1730331713914, Thread 7321: XXXX 1730331713914, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331714013 XXXX 1730331714013, Thread 7321: XXXX 1730331714013, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331714014 XXXX 1730331714014, Thread 7321: XXXX 1730331714014, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331714113 XXXX 1730331714113, Thread 7321: XXXX 1730331714113, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331714114 XXXX 1730331714114, Thread 7321: XXXX 1730331714114, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331714213 XXXX 1730331714213, Thread 7321: XXXX 1730331714213, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331714213 XXXX 1730331714213, Thread 7321: XXXX 1730331714213, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331714314 XXXX 1730331714314, Thread 7321: XXXX 1730331714314, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331714315 XXXX 1730331714315, Thread 7321: XXXX 1730331714315, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331714414 XXXX 1730331714414, Thread 7321: XXXX 1730331714414, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331714416 XXXX 1730331714416, Thread 7321: XXXX 1730331714416, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331714514 XXXX 1730331714514, Thread 7321: XXXX 1730331714514, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331714515 XXXX 1730331714515, Thread 7321: XXXX 1730331714515, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331714614 XXXX 1730331714614, Thread 7321: XXXX 1730331714614, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331714615 XXXX 1730331714615, Thread 7321: XXXX 1730331714615, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331714719 XXXX 1730331714719, Thread 7321: XXXX 1730331714719, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331714720 XXXX 1730331714720, Thread 7321: XXXX 1730331714720, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331714819 XXXX 1730331714819, Thread 7321: XXXX 1730331714819, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331714820 XXXX 1730331714820, Thread 7321: XXXX 1730331714820, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331714919 XXXX 1730331714919, Thread 7321: XXXX 1730331714919, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331714920 XXXX 1730331714920, Thread 7321: XXXX 1730331714920, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331715020 XXXX 1730331715020, Thread 7321: XXXX 1730331715020, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331715022 XXXX 1730331715022, Thread 7321: XXXX 1730331715022, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331715121 XXXX 1730331715121, Thread 7321: XXXX 1730331715121, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331715122 XXXX 1730331715122, Thread 7321: XXXX 1730331715122, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331715222 XXXX 1730331715222, Thread 7321: XXXX 1730331715222, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331715223 XXXX 1730331715223, Thread 7321: XXXX 1730331715223, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331715323 XXXX 1730331715323, Thread 7321: XXXX 1730331715323, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331715324 XXXX 1730331715324, Thread 7321: XXXX 1730331715324, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331715423 XXXX 1730331715423, Thread 7321: XXXX 1730331715423, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331715424 XXXX 1730331715424, Thread 7321: XXXX 1730331715424, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331715524 XXXX 1730331715524, Thread 7321: XXXX 1730331715524, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331715525 XXXX 1730331715525, Thread 7321: XXXX 1730331715525, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331715625 XXXX 1730331715625, Thread 7321: XXXX 1730331715625, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331715626 XXXX 1730331715626, Thread 7321: XXXX 1730331715626, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331715725 XXXX 1730331715725, Thread 7321: XXXX 1730331715725, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331715726 XXXX 1730331715726, Thread 7321: XXXX 1730331715726, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331715826 XXXX 1730331715826, Thread 7321: XXXX 1730331715826, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331715827 XXXX 1730331715827, Thread 7321: XXXX 1730331715827, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331715926 XXXX 1730331715926, Thread 7321: XXXX 1730331715926, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331715927 XXXX 1730331715927, Thread 7321: XXXX 1730331715927, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331716026 XXXX 1730331716026, Thread 7321: XXXX 1730331716026, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331716027 XXXX 1730331716027, Thread 7321: XXXX 1730331716027, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331716127 XXXX 1730331716127, Thread 7321: XXXX 1730331716127, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331716128 XXXX 1730331716128, Thread 7321: XXXX 1730331716128, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331716227 XXXX 1730331716227, Thread 7321: XXXX 1730331716227, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331716228 XXXX 1730331716228, Thread 7321: XXXX 1730331716228, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331716327 XXXX 1730331716327, Thread 7321: XXXX 1730331716327, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331716328 XXXX 1730331716328, Thread 7321: XXXX 1730331716328, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331716428 XXXX 1730331716428, Thread 7321: XXXX 1730331716428, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331716429 XXXX 1730331716429, Thread 7321: XXXX 1730331716429, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331716529 XXXX 1730331716529, Thread 7321: XXXX 1730331716529, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331716530 XXXX 1730331716530, Thread 7321: XXXX 1730331716530, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331716630 XXXX 1730331716630, Thread 7321: XXXX 1730331716630, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331716631 XXXX 1730331716631, Thread 7321: XXXX 1730331716631, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331716731 XXXX 1730331716731, Thread 7321: XXXX 1730331716731, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331716731 XXXX 1730331716731, Thread 7321: XXXX 1730331716731, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331716831 XXXX 1730331716831, Thread 7321: XXXX 1730331716831, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331716831 XXXX 1730331716831, Thread 7321: XXXX 1730331716831, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331716932 XXXX 1730331716932, Thread 7321: XXXX 1730331716932, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331716933 XXXX 1730331716933, Thread 7321: XXXX 1730331716933, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331717032 XXXX 1730331717032, Thread 7321: XXXX 1730331717032, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331717033 XXXX 1730331717033, Thread 7321: XXXX 1730331717033, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331717133 XXXX 1730331717133, Thread 7321: XXXX 1730331717133, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331717134 XXXX 1730331717134, Thread 7321: XXXX 1730331717134, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331717233 XXXX 1730331717233, Thread 7321: XXXX 1730331717233, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331717234 XXXX 1730331717234, Thread 7321: XXXX 1730331717234, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331717334 XXXX 1730331717334, Thread 7321: XXXX 1730331717334, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331717335 XXXX 1730331717335, Thread 7321: XXXX 1730331717335, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331717434 XXXX 1730331717434, Thread 7321: XXXX 1730331717434, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331717435 XXXX 1730331717435, Thread 7321: XXXX 1730331717435, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331717535 XXXX 1730331717535, Thread 7321: XXXX 1730331717535, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331717535 XXXX 1730331717535, Thread 7321: XXXX 1730331717535, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331717635 XXXX 1730331717635, Thread 7321: XXXX 1730331717635, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331717637 XXXX 1730331717637, Thread 7321: XXXX 1730331717637, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331717736 XXXX 1730331717736, Thread 7321: XXXX 1730331717736, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331717737 XXXX 1730331717737, Thread 7321: XXXX 1730331717737, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331717836 XXXX 1730331717836, Thread 7321: XXXX 1730331717836, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331717837 XXXX 1730331717837, Thread 7321: XXXX 1730331717837, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331717936 XXXX 1730331717936, Thread 7321: XXXX 1730331717936, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331717938 XXXX 1730331717938, Thread 7321: XXXX 1730331717938, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331718036 XXXX 1730331718036, Thread 7321: XXXX 1730331718036, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331718037 XXXX 1730331718037, Thread 7321: XXXX 1730331718037, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331718137 XXXX 1730331718137, Thread 7321: XXXX 1730331718137, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331718139 XXXX 1730331718139, Thread 7321: XXXX 1730331718139, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331718237 XXXX 1730331718237, Thread 7321: XXXX 1730331718237, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331718238 XXXX 1730331718238, Thread 7321: XXXX 1730331718238, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331718338 XXXX 1730331718338, Thread 7321: XXXX 1730331718338, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331718340 XXXX 1730331718340, Thread 7321: XXXX 1730331718340, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331718438 XXXX 1730331718438, Thread 7321: XXXX 1730331718438, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331718439 XXXX 1730331718439, Thread 7321: XXXX 1730331718439, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331718539 XXXX 1730331718539, Thread 7321: XXXX 1730331718539, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331718540 XXXX 1730331718540, Thread 7321: XXXX 1730331718540, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331718639 XXXX 1730331718639, Thread 7321: XXXX 1730331718639, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331718640 XXXX 1730331718640, Thread 7321: XXXX 1730331718640, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331718740 XXXX 1730331718740, Thread 7321: XXXX 1730331718740, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331718740 XXXX 1730331718740, Thread 7321: XXXX 1730331718740, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331718841 XXXX 1730331718841, Thread 7321: XXXX 1730331718841, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331718842 XXXX 1730331718842, Thread 7321: XXXX 1730331718842, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331718942 XXXX 1730331718942, Thread 7321: XXXX 1730331718942, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331718943 XXXX 1730331718943, Thread 7321: XXXX 1730331718943, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331719042 XXXX 1730331719042, Thread 7321: XXXX 1730331719042, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331719044 XXXX 1730331719044, Thread 7321: XXXX 1730331719044, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331719142 XXXX 1730331719142, Thread 7321: XXXX 1730331719142, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331719143 XXXX 1730331719143, Thread 7321: XXXX 1730331719143, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331719242 XXXX 1730331719242, Thread 7321: XXXX 1730331719242, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331719243 XXXX 1730331719243, Thread 7321: XXXX 1730331719243, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331719343 XXXX 1730331719343, Thread 7321: XXXX 1730331719343, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331719343 XXXX 1730331719343, Thread 7321: XXXX 1730331719343, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331719443 XXXX 1730331719443, Thread 7321: XXXX 1730331719443, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331719445 XXXX 1730331719445, Thread 7321: XXXX 1730331719445, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331719543 XXXX 1730331719543, Thread 7321: XXXX 1730331719543, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331719544 XXXX 1730331719544, Thread 7321: XXXX 1730331719544, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331719644 XXXX 1730331719644, Thread 7321: XXXX 1730331719644, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331719644 XXXX 1730331719644, Thread 7321: XXXX 1730331719644, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331719746 XXXX 1730331719746, Thread 7321: XXXX 1730331719746, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331719746 XXXX 1730331719746, Thread 7321: XXXX 1730331719746, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331719846 XXXX 1730331719846, Thread 7321: XXXX 1730331719846, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331719847 XXXX 1730331719847, Thread 7321: XXXX 1730331719847, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331719946 XXXX 1730331719946, Thread 7321: XXXX 1730331719946, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331719946 XXXX 1730331719946, Thread 7321: XXXX 1730331719946, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331720047 XXXX 1730331720047, Thread 7321: XXXX 1730331720047, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331720047 XXXX 1730331720047, Thread 7321: XXXX 1730331720047, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331720148 XXXX 1730331720148, Thread 7321: XXXX 1730331720148, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331720149 XXXX 1730331720149, Thread 7321: XXXX 1730331720149, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331720248 XXXX 1730331720248, Thread 7321: XXXX 1730331720248, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331720248 XXXX 1730331720248, Thread 7321: XXXX 1730331720248, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331720349 XXXX 1730331720349, Thread 7321: XXXX 1730331720349, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331720351 XXXX 1730331720351, Thread 7321: XXXX 1730331720351, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331720449 XXXX 1730331720449, Thread 7321: XXXX 1730331720449, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331720450 XXXX 1730331720450, Thread 7321: XXXX 1730331720450, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331720550 XXXX 1730331720550, Thread 7321: XXXX 1730331720550, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331720551 XXXX 1730331720551, Thread 7321: XXXX 1730331720551, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331720650 XXXX 1730331720650, Thread 7321: XXXX 1730331720650, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331720651 XXXX 1730331720651, Thread 7321: XXXX 1730331720651, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331720751 XXXX 1730331720751, Thread 7321: XXXX 1730331720751, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331720752 XXXX 1730331720752, Thread 7321: XXXX 1730331720752, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331720851 XXXX 1730331720851, Thread 7321: XXXX 1730331720851, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331720852 XXXX 1730331720852, Thread 7321: XXXX 1730331720852, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331720951 XXXX 1730331720951, Thread 7321: XXXX 1730331720951, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331720953 XXXX 1730331720953, Thread 7321: XXXX 1730331720953, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331721051 XXXX 1730331721051, Thread 7321: XXXX 1730331721051, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331721051 XXXX 1730331721051, Thread 7321: XXXX 1730331721051, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331721153 XXXX 1730331721153, Thread 7321: XXXX 1730331721153, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331721154 XXXX 1730331721154, Thread 7321: XXXX 1730331721154, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331721253 XXXX 1730331721253, Thread 7321: XXXX 1730331721253, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331721253 XXXX 1730331721253, Thread 7321: XXXX 1730331721253, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331721353 XXXX 1730331721353, Thread 7321: XXXX 1730331721353, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331721354 XXXX 1730331721354, Thread 7321: XXXX 1730331721354, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331721453 XXXX 1730331721453, Thread 7321: XXXX 1730331721453, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331721455 XXXX 1730331721455, Thread 7321: XXXX 1730331721455, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331721553 XXXX 1730331721553, Thread 7321: XXXX 1730331721553, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331721555 XXXX 1730331721555, Thread 7321: XXXX 1730331721555, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331721653 XXXX 1730331721653, Thread 7321: XXXX 1730331721653, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331721654 XXXX 1730331721654, Thread 7321: XXXX 1730331721654, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331721754 XXXX 1730331721754, Thread 7321: XXXX 1730331721754, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331721755 XXXX 1730331721755, Thread 7321: XXXX 1730331721755, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331721855 XXXX 1730331721855, Thread 7321: XXXX 1730331721855, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331721855 XXXX 1730331721855, Thread 7321: XXXX 1730331721855, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331721955 XXXX 1730331721955, Thread 7321: XXXX 1730331721955, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331721957 XXXX 1730331721957, Thread 7321: XXXX 1730331721957, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331722056 XXXX 1730331722056, Thread 7321: XXXX 1730331722056, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331722057 XXXX 1730331722057, Thread 7321: XXXX 1730331722057, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331722157 XXXX 1730331722157, Thread 7321: XXXX 1730331722157, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331722158 XXXX 1730331722158, Thread 7321: XXXX 1730331722158, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331722257 XXXX 1730331722257, Thread 7321: XXXX 1730331722257, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331722257 XXXX 1730331722257, Thread 7321: XXXX 1730331722257, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331722358 XXXX 1730331722358, Thread 7321: XXXX 1730331722358, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331722358 XXXX 1730331722358, Thread 7321: XXXX 1730331722358, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331722459 XXXX 1730331722459, Thread 7321: XXXX 1730331722459, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331722461 XXXX 1730331722461, Thread 7321: XXXX 1730331722461, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331722560 XXXX 1730331722560, Thread 7321: XXXX 1730331722560, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331722562 XXXX 1730331722562, Thread 7321: XXXX 1730331722562, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331722663 XXXX 1730331722663, Thread 7321: XXXX 1730331722663, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331722664 XXXX 1730331722664, Thread 7321: XXXX 1730331722664, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331722764 XXXX 1730331722764, Thread 7321: XXXX 1730331722764, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331722765 XXXX 1730331722765, Thread 7321: XXXX 1730331722765, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331722864 XXXX 1730331722864, Thread 7321: XXXX 1730331722864, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331722864 XXXX 1730331722864, Thread 7321: XXXX 1730331722864, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331722966 XXXX 1730331722966, Thread 7321: XXXX 1730331722966, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331722967 XXXX 1730331722967, Thread 7321: XXXX 1730331722967, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331723066 XXXX 1730331723066, Thread 7321: XXXX 1730331723066, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331723067 XXXX 1730331723067, Thread 7321: XXXX 1730331723067, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331723166 XXXX 1730331723166, Thread 7321: XXXX 1730331723166, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331723166 XXXX 1730331723166, Thread 7321: XXXX 1730331723166, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331723268 XXXX 1730331723268, Thread 7321: XXXX 1730331723268, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331723270 XXXX 1730331723270, Thread 7321: XXXX 1730331723270, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331723369 XXXX 1730331723369, Thread 7321: XXXX 1730331723369, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331723369 XXXX 1730331723369, Thread 7321: XXXX 1730331723369, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331723470 XXXX 1730331723470, Thread 7321: XXXX 1730331723470, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331723471 XXXX 1730331723471, Thread 7321: XXXX 1730331723471, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331723570 XXXX 1730331723570, Thread 7321: XXXX 1730331723570, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331723570 XXXX 1730331723570, Thread 7321: XXXX 1730331723570, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331723671 XXXX 1730331723671, Thread 7321: XXXX 1730331723671, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331723672 XXXX 1730331723672, Thread 7321: XXXX 1730331723672, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331723772 XXXX 1730331723772, Thread 7321: XXXX 1730331723772, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331723773 XXXX 1730331723773, Thread 7321: XXXX 1730331723773, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331723872 XXXX 1730331723872, Thread 7321: XXXX 1730331723872, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331723873 XXXX 1730331723873, Thread 7321: XXXX 1730331723873, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331723972 XXXX 1730331723972, Thread 7321: XXXX 1730331723972, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331723974 XXXX 1730331723974, Thread 7321: XXXX 1730331723974, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331724073 XXXX 1730331724073, Thread 7321: XXXX 1730331724073, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331724073 XXXX 1730331724073, Thread 7321: XXXX 1730331724073, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331724173 XXXX 1730331724173, Thread 7321: XXXX 1730331724173, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331724173 XXXX 1730331724173, Thread 7321: XXXX 1730331724173, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331724274 XXXX 1730331724274, Thread 7321: XXXX 1730331724274, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331724275 XXXX 1730331724275, Thread 7321: XXXX 1730331724275, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331724375 XXXX 1730331724375, Thread 7321: XXXX 1730331724375, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331724376 XXXX 1730331724376, Thread 7321: XXXX 1730331724376, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331724475 XXXX 1730331724475, Thread 7321: XXXX 1730331724475, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331724475 XXXX 1730331724475, Thread 7321: XXXX 1730331724475, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331724576 XXXX 1730331724576, Thread 7321: XXXX 1730331724576, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331724577 XXXX 1730331724577, Thread 7321: XXXX 1730331724577, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331724677 XXXX 1730331724677, Thread 7321: XXXX 1730331724677, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331724677 XXXX 1730331724677, Thread 7321: XXXX 1730331724677, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331724776 XXXX 1730331724776, Thread 7321: XXXX 1730331724776, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331724777 XXXX 1730331724777, Thread 7321: XXXX 1730331724777, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331724876 XXXX 1730331724876, Thread 7321: XXXX 1730331724876, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331724877 XXXX 1730331724877, Thread 7321: XXXX 1730331724877, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331724977 XXXX 1730331724977, Thread 7321: XXXX 1730331724977, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331724978 XXXX 1730331724978, Thread 7321: XXXX 1730331724978, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331725078 XXXX 1730331725078, Thread 7321: XXXX 1730331725078, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331725078 XXXX 1730331725078, Thread 7321: XXXX 1730331725078, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331725181 XXXX 1730331725181, Thread 7321: XXXX 1730331725181, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331725182 XXXX 1730331725182, Thread 7321: XXXX 1730331725182, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331725282 XXXX 1730331725282, Thread 7321: XXXX 1730331725282, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331725283 XXXX 1730331725283, Thread 7321: XXXX 1730331725283, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331725382 XXXX 1730331725382, Thread 7321: XXXX 1730331725382, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331725384 XXXX 1730331725384, Thread 7321: XXXX 1730331725384, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331725482 XXXX 1730331725482, Thread 7321: XXXX 1730331725482, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331725483 XXXX 1730331725483, Thread 7321: XXXX 1730331725483, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331725583 XXXX 1730331725583, Thread 7321: XXXX 1730331725583, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331725584 XXXX 1730331725584, Thread 7321: XXXX 1730331725584, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331725684 XXXX 1730331725684, Thread 7321: XXXX 1730331725684, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331725685 XXXX 1730331725685, Thread 7321: XXXX 1730331725685, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331725784 XXXX 1730331725784, Thread 7321: XXXX 1730331725784, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331725785 XXXX 1730331725785, Thread 7321: XXXX 1730331725785, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331725885 XXXX 1730331725885, Thread 7321: XXXX 1730331725885, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331725886 XXXX 1730331725886, Thread 7321: XXXX 1730331725886, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331725985 XXXX 1730331725985, Thread 7321: XXXX 1730331725985, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331725986 XXXX 1730331725986, Thread 7321: XXXX 1730331725986, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331726086 XXXX 1730331726086, Thread 7321: XXXX 1730331726086, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331726087 XXXX 1730331726087, Thread 7321: XXXX 1730331726087, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331726186 XXXX 1730331726186, Thread 7321: XXXX 1730331726186, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331726187 XXXX 1730331726187, Thread 7321: XXXX 1730331726187, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331726286 XXXX 1730331726286, Thread 7321: XXXX 1730331726286, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331726287 XXXX 1730331726287, Thread 7321: XXXX 1730331726287, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331726387 XXXX 1730331726387, Thread 7321: XXXX 1730331726387, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331726387 XXXX 1730331726387, Thread 7321: XXXX 1730331726387, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331726488 XXXX 1730331726488, Thread 7321: XXXX 1730331726488, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331726489 XXXX 1730331726489, Thread 7321: XXXX 1730331726489, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331726589 XXXX 1730331726589, Thread 7321: XXXX 1730331726589, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331726589 XXXX 1730331726589, Thread 7321: XXXX 1730331726589, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331726691 XXXX 1730331726691, Thread 7321: XXXX 1730331726691, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331726691 XXXX 1730331726691, Thread 7321: XXXX 1730331726691, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331726791 XXXX 1730331726791, Thread 7321: XXXX 1730331726791, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331726792 XXXX 1730331726792, Thread 7321: XXXX 1730331726792, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331726892 XXXX 1730331726892, Thread 7321: XXXX 1730331726892, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331726892 XXXX 1730331726892, Thread 7321: XXXX 1730331726892, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331726992 XXXX 1730331726992, Thread 7321: XXXX 1730331726992, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331726993 XXXX 1730331726993, Thread 7321: XXXX 1730331726993, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331727093 XXXX 1730331727093, Thread 7321: XXXX 1730331727093, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331727093 XXXX 1730331727093, Thread 7321: XXXX 1730331727093, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331727194 XXXX 1730331727194, Thread 7321: XXXX 1730331727194, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331727195 XXXX 1730331727195, Thread 7321: XXXX 1730331727195, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331727294 XXXX 1730331727294, Thread 7321: XXXX 1730331727294, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331727295 XXXX 1730331727295, Thread 7321: XXXX 1730331727295, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331727395 XXXX 1730331727395, Thread 7321: XXXX 1730331727395, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331727396 XXXX 1730331727396, Thread 7321: XXXX 1730331727396, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331727496 XXXX 1730331727496, Thread 7321: XXXX 1730331727496, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331727496 XXXX 1730331727496, Thread 7321: XXXX 1730331727496, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331727596 XXXX 1730331727596, Thread 7321: XXXX 1730331727596, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331727596 XXXX 1730331727596, Thread 7321: XXXX 1730331727596, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331727699 XXXX 1730331727699, Thread 7321: XXXX 1730331727699, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331727700 XXXX 1730331727700, Thread 7321: XXXX 1730331727700, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331727799 XXXX 1730331727799, Thread 7321: XXXX 1730331727799, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331727800 XXXX 1730331727800, Thread 7321: XXXX 1730331727800, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331727899 XXXX 1730331727899, Thread 7321: XXXX 1730331727899, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331727900 XXXX 1730331727900, Thread 7321: XXXX 1730331727900, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331728000 XXXX 1730331728000, Thread 7321: XXXX 1730331728000, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331728001 XXXX 1730331728001, Thread 7321: XXXX 1730331728001, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331728101 XXXX 1730331728101, Thread 7321: XXXX 1730331728101, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331728102 XXXX 1730331728102, Thread 7321: XXXX 1730331728102, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331728202 XXXX 1730331728202, Thread 7321: XXXX 1730331728202, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331728202 XXXX 1730331728202, Thread 7321: XXXX 1730331728202, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331728302 XXXX 1730331728302, Thread 7321: XXXX 1730331728302, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331728303 XXXX 1730331728303, Thread 7321: XXXX 1730331728303, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331728402 XXXX 1730331728402, Thread 7321: XXXX 1730331728402, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331728403 XXXX 1730331728403, Thread 7321: XXXX 1730331728403, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331728503 XXXX 1730331728503, Thread 7321: XXXX 1730331728503, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331728504 XXXX 1730331728504, Thread 7321: XXXX 1730331728504, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331728604 XXXX 1730331728604, Thread 7321: XXXX 1730331728604, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331728604 XXXX 1730331728604, Thread 7321: XXXX 1730331728604, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331728706 XXXX 1730331728706, Thread 7321: XXXX 1730331728706, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331728706 XXXX 1730331728706, Thread 7321: XXXX 1730331728706, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331728806 XXXX 1730331728806, Thread 7321: XXXX 1730331728806, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331728807 XXXX 1730331728807, Thread 7321: XXXX 1730331728807, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331728908 XXXX 1730331728908, Thread 7321: XXXX 1730331728908, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331728909 XXXX 1730331728909, Thread 7321: XXXX 1730331728909, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331729008 XXXX 1730331729008, Thread 7321: XXXX 1730331729008, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331729010 XXXX 1730331729010, Thread 7321: XXXX 1730331729010, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331729108 XXXX 1730331729108, Thread 7321: XXXX 1730331729108, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331729109 XXXX 1730331729109, Thread 7321: XXXX 1730331729109, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331729208 XXXX 1730331729208, Thread 7321: XXXX 1730331729208, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331729209 XXXX 1730331729209, Thread 7321: XXXX 1730331729209, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331729309 XXXX 1730331729309, Thread 7321: XXXX 1730331729309, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331729309 XXXX 1730331729309, Thread 7321: XXXX 1730331729309, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331729409 XXXX 1730331729409, Thread 7321: XXXX 1730331729409, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331729410 XXXX 1730331729410, Thread 7321: XXXX 1730331729410, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331729510 XXXX 1730331729510, Thread 7321: XXXX 1730331729510, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331729511 XXXX 1730331729511, Thread 7321: XXXX 1730331729511, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331729610 XXXX 1730331729610, Thread 7321: XXXX 1730331729610, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331729611 XXXX 1730331729611, Thread 7321: XXXX 1730331729611, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331729710 XXXX 1730331729710, Thread 7321: XXXX 1730331729710, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331729711 XXXX 1730331729711, Thread 7321: XXXX 1730331729711, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331729811 XXXX 1730331729811, Thread 7321: XXXX 1730331729811, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331729811 XXXX 1730331729811, Thread 7321: XXXX 1730331729811, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331729912 XXXX 1730331729912, Thread 7321: XXXX 1730331729912, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331729913 XXXX 1730331729913, Thread 7321: XXXX 1730331729913, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331730012 XXXX 1730331730012, Thread 7321: XXXX 1730331730012, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331730013 XXXX 1730331730013, Thread 7321: XXXX 1730331730013, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331730113 XXXX 1730331730113, Thread 7321: XXXX 1730331730113, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331730113 XXXX 1730331730113, Thread 7321: XXXX 1730331730113, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331730214 XXXX 1730331730214, Thread 7321: XXXX 1730331730214, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331730215 XXXX 1730331730215, Thread 7321: XXXX 1730331730215, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331730315 XXXX 1730331730315, Thread 7321: XXXX 1730331730315, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331730316 XXXX 1730331730316, Thread 7321: XXXX 1730331730316, Exiting Thread 7321: Commands::runScriptBasic  
+7321 1730331730416 XXXX 1730331730416, Thread 7321: XXXX 1730331730416, Entering Thread 7321: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+7321 1730331730421 XXXX 1730331730421, Thread 7321: com.Send returned false 
+7321 1730331730421 XXXX 1730331730421, Thread 7321: transfer: exception after writeHeaderAndGetResult null 
+7321 1730331730421 XXXX 1730331730421, Thread 7321: XXXX 1730331730421, Entering Thread 7321: ToolCommUsb::recoverFromProtocolError, type = NO_SCRIPT  
+7321 1730331730421 XXXX 1730331730421, Thread 7321: Send Abort Script Engine Command 
+7321 1730331730421 XXXX 1730331730421, Thread 7321: XXXX 1730331730421, Entering Thread 7321: ToolCommUsb::killScriptEngine  
+7321 1730331730421 XXXX 1730331730421, Thread 7321: com.Send returned false 
+7321 1730331730421 XXXX 1730331730421, Thread 7321: Failed sending Abort Script Engine Command. Set nuclear option = true 
+7321 1730331730421 XXXX 1730331730421, Thread 7321: About to nuke 
+7321 1730331730421 XXXX 1730331730421, Thread 7321: XXXX 1730331730421, Entering Thread 7321: ToolCommUsb::nuclearOption  
+7321 1730331730421 XXXX 1730331730421, Thread 7321: com.Send returned false 

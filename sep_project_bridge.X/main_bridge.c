@@ -25,7 +25,6 @@ limitations under the License.
 #include "bsp/timer_1ms.h"
 #include "bsp/buttons.h"
 #include "bsp/leds.h"
-#include "bsp/rtcc.h"
  
 #include "io_mapping.h"
 #include "spi_bridge.h"
@@ -41,39 +40,22 @@ static void BlinkAliveEventHandler( void );
 static void SpiSendEventHandler( void );
 static void ScreenUpdateEventHandler( void );
 
-static RTCC_DATETIME time;
-static RTCC_DATETIME lastTime = {0};
 static volatile bool toggleBlinkAlive = false;
 static volatile bool send_spi_flag = false;
 static volatile bool allowScreenUpdate = true; 
 
-#define MEMCMP_VALUES_IDENTICAL 0
-
-#define CMD_SHOW_TEMP 0xA0
-#define CMD_SHOW_PROX 0xB0
-#define CMD_SHOW_LIGHT 0xB1
-
-
-void delay_nop(unsigned int count) {
-    while (count--) {
-        Nop();  // One NOP takes 1 instruction cycle
-    }
-}
-
 // *****************************************************************************
 // *****************************************************************************
-// Section: Main Entry Point
+// Section: Main Loop
 // *****************************************************************************
 // *****************************************************************************
 int main ( void )
 {
-    uint16_t adcResult;
-    uint16_t lastAdcResult = 0xFFFF;
     
-    uint8_t spi_data_out = 0x76;
-    uint8_t spi_data_in = 0x00;
-    
-    uint8_t letter = 'a';
+    uint8_t uart_bytes_recieved; 
+    char uart_rx_buff[RX_MAX_SIZE] = {0};
+    char uart_tx_buff[TX_MAX_SIZE] = {0};
+    char cmd = 0;
     /* Call the System Initialize routine*/
     SYS_Initialize();   
     spi_init_master();
@@ -87,50 +69,40 @@ int main ( void )
     BUTTON_Enable ( BUTTON_DEMO );
     BUTTON_Enable ( BUTTON_TEMP );
     BUTTON_Enable ( BUTTON_PROX );
+    BUTTON_Enable ( BUTTON_RGB );
     
     
     /* Get a timer event once every 100ms for the blink alive. */
     TIMER_SetConfiguration ( TIMER_CONFIGURATION_1MS );
     TIMER_RequestTick( &BlinkAliveEventHandler, 100 );
-    TIMER_RequestTick( &SpiSendEventHandler, 500 );
+    TIMER_RequestTick( &SpiSendEventHandler, 100 );
     TIMER_RequestTick( &ScreenUpdateEventHandler, 170 );
-    
-    /* The TIMER_1MS configuration should come before the RTCC initialization as
-     * there are some processor modules that require the TIMER_1MS module to be
-     * configured before the RTCC module, as the RTCC module is emulated using
-     * the TIMER_1MS module. */
-    time.bcdFormat = false;
-    lastTime.bcdFormat = false;
-    RTCC_BuildTimeGet( &time );
-    RTCC_Initialize( &time );
-    memset(&lastTime,0,sizeof(lastTime)); 
     
     /* Clear the screen */
     printf( "\f" );
     
     while ( 1 )
 {
-        /*
-        while(1){
-            //uart1_write('H');
-            delay_nop(100000000);
-            U1TXREG = 0xAA;         // Write the data to the transmit register
-            LED_Toggle(LED_BLINK_ALIVE);     
-        }
-        */
         
         if (allowScreenUpdate == true) //check screen refresh rate
         {
             allowScreenUpdate = false; //Clear screen refresh flag
-            printf("MOSI: 0X%02x      DataIn: 0X%02x\r\n", spi_data_out, spi_data_in);
+            printf("MOSI: 0X%02x      MISO: 0X%02x 0X%02x\r\n", cmd, (unsigned char)uart_tx_buff[2], (unsigned char)uart_tx_buff[1]);
+
         }
 
         if (toggleBlinkAlive == true)
         {
-            letter = uart1_read();
-            if (letter != NULL){
-                uart1_write(letter);
+            //Poll UART (non-blocking)           
+            uart_bytes_recieved = uart1_read(uart_rx_buff, sizeof(uart_rx_buff));
+           
+            if (uart_bytes_recieved != 0){                         //If command was sent, reply with data
+                cmd = uart_rx_buff[0];
+                uart_tx_buff[0] = cmd;
+                spi_master_handle(cmd, uart_tx_buff);              //Put sensor data in tx buffer
+                uart1_write(uart_tx_buff, sizeof(uart_tx_buff));
             }
+                 
             LED_Toggle(LED_BLINK_ALIVE);
             toggleBlinkAlive = false;
         }
@@ -139,32 +111,38 @@ int main ( void )
         /* To determine how the LED and Buttons are mapped to the actual board
          * features, please see io_mapping.h. */
         
-        if(BUTTON_IsPressed( BUTTON_TEMP ) == true)
+        //Debug SPI with devboard buttons
+        if(BUTTON_IsPressed( BUTTON_TEMP ) == true)   //S3 button
         {       
-            //spi_send_flag = true;
             if(send_spi_flag == true){
                 send_spi_flag = false;
-                spi_data_out = CMD_SHOW_TEMP;
+                cmd = 'A';
                 //Send command via SPI
-                LATGbits.LATG9 = 0;
-                delay_nop(1000);  // Delays for 1000 instruction cycles
-                spi_data_in = spi_master_rw(spi_data_out);
-                LATGbits.LATG9 = 1;
+                uart_tx_buff[0] = cmd;
+                spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer                             
             }
             
         }
        
-        if(BUTTON_IsPressed( BUTTON_PROX ) == true)
+        if(BUTTON_IsPressed( BUTTON_PROX ) == true)   //S6 button
         {
-            //spi_send_flag = true;
             if(send_spi_flag == true){
                 send_spi_flag = false;
-                spi_data_out = CMD_SHOW_PROX;
+                cmd = 'B';
                 //Send command via SPI
-                LATGbits.LATG9 = 0;
-                delay_nop(1000);  // Delays for 1000 instruction cycles
-                spi_data_in = spi_master_rw(spi_data_out);
-                LATGbits.LATG9 = 1;
+                uart_tx_buff[0] = cmd;
+                spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer
+            }
+        }
+        
+        if(BUTTON_IsPressed( BUTTON_RGB ) == true)    //S5 button
+        {
+            if(send_spi_flag == true){
+                send_spi_flag = false;
+                cmd = 'D';
+                //Send command via SPI
+                uart_tx_buff[0] = cmd;
+                spi_master_handle(cmd, uart_tx_buff); //Put sensor data in tx buffer
             }
         }
         

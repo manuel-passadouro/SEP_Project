@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/default/production/pic24fj1024gb610_pim.x.production.elf">
+  <executable name="dist/default/production/sep_project_bridge.X.production.elf">
     <memory name="data">
       <units>bytes</units>
       <length>32768</length>
-      <used>222</used>
-      <free>32546</free>
+      <used>206</used>
+      <free>32562</free>
     </memory>
     <memory name="program">
       <units>bytes</units>
       <length>1056000</length>
-      <used>12303</used>
-      <free>1043697</free>
+      <used>12780</used>
+      <free>1043220</free>
     </memory>
   </executable>
 </project>
