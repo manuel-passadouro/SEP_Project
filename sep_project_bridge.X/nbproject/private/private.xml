@@ -5,10 +5,8 @@
         <group>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_bridge.X/spi_bridge.c</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_bridge.X/uart_bridge.h</file>
-            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_bridge.X/bsp/buttons.c</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_bridge.X/main_bridge.c</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_bridge.X/spi_bridge.h</file>
-            <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_bridge.X/bsp/leds.c</file>
             <file>file:/C:/Users/mpass/Desktop/SEP_Project/sep_project_bridge.X/uart_bridge.c</file>
         </group>
     </open-files>

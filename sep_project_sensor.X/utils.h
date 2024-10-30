@@ -36,8 +36,6 @@ typedef struct {
 
 extern volatile sensor_buffer_struct sensor_buffer;
 
-
-void test_sleep(void);
 void led_init(void);
 
 #ifdef	__cplusplus

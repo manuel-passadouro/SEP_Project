@@ -14,6 +14,10 @@ connected = False
 message_count = 0
 log_file = "uart_data_log.csv"
 
+#Constants for Temperature data conversion
+VREF_MV = 3200          # Reference voltage in millivolts (3500 mV)
+ADC_MAX_VALUE = 1023    # Max ADC value for a 10-bit ADC
+
 # Initial RGB color for the square (customizable)
 #global rgb_color
 rgb_color = (255, 111, 55)  # Red color
@@ -21,9 +25,9 @@ rgb_color = (255, 111, 55)  # Red color
 def open_log_file():
     global csv_file, writer
     try:
-        csv_file = open(log_file, mode='w', newline='')  # Open the CSV file for appending
+        csv_file = open(log_file, mode='w', newline='')     # Open the CSV file for appending
         writer = csv.writer(csv_file)
-        writer.writerow(["Timestamp", "Data"])  # Write header only once
+        writer.writerow(["Timestamp", "Data"])              # Write header only once
     except Exception as e:
         print(f"Error opening log file: {e}")
 
@@ -51,25 +55,31 @@ def read_uart():
     while connected:
         try:
             if uart.in_waiting > 0:
-                data = uart.readline().strip()  #Read up until newline
+                data = uart.read(10) #Read 10 bytes from UART buffer
                 print("Size of data:", len(data))
 
                 if data[0:1].decode('utf-8') == 'A':
-                    # Check if at least 2 more bytes are available
                     
                     # Read the next two bytes separately
                     temp_low = data[1]
                     temp_high = data[2]
-                    
+                    temp_value = (temp_high << 8) | temp_low  # Combine high and low bytes
+
+                    temp_k = (temp_value/ADC_MAX_VALUE) * VREF_MV
+                    temp_c = temp_k - 273.15
+
+                    # Cap temp_c to 1 decimal place
+                    temp_c = round(temp_c, 1)
+                                      
                     # Display the high and low bytes separately
-                    text_area.insert(tk.END, f"Ambient Temp [ºC]: {temp_high}, {temp_low}\n")
+                    text_area.insert(tk.END, f"Ambient Temp [C]: {temp_high}, {temp_low}, {temp_c}\n")
                     text_area.see(tk.END)
 
                     # Log the temperature bytes
                     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    writer.writerow([timestamp, f"Ambient Temp: {temp_high}, {temp_low}"])
+                    writer.writerow([timestamp, f"Ambient Temp [C]: {temp_c}"])
                     csv_file.flush()
-                    print(f"Logged: {timestamp}, Ambient Temp: {temp_high}, {temp_low}")
+                    print(f"Logged: {timestamp}, Ambient Temp [C]: {temp_c}")
 
                 elif data[0:1].decode('utf-8') == 'B':
                     # Check if at least 2 more bytes are available
@@ -77,16 +87,17 @@ def read_uart():
                     # Read the next two bytes separately
                     prox_low = data[1]
                     prox_high = data[2]
-                    
-                    # Display the high and low bytes separately
-                    text_area.insert(tk.END, f"Prox: {prox_high}, {prox_low}\n")
+                    prox_value = (prox_high << 8) | prox_low  # Combine high and low bytes
+    
+                    # Display the 16-bit proximity value
+                    text_area.insert(tk.END, f"Prox: {prox_value}\n")
                     text_area.see(tk.END)
 
-                    # Log the temperature bytes
+                    # Log the 16-bit proximity value
                     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    writer.writerow([timestamp, f"Prox: {prox_high}, {prox_low}"])
+                    writer.writerow([timestamp, f"Prox: {prox_value}"])
                     csv_file.flush()
-                    print(f"Logged: {timestamp}, Prox: {prox_high}, {prox_low}")
+                    print(f"Logged: {timestamp}, Prox: {prox_value}")
 
                 elif data[0:1].decode('utf-8') == 'C':
                     # Check if at least 2 more bytes are available
@@ -94,16 +105,17 @@ def read_uart():
                     # Read the next two bytes separately
                     light_low = data[1]
                     light_high = data[2]
-                    
-                    # Display the high and low bytes separately
-                    text_area.insert(tk.END, f"Light: {light_high}, {light_low}\n")
+                    light_value = (light_high << 8) | light_low  # Combine high and low bytes
+    
+                    # Display the 16-bit light value
+                    text_area.insert(tk.END, f"Light: {light_value}\n")
                     text_area.see(tk.END)
 
-                    # Log the temperature bytes
+                    # Log the 16-bit light value
                     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    writer.writerow([timestamp, f"Light: {light_high}, {light_low}"])
+                    writer.writerow([timestamp, f"Light: {light_value}"])
                     csv_file.flush()
-                    print(f"Logged: {timestamp}, Light: {light_high}, {light_low}")
+                    print(f"Logged: {timestamp}, Light: {light_value}")
 
                 elif data[0:1].decode('utf-8') == 'D':
                     # Check if at least 2 more bytes are available
@@ -121,22 +133,21 @@ def read_uart():
                     green_16bit = (green_high << 8) | green_low
                     blue_16bit = (blue_high << 8) | blue_low
 
-                    # Scale 16-bit values down to 8-bit values by dividing by 256
-                    red_8bit = red_16bit 
-                    green_8bit = green_16bit 
-                    blue_8bit = blue_16bit 
+                    # Scale down 16 bit values to prevent overflow
+                    red_8bit = red_16bit >> 4 
+                    green_8bit = green_16bit >> 4
+                    blue_8bit = blue_16bit >> 4
 
-                    # Convert high bytes to integers (or keep them as they are if already integers)
-                    #red_value = ((red_high << 8) + red_low)/8
-                    #green_value = ((green_high << 8) + green_low)/8
-                    #blue_value = ((blue_high << 8) + blue_low)/8
+                    # Ensure values are within the 0-255 range
+                    red_8bit = min(max(red_8bit, 0), 255)
+                    green_8bit = min(max(green_8bit, 0), 255)
+                    blue_8bit = min(max(blue_8bit, 0), 255)
+
                     
                     # Display the high and low bytes separately
                     rgb_color = (red_8bit, green_8bit, blue_8bit)
                     update_square_color()
-                    text_area.insert(tk.END, f"RGB: {red_high}, {red_low}, {green_high}, {green_low},"
-                                     f" {blue_high}, {blue_low}\n")
-
+                    
                     text_area.insert(tk.END, f"RGB: {red_8bit}, {green_8bit}, {blue_8bit}\n")
 
                     text_area.see(tk.END)
@@ -150,8 +161,17 @@ def read_uart():
                                      f" {blue_high}, {blue_low}")
                     
                 else:
-                    # Handle as a regular string if data is not 'A'
-                    print(f"Invalid Message Received")
+                    # Handle undifined cases
+                    
+                    text_area.insert(tk.END, f"CMD error\n")
+                    text_area.see(tk.END)
+
+                    # Log the error bytes
+                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    writer.writerow([timestamp, f"CMD error"])
+                    csv_file.flush()
+                    print(f"CMD error")
+                    #print(f"Invalid Message Received")
 
                 last_data_time_var.set("Last Data Received: " + timestamp)
                 message_count += 1
@@ -194,7 +214,7 @@ image_label.image = photo
 image_label.place(x=10, y=10)
 
 # Project info
-project_info = "SEP Project\nGroup XX:\nManuel Passadouro, 80840\nMiguel Simões, 99162"
+project_info = "SEP Project\nGroup 1:\nManuel Passadouro, 80840\nMiguel Simões, 99162"
 project_label = tk.Label(root, text=project_info, font=("Arial", 10), anchor="w", justify="left")
 project_label.place(x=80, y=10)
 

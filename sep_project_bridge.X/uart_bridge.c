@@ -27,7 +27,7 @@ void uart1_init(){
     //Disable analog functionality
     //No analog on RFx pins
     RPINR18bits.U1RXR = 10; // U1RX on pin 49 (RP10/RF4)   
-    RPOR8bits.RP17R = 3; // U1TX on pin 50 (RP17/RF5)
+    RPOR8bits.RP17R = 3;    // U1TX on pin 50 (RP17/RF5)
     
 }
 
@@ -37,7 +37,7 @@ void uart1_write(char* buffer, uint8_t length) {
     while (index < length) {
         
         U1TXREG = buffer[index];
-        delay_nop(1000);
+        delay_nop(1000);        //Prevent UART TX buffer overflow
         index++;
     }
 }

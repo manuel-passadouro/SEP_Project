@@ -20,16 +20,11 @@ extern "C" {
 #include <xc.h>
 
 #define UART_BR 103 //Baudrate = (FCY/((16*9600))-1 = 103, for uart baudrate = 9600 (low speed)
-//#define UART_BR 51 //Baudrate = (FCY/((16*19200))-1 = 51, for uart baudrate = 19200 (low speed)
-//#define UART_BR 25 //Baudrate = (FCY/((16*19200))-1 = 25, for uart baudrate = 19200 (low speed)
-//#define UART_BR 8 //Baudrate = (FCY/((16*115200))-1 = 8, for uart baudrate = 19200 (low speed)
 #define TX_MAX_SIZE 10 //Max nunmber of bytes to send
 #define RX_MAX_SIZE 10 //Max nunmber of bytes to send
     
 void uart1_init(void);
-//void uart1_write(char);
 void uart1_write(char*, uint8_t);
-//char uart1_read(void);
 uint8_t uart1_read(char* , uint8_t);
 
 

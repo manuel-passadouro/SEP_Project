@@ -27,30 +27,30 @@ extern "C" {
 //Data Registers (Read Only)
 #define ID_ADDR 0x94 //Sensor ID 
     
-#define PDATA_ADDR 0x9C  //Proximty Data
-#define CDATAH_ADDR 0x95 //High byte of clear channel data
-#define CDATAL_ADDR 0x94 //Low byte of clear channel data
-#define RDATAL_ADDR 0x96 //Red Data, Low byte
-#define RDATAH_ADDR 0x97 //Red Data, High byte
-#define GDATAL_ADDR 0x98 //Green Data, Low byte
-#define GDATAH_ADDR 0x99 //Green Data, High byte
-#define BDATAL_ADDR 0x9A //Blue Data, Low byte
-#define BDATAH_ADDR 0x9B //Blue Data, High byte
+#define PDATA_ADDR 0x9C     //Proximty Data
+#define CDATAH_ADDR 0x95    //High byte of clear channel data
+#define CDATAL_ADDR 0x94    //Low byte of clear channel data
+#define RDATAL_ADDR 0x96    //Red Data, Low byte
+#define RDATAH_ADDR 0x97    //Red Data, High byte
+#define GDATAL_ADDR 0x98    //Green Data, Low byte
+#define GDATAH_ADDR 0x99    //Green Data, High byte
+#define BDATAL_ADDR 0x9A    //Blue Data, Low byte
+#define BDATAH_ADDR 0x9B    //Blue Data, High byte
     
-#define GSTATUS_ADDR 0xAF //Gesture Status
-#define GFIFO_U_ADDR 0xFC //Gesture FIFO UP
-#define GFIFO_D_ADDR 0xFD //Gesture FIFO DOWN
-#define GFIFO_L_ADDR 0xFE //Gesture FIFO LEFT
-#define GFIFO_R_ADDR 0xFF //Gesture FIFO RIGHT
+#define GSTATUS_ADDR 0xAF   //Gesture Status
+#define GFIFO_U_ADDR 0xFC   //Gesture FIFO UP
+#define GFIFO_D_ADDR 0xFD   //Gesture FIFO DOWN
+#define GFIFO_L_ADDR 0xFE   //Gesture FIFO LEFT
+#define GFIFO_R_ADDR 0xFF   //Gesture FIFO RIGHT
     
 //Sensor config bytes
-#define GAIN_BYTE 0x0E //00001010 -> PGAIN x8, AGAIN x16
-#define ATIME_BYTE 0xB6 // 200ms Integration time (max for 16 bits)
-#define ENABLE_BYTE 0x07 //00000111 -> turn on sensor, enable Prox, ALS.
-//#define ENABLE_BYTE 0x47 //01000111 -> turn on sensor, enable Prox, ALS adn gesture.
-#define CONFIG2_BYTE 0X21 //Set IR LED boost to 200%.
-#define GCONFIG1_BYTE 0X07 //Enable gesture interrupts and exit mask.
-#define GCONFIG4_BYTE 0X01 //Enable gesture engine.
+#define GAIN_BYTE 0x0E      //00001010 -> PGAIN x8, AGAIN x16
+#define ATIME_BYTE 0xB6     // 200ms Integration time (max for 16 bits)
+#define ENABLE_BYTE 0x07    //00000111 -> turn on sensor, enable Prox, ALS.
+//#define ENABLE_BYTE 0x47  //01000111 -> turn on sensor, enable Prox, ALS adn gesture.
+#define CONFIG2_BYTE 0X21   //Set IR LED boost to 200%.
+#define GCONFIG1_BYTE 0X07  //Enable gesture interrupts and exit mask.
+#define GCONFIG4_BYTE 0X01  //Enable gesture engine.
 
 void apds9960_init();
 void apds9960_get_prox(uint8_t *);

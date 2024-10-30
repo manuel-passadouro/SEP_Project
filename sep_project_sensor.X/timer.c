@@ -7,12 +7,13 @@
 
 #include "timer.h"
 
-volatile int timer1_flag = 0;  // Global flag for Timer1 interrupt
+volatile int timer1_flag = 0;   // Global flag for Timer1 interrupt
 
 void __attribute__((__interrupt__, auto_psv)) _T1Interrupt(void) {
  
-    IFS0bits.T1IF = 0;      //Clear Interrupt Flag
+    IFS0bits.T1IF = 0;          //Clear Interrupt Flag
     timer1_flag = 1;
+    
 }
 
 void timer1_init(void) {
@@ -27,7 +28,7 @@ void timer1_init(void) {
     
     IFS0bits.T1IF = 0;          // Clear interrupt flag
     IEC0bits.T1IE = 1;          // Enable timer interrupt
-    IPC0bits.T1IP = 4;          // Timer1 Interrupt Priority (default = 4)
+    IPC0bits.T1IP = 3;          // Timer1 Interrupt Priority (lower than IoC)
 
     T1CONbits.TON = 1;          // Enable timer
 }

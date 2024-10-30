@@ -25,14 +25,11 @@ extern "C" {
 #include <stdint.h>
 
 #define FOSC 8000000UL
-#define FCY (FOSC/2)    // System Clock speed
+#define FCY (FOSC/2)                    // System Clock speed
 
 #include <libpic30.h>
     
-//#define T1CK 35000UL                   //Timer1 Clock speed
-#define CLEAR_WDT __builtin_clrwdt()     //WDT Reset macro
-//#define ENTER_SLEEP __builtin_pwrsav(0); // Sleep mode
-
+#define CLEAR_WDT __builtin_clrwdt()    //WDT Reset macro
 
 #ifdef	__cplusplus
 }

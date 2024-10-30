@@ -14,7 +14,7 @@ extern "C" {
 
 #include "sys_config.h"
 #include "spi_sensor.h"
-
+    
 void ioc_init(void);
 
 
