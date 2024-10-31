@@ -52,7 +52,7 @@ The system can:
 
 The following architecture is to be implemented for this project:
 
-![Project Architecture Diagram.](./SEP_project_architecture.png)
+![Project Architecture Diagram.](./SEP_project_architecture.drawio.png)
 
 ## Workflow:
 
