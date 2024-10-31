@@ -24,7 +24,7 @@ void ioc_init(){
     IOCNBbits.IOCNB14 = 1;  // Enables falling edge detection
     IOCFBbits.IOCFB14 = 0;  // Clear the individual interrupt flag for RA1
     IFS1bits.IOCIF = 0;     // Clear overall IoC interrupt flag
-    IPC4bits.IOCIP = 4;     // Configure the IoC interrupts priority to value 1
+    IPC4bits.IOCIP = 4;     // Configure the IoC interrupts priority to value 4
     IEC1bits.IOCIE = 1;     // Enable the IoC interrupts
     INTCON2bits.GIE = 1;    //Enables Global Interrupt
 }

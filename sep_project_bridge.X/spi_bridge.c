@@ -24,7 +24,7 @@ void spi_init_master(void){
     SPI1CON1bits.SMP = 0;       // Input data sampled at mid-bit
     SPI1CON1bits.CKP = 0;       // Idle is SCK low
     SPI1CON1bits.CKE = 1;       // Data changes on SCK falling edge
-    SPI1BRGL = 79;              // Baud rate divisor FCY/100k
+    SPI1BRGL = 79;              // Baud rate divisor (79 -> 100kHz, for 16MHz clk)
     SPI1CON1bits.MSTEN = 1;     // Set for master mode
     SPI1CON2 = 0;               // Fully disable frame mode
     

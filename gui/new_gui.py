@@ -72,7 +72,7 @@ def read_uart():
                     temp_c = round(temp_c, 1)
                                       
                     # Display the high and low bytes separately
-                    text_area.insert(tk.END, f"Ambient Temp [C]: {temp_high}, {temp_low}, {temp_c}\n")
+                    text_area.insert(tk.END, f"Ambient Temp [C]: {temp_value}, {temp_c}\n")
                     text_area.see(tk.END)
 
                     # Log the temperature bytes

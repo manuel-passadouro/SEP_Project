@@ -4,13 +4,13 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005cc4.00 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005cc4.01 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005cc4.02 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005cc4.03 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005cc4.04 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005cc4.05 \
-  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005cc4.06 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005c30.00 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005c30.01 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005c30.02 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005c30.03 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005c30.04 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005c30.05 \
+  -TC:\\Users\\mpass\\AppData\\Local\\Temp\\tmp00005c30.06 \
   -p24FJ256GA702 \
   --mdfp=C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
   -o \
