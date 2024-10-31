@@ -57,9 +57,9 @@ The following architecture is to be implemented for this project:
 ## Workflow:
 
 **TODO: ADD WORKFLOW DIAGRAM**
-![Slave Node Flowchart.](./SEPdrawio_(1).png)
+![Slave Node Flowchart.](./Slave_flow.png)
 
-![Bridge Workflow.](./Bridge_Workflow_drawio.png)
+![Bridge Workflow.](./Bridge_Flow.png)
 
 ## Components Used (Bill of Materials?):
 
