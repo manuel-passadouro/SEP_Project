@@ -6,15 +6,31 @@
 - [ ] List of features/requirements;
 - [x] Uart Comunication;
 - [x] APDS9906 Drivers;
-- [ ] PC GUI;
-- [ ] Full system integration;
+- [x] PC GUI;
+- [x] Full system integration;
 - [x] Sensor Node schematic and layout;
-- [ ] Sensor Node PCB;
-- [ ] PCB testing;
+- [x] Sensor Node PCB;
+- [x] PCB testing;
 - [ ] Presentation Slides.
 <!-- TODO ENDS HERE -->
 
 <!-- NEW LOG ENTRY STARTS HERE -->
+
+## 30/10/2024
+
+### Notes:
+- Full system integration and testing is complete, ready for demo;
+- UART buffer was set to fixed length (10 bytes) after trouble with
+trying to send only required bytes (better data link control is needed);
+- Undefined commands caused by UART TX errors were causing the sensor node spi
+to loop;
+- IoC interrupt priority was set higher than Timer1, to avoid disruption 
+to spi com flow;
+- Delays in spi send from bridge are required to avoid transmission errors, not
+  affected by UART flow;
+- ADC temp data still fluctuates in the low end of the range, but values are realistic.
+ 
+<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 25/10/2024
 
@@ -27,9 +43,6 @@
 - Some data processing (8-bit RGB, Temp in Celsius, Timestamp) should also be done in GUI;
 - Gesture detection conflicts with Prox and RGB data acquisition, it is unlikely that there will be time to correctly implement and test;
 - Sleep will only be tested after communication loop is fully tested.
-
-  
-<!-- NEW LOG ENTRY ENDS HERE -->
 
 ## 13/10/2024
 
