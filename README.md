@@ -92,7 +92,7 @@ The following architecture is to be implemented for this project:
   
 ##Presentation Slides
 
-![Presentation.](./docs/SEP_Group1_Presentation.png)
+![Presentation.](./docs/SEP_Group1_Presentation.pdf)
 
 
 
