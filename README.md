@@ -47,25 +47,25 @@ The system can:
 
 ## GUI Example
 
-![Project Architecture Diagram.](./gui.png)
+![Project Architecture Diagram.](./docs/gui.png)
 
 ## High Level Architecture:
 
 The following architecture is to be implemented for this project:
 
-![Project Architecture Diagram.](./SEP_project_architecture.drawio.png)
+![Project Architecture Diagram.](./docs/SEP_project_architecture.drawio.png)
 
 ## Workflow:
 
-![Slave Node Flowchart.](./Slave_flow.png)
+![Slave Node Flowchart.](./docs/Slave_flow.png)
 
-![Bridge Workflow.](./Bridge_Flow.png)
+![Bridge Workflow.](./docs/Bridge_Flow.png)
 
 ## Sensor Node Schematic and Layout:
 
-![Project Architecture Diagram.](./pcb_schematic.png)
+![PCB Schematic.](./docs/pcb_schematic.png)
 
-![Project Architecture Diagram.](./pcb_layout.png)
+![PCB Layout.](./docs/pcb_layout.png)
 
 
 ## Sensor Node Bill of Materials:
@@ -91,5 +91,8 @@ The following architecture is to be implemented for this project:
 
   
 ##Presentation Slides
+
+![Presentation.](./docs/SEP_Group1_Presentation.png)
+
 
 
