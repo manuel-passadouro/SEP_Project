@@ -26,28 +26,28 @@ The system can:
 - Read the ambient temperature using a AD592 sensor;
 - Measure ambient light using an APDS 9960 sensor;
 - Measure the proximity and color of an object in its vicinity, also with APDS 9960;
-~~- Identify the arrival of a new object automatically, through motion detection;~~
+- ~~Identify the arrival of a new object automatically, through motion detection;~~
 - Send sensor data from sensor node to the PC, via the Serial/SPI Bridge;
-~~- Evaluate if object color is within pre-determined values (PASS/FAIL);~~
+- ~~Evaluate if object color is within pre-determined values (PASS/FAIL);~~
 - Stop and restart data acquisition and transmission from the GUI;
 - Store timestamped sensor data on the PC in a machine readable format (i.e. csv);
-~~- Automatically stop data acquisition and transmission, if no new objects arrive after some time;~~
+- ~~Automatically stop data acquisition and transmission, if no new objects arrive after some time;~~
 - Display on the GUI:
 
-  ~~- *#* of objects detected;~~
+  - ~~*#* of objects detected;~~
   - Color of current object (color name and RGB value);
   - Color of current object (square with color according to RGB value);
-  ~~- Color PASS or FAIL;~~
+  - ~~Color PASS or FAIL;~~
   - Room Temperature;
   - Current time;
-  ~~- Last new object arrival time;~~
-  ~~- Time Elapsed since last new object;~~
+  - ~~Last new object arrival time;~~
+  - ~~Time Elapsed since last new object;~~
   - Option to Stop/Start data acquisition;
   - Option to save data on PC.
 
 ## GUI Example
 
-![Project Architecture Diagram.](./SEP_project_architecture.drawio.png)
+![Project Architecture Diagram.](./gui.png)
 
 ## High Level Architecture:
 
@@ -61,9 +61,12 @@ The following architecture is to be implemented for this project:
 
 ![Bridge Workflow.](./Bridge_Flow.png)
 
-## Schematic and Layout:
+## Sensor Node Schematic and Layout:
 
-**TODO: ADD SENSOR NODE SCHEMATIC**
+![Project Architecture Diagram.](./pcb_schematic.png)
+
+![Project Architecture Diagram.](./pcb_layout.png)
+
 
 ## Sensor Node Bill of Materials:
 
